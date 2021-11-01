@@ -1,0 +1,142 @@
+body{
+    font-family: sans-serif;
+}
+
+.col-md{
+    height: 5%;
+}
+
+h1, h2{
+    text-align: center;
+}
+
+h1, p{
+    color: #E2E2E2;
+}
+
+p{
+    font-family: Droid Sans;
+    font-size: 15px;
+    color: white;
+}
+
+.container{
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 65%;
+    height: 120%;
+    background-color: #1B263B;
+}
+
+.cont-button, .cont-img{
+    margin-bottom: 30%;
+}
+
+.cont-text{
+    margin-bottom: 10%;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.button-login{
+    text-decoration: none;
+    color: #B76E1F;
+    font-family: Bree Serif;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    vertical-align: middle;
+    font-size: 26px;
+    line-height: 33px;
+}
+
+.cont-img{
+    margin-top: 15%;
+}
+
+.main-form{
+    background-color: #E0E1DD;
+    width: 80%;
+    border-radius: 25px;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    height: 100%;
+    margin-bottom: 5%;
+    height: 100%;
+}
+
+.cont-img{
+    height: fit-content;
+    justify-content: center;
+    display: flex;
+    vertical-align: middle;
+}
+
+.cont-text{
+    text-align: center;
+    vertical-align: text-bottom;
+    height: fit-content;
+}
+
+.regis-logo{
+    width: 30%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.row{
+    margin-bottom: 1.5%;
+    height: 10%;
+}
+
+input, select, textarea{
+    border-radius: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+    font-size: 64pt;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 7%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form-control{
+    width:50%;
+    height: fit-content;
+}
+
+.title-main-form{
+    text-align: center;
+    color: #030404;
+    font-family: Domine;
+}
+
+.cb-password{
+    width: min-content;
+    height: min-content;
+}
+
+.pass-show-content{
+    text-align: left;
+    align-content: flex-start;
+    justify-items: left;
+    
+}
+
+button {
+    background-color: #B76E1F;
+    color: #030404;
+    border-radius: 3px;
+    border: none;
+    padding: 10px 20px;
+    font-size: 17px;
+    font-family: Raleway;
+    cursor: pointer;
+}
+
+

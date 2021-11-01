@@ -1,0 +1,136 @@
+/*Header*/
+.header-box-blu {
+    background-color: #1B263B;
+    width: 100%;
+    height: 100px;
+    position: absolute; left: 0px; top: 0;
+}
+.poin{
+    width: 28px;
+    height: 28x;
+    position: absolute; top: 10px; left: 10px;
+}
+.fb{
+    width: 28px;
+    height: 28x;
+    position: absolute; top: 10px; left: 95%;
+}.ig{
+    width: 28px;
+    height: 28x;
+    position: absolute; top: 10px; left: 90%;
+}
+.jl{
+    color: rgba(231, 235, 238, 0.63);
+    font-family: Merriweather;
+    font-size: 20px;
+    letter-spacing: 2px;
+    line-height: 26px;
+    text-align: left;
+    position: absolute; left: 45px;top: 10px
+    
+}
+.box-abu {
+    background-color: #EFF0EF;
+    width: 100%;
+    height: 420px;
+    position: relative; top: 100px; 
+}
+/*--Header*/
+
+/*Navbar*/
+.nav-box {
+    background-color: #E0E1DD;
+    border-radius: 27px;
+    width: 85%;
+    height: 106px;
+    position: relative; top: 50px; left: 8%;
+}
+.nav-box-menu {
+   background-color: #FFFFFF;
+   width: 80%;
+   height: 60px;
+   position: absolute; top: 22px; left: 15%;
+}
+.salatiga{
+    width: 44px;
+    height: 55px;
+    position: absolute; top: 25px; left: 5%;
+}
+/*--Navbar*/
+
+/*carousel*/
+.carousel-inner{
+    width: 900px;
+    height: 400px;
+    position: absolute; left: 0px; top: 0px;
+}
+.pare {
+    width: 75%;
+    height: 300px;
+    position: absolute; left: 12%; top: 70px;
+}
+/*--carousel*/
+
+.container1{
+    width: 80%;
+    height: 300px;
+    background-color: #1B263B;
+    position: absolute; left: 10%;
+    
+}
+.txt-kritik{
+  color: #FFFFFF;
+  font-family: Merriweather;
+  font-size: 38px;
+  line-height: 49px;
+  text-align: left;
+  position: relative; left: 2%;bottom: 5%;
+    
+}
+.txt-kritik1{
+    color: #FFFFFF;
+    font-family: Merriweather;
+    font-size: 28px;
+    line-height: 49px;
+    text-align: left;
+    position: relative; left: 72%;bottom: 25%;
+      
+  }
+.form-floating{
+    width: 60%;
+    position: relative; left: 2%;bottom: 25%;
+}
+
+/*footer*/
+.body {
+    background-color: #E0E1DD;
+    width: 100%;
+    position: relative; 
+    top:370px;
+  }
+.pare1{
+    width: 163px;
+    height: 64px;
+}
+.box-footer{
+    background-color: #1B263B;
+}
+/*--footer*/
+.kirim{
+    background-color: #B76E1F;
+    border-radius: 38px;
+    width: 110px;
+    height: 36px;
+    position: relative; left: 78%; bottom: 110px;
+}
+.txt-gabung{
+    color: #FFFFFF;
+    font-family: Playfair Display SC;
+    font-size: 18px;
+    line-height: 23px;
+    width: 79px;
+}
+
+.form-check{
+  position: relative; left: 72%;top: 25%;
+}

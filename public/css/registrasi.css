@@ -1,0 +1,102 @@
+/*Header*/
+.header-box-blu {
+    background-color: #1B263B;
+    width: 100%;
+    height: 100px;
+    position: absolute; left: 0px; top: 0;
+}
+.poin{
+    width: 28px;
+    height: 28x;
+    position: absolute; top: 10px; left: 10px;
+}
+.fb{
+    width: 28px;
+    height: 28x;
+    position: absolute; top: 10px; left: 95%;
+}.ig{
+    width: 28px;
+    height: 28x;
+    position: absolute; top: 10px; left: 90%;
+}
+.jl{
+    color: rgba(231, 235, 238, 0.63);
+    font-family: Merriweather;
+    font-size: 20px;
+    letter-spacing: 2px;
+    line-height: 26px;
+    text-align: left;
+    position: absolute; left: 45px;top: 10px
+    
+}
+/*--Header*/
+
+/*Navbar*/
+.nav-box {
+    background-color: #E0E1DD;
+    border-radius: 27px;
+    width: 85%;
+    height: 106px;
+    position: relative; top: 50px; left: 8%;
+}
+.nav-box-menu {
+   background-color: #FFFFFF;
+   width: 80%;
+   height: 60px;
+   position: absolute; top: 22px; left: 15%;
+}
+.salatiga{
+    width: 44px;
+    height: 55px;
+    position: absolute; top: 25px; left: 5%;
+}
+/*--Navbar*/
+
+.carousel-inner{
+    width: 900px;
+    height: 400px;
+    position: absolute; left: 0px; top: 0px;
+}
+.pare {
+    width: 75%;
+    height: 300px;
+    position: absolute; left: 12%; top: 70px;
+}
+/*--carousel*/
+
+.container1{
+    width: 80%;
+    height: 60%;
+    background-color: #1B263B;
+    position: absolute; left: 10%;top: 30%;
+    
+}
+.txt-ekraf{
+    color: #FFFFFF;
+    font-family: Merriweather;
+    font-size: 25px;
+    text-align: center;
+    width: 25%;
+    position: absolute; left: 15%;top: 10%;
+}
+.txt-pariwisata{
+    color: #FFFFFF;
+    font-family: Merriweather;
+    font-size: 25px;
+    text-align: center;
+    width: 25%;
+    position: absolute; left: 58%;top: 10%;
+}
+.bulat1{
+    width:15%;
+    height : 30%;
+    position: relative; left: 20%;top: 40%;
+
+}
+.bulat2{
+    width:15%;
+    height : 30%;
+    position: relative; left: 47%;top: 40%;
+
+}
+

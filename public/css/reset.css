@@ -1,0 +1,31 @@
+.card-body{
+    background-color: #1B263B;
+  }
+  .verifikasi{
+    color: #F2F2F2;
+    font-family: Cardo;
+    font-size: 34px;
+    letter-spacing: 2px;
+    line-height: 44px;
+}
+.email{
+    width: 230px;
+    height: 95px;
+}
+.txt-reset{
+    color: #F2F2F2;
+}
+.btn{
+    background-color: #B76E1F;
+    border-radius: 38px;
+    width: 140px;
+    height: 36px;
+}
+.txt-resetpas{
+    color: #FFFFFF;
+  font-family: Playfair Display SC;
+  font-size: 18px;
+  line-height: 23px;
+  position: relative; top:5px;
+
+  }

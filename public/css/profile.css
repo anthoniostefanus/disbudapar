@@ -1,0 +1,145 @@
+/*Header*/
+.header-box-blu {
+    background-color: #1B263B;
+    width: 100%;
+    height: 100px;
+    position: absolute; left: 0px; top: 0;
+}
+.poin{
+    width: 28px;
+    height: 28x;
+    position: absolute; top: 10px; left: 10px;
+}
+.fb{
+    width: 28px;
+    height: 28x;
+    position: absolute; top: 10px; left: 95%;
+}.ig{
+    width: 28px;
+    height: 28x;
+    position: absolute; top: 10px; left: 90%;
+}
+.jl{
+    color: rgba(231, 235, 238, 0.63);
+    font-family: Merriweather;
+    font-size: 20px;
+    letter-spacing: 2px;
+    line-height: 26px;
+    text-align: left;
+    position: absolute; left: 45px;top: 10px
+    
+}
+/*--Header*/
+
+/*Navbar*/
+.nav-box {
+    background-color: #E0E1DD;
+    border-radius: 27px;
+    width: 85%;
+    height: 106px;
+    position: relative; top: 50px; left: 8%;
+}
+.nav-box-menu {
+   background-color: #FFFFFF;
+   width: 80%;
+   height: 60px;
+   position: absolute; top: 22px; left: 15%;
+}
+.salatiga{
+    width: 44px;
+    height: 55px;
+    position: absolute; top: 25px; left: 5%;
+}
+/*--Navbar*/
+
+/*Profile*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px
+}
+.profil{
+    position: relative; top: 5px; right: 2%;
+    border-radius: 20px 50px ;
+
+}
+.container{
+    background-color: #1B263B;
+    border-radius: 38px;
+}
+.col{
+    background-color: #1B263B;
+    border-radius: 38px;
+}
+
+body {
+    background-color: #e2e8f0;
+    padding: 20px
+}
+
+.breadcrumb {
+    background-color: #c5cee4
+}
+
+.breadcrumb a {
+    text-decoration: none
+}
+
+
+p {
+    margin: 0
+}
+
+.d-flex a {
+    text-decoration: none;
+    color: #686868
+}
+
+
+
+.txt{
+    color: #FFFFFF;
+    font-family: Merriweather;
+    font-size: 38px;
+    line-height: 49px;
+}
+
+.upload-btn-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+  }
+  
+  .btn {
+    border: 2px solid gray;
+    color: gray;
+    background-color: white;
+    padding: 8px 20px;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .upload-btn-wrapper input[type=file] {
+    font-size: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+  }
+
+
+  .form-input img {
+   width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom:30px;
+    border-radius: 50%;
+    border-style: solid;
+    border-color: rgb(255, 255, 255);
+  }
+  

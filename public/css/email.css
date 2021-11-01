@@ -1,0 +1,29 @@
+.txt-email{
+    color: #E5EBF2;
+    font-family: Droid Serif;
+    font-size: 26px;
+    line-height: 33px;
+    width: 309px;
+}
+
+.card{
+    background-color: #1B263B;
+}
+.pare2{
+    width: 230px;
+    height: 95px;
+}
+.txt-btn{
+    color: #FFFFFF;
+    font-family: Playfair Display SC;
+    font-size: 18px;
+    line-height: 23px;
+    width: 160px;
+    
+}
+.btn{
+  background-color: #B76E1F;
+  border-radius: 38px;
+  width: 190px;
+  height: 36px;
+  }

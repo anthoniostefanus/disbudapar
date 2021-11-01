@@ -1,0 +1,39 @@
+.card{
+    background-color: #1B263B;
+    height: 379px;
+}
+.verifikasi{
+    color: #F2F2F2;
+    font-family: Cardo;
+    font-size: 34px;
+    letter-spacing: 2px;
+    line-height: 44px;
+}
+.verifikasi1{
+    color: #FEFEFE;
+  font-family: Cardo;
+  font-size: 23px;
+  letter-spacing: 2px;
+  line-height: 29px;
+  opacity: 0.45;
+}
+.email{
+  width: 119px;
+  height: 119px;
+
+}
+.btn{
+    background-color: #B76E1F;
+    border-radius: 38px;
+    width: 140px;
+    height: 36px;
+    position: absolute; left:41%; 
+}
+.txt-verifikasi{
+    color: #FFFFFF;
+  font-family: Playfair Display SC;
+  font-size: 18px;
+  line-height: 23px;
+  position: absolute; top:5px; left:11%; 
+
+  }

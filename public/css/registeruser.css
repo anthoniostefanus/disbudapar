@@ -1,0 +1,24 @@
+.container{
+    width: 80%;
+    height: 55%;
+    background-color: #1B263B;
+}
+
+.card{
+    background-color: #E0E1DD;
+    width: 100%;
+    height: 93%;
+    position: relative;top: 5%;
+}
+.pare{
+    width: 20%;
+    height: 10%;
+}
+.txt-header{
+    color: #030404;
+    font-family: Domine;
+    font-size: 39px;
+    letter-spacing: 2px;
+    line-height: 50px;
+    width: 60%;
+}
