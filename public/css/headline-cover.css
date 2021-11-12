@@ -1,0 +1,37 @@
+.headline-box {
+    background-color: #1B263B;
+    height: fit-content;
+    position: relative;
+    width: 100%;
+}
+
+table{
+    width: 100%;
+}
+
+tr{
+    vertical-align: middle;
+}
+
+.logo-poin, .logo-insta, .logo-fb{
+    width: 10%;
+    padding-left: 2%;
+}
+
+.headline-street{
+    width: 70%;
+}
+
+.fb, .ig, .poin{
+    width: 28px;
+    height: 28x;
+    vertical-align: middle;
+}
+
+.jl{
+    color: rgba(231, 235, 238, 0.63);
+    font-family: Merriweather;
+    font-size: 20px;
+    letter-spacing: 2px;
+    text-align: left;
+}

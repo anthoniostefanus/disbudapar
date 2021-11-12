@@ -188,7 +188,7 @@ return [
     */
 
     'use_route_url' => false,
-    'dashboard_url' => 'home',
+    'dashboard_url' => 'dashboard',
     'logout_url' => 'logout',
     'login_url' => 'login',
     'register_url' => 'register',
@@ -255,8 +255,21 @@ return [
         ],
         [
             'text' => 'Berita',
-            'url'  => '/berita',
-            'icon'  => 'fas fa-newspaper',
+            'icon' => 'fas fa-newspaper',
+            'submenu' => [
+                [
+                    'text' => 'Berita Ekonomi Kreatif',
+                    'url'  => '/beritaekraf',
+                ],
+                [
+                    'text' => 'Berita Pariwisata',
+                    'url'  => '/beritapariwisata',
+                ],
+                [
+                    'text' => 'Berita Salatiga',
+                    'url'  => '/beritasalatiga',
+                ],
+            ]
         ],
         [
             'text' => 'Vidio',

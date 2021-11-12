@@ -19,7 +19,8 @@ class Vidio extends Model
     protected $primaryKey = 'id';
     // protected $guarded
     protected $fillable = [
-        'link',
+        'link1',
+        'link2',
         'created_at',
         'updated_at',
     ];

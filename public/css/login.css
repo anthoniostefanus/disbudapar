@@ -1,0 +1,50 @@
+.main-login{
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 5%;
+}
+
+.pict-main-login{
+  width: 75%;
+  height: 75%;
+}
+
+h1, h2{
+  color: #F2F2F2;
+  font-family: Cardo;
+  letter-spacing: 4px;
+  line-height: 44px;
+  text-align: center;
+}
+
+input{
+  border-radius: 3px;
+  text-align: center;
+  font-size: 64pt;
+  width: 95%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.main-form-login{
+  background-color: #1B263B;
+}
+
+.side-input-field{
+  width: 26px;
+  height: 26px;
+}
+
+.row-username{
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+.row-password{
+    margin-bottom: 5%;
+}
+.pare2{
+  width: 35%;
+  height:  100px;
+}

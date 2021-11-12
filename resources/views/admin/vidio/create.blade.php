@@ -11,9 +11,14 @@
             <div class="card">
                 <div class="card-body">
                     <div class="form-group">
-                        <label for="link">Link</label>
-                        <input type="text" class="form-control @error('link') is-invalid @enderror" id="link" placeholder="Masukkan link Vidio" name="link" value="{{old('link')}}">
-                        @error('link') <span class="text-danger">{{$message}}</span> @enderror
+                        <label for="link1">Link 1</label>
+                        <input type="text" class="form-control @error('link1') is-invalid @enderror" id="link1" placeholder="Masukkan link Vidio" name="link1" value="{{old('link1')}}">
+                        @error('link1') <span class="text-danger">{{$message}}</span> @enderror
+                    </div>
+                    <div class="form-group">
+                        <label for="link2">Link 2</label>
+                        <input type="text" class="form-control @error('link2') is-invalid @enderror" id="link2" placeholder="Masukkan link Vidio" name="link2" value="{{old('link2')}}">
+                        @error('link2') <span class="text-danger">{{$message}}</span> @enderror
                     </div>
                 </div>
                 <div class="card-footer">

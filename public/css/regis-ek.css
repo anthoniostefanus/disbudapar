@@ -1,0 +1,81 @@
+body{
+    font-family: sans-serif;
+}
+
+.main-container{
+    background-color: #1B263B;
+    height: fit-content;
+}
+
+.banner-ekraf {
+    background-color: #B76E1F;
+    border-bottom-left-radius: 100%;
+    border-bottom-right-radius: 100%;
+}
+
+.row{
+    margin-bottom: 5%;
+}
+
+h1{
+    color: #ECF0F3;
+    font-family: Merriweather;
+    font-size: 32pt;
+    letter-spacing: 2px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.main-content{
+    background-color: #E0E1DD;
+    border-radius: 50px;
+    width: 60%;
+    height: fit-content;
+}
+
+form{
+    margin-top: 5%;
+}
+
+label{
+    color: #47525E;
+    font-family: Merriweather;
+    font-size: 16pt;
+    text-align: left;
+}
+
+input, select, textarea{
+    border-radius: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+    font-size: 64pt;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 7%;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+}
+
+textarea{
+    text-align: left;
+    vertical-align: middle;
+}
+
+.daftar{
+    background-color: #B76E1F;
+    border-radius: 10%;
+    width: fit-content;
+    height: fit-content;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    color: #060707;
+    font-family: Bree Serif;
+    font-size: 20pt;
+    font-weight: 300;
+    line-height: 30pt;
+}
+

@@ -41,11 +41,12 @@ class UserController extends Controller
     {
         $request->validate([
             'name' => 'required',
+            'no_tlp' => 'required',
             'email' => 'required|email|unique:users,email',
             'password' => 'required|confirmed'
         ]);
         $array = $request->only([
-            'name', 'email', 'password'
+            'name','no_tlp','email','password'
         ]);
         $array['password'] = bcrypt($array['password']);
         $user = User::create($array);
@@ -91,11 +92,13 @@ class UserController extends Controller
     {
         $request->validate([
             'name' => 'required',
+            'no_tlp' => 'required',
             'email' => 'required|email|unique:users,email,'.$id,
             'password' => 'sometimes|nullable|confirmed'
         ]);
         $user = User::find($id);
         $user->name = $request->name;
+        $user->no_tlp = $request->no_tlp;
         $user->email = $request->email;
         if ($request->password) $user->password = bcrypt($request->password);
         $user->save();

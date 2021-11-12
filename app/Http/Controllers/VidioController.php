@@ -40,10 +40,11 @@ class VidioController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'link' => 'required'
+            'link1' => 'required',
+            'link2' => 'required'
         ]);
         $array = $request->only([
-            'link'
+            'link1', 'link2' 
         ]);
         $vidio = Vidio::create($array);
         return redirect()->route('vidio.index')
@@ -87,10 +88,12 @@ class VidioController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            'link' => 'required'
+            'link1' => 'required',
+            'link2' => 'required'
         ]);
         $vidio = Vidio::find($id);
-        $vidio->link = $request->link;
+        $vidio->link1 = $request->link1;
+        $vidio->link2 = $request->link2;
         $vidio->save();
         return redirect()->route('vidio.index')
             ->with('success_message', 'Berhasil mengubah vidio');

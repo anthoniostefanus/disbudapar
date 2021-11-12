@@ -17,6 +17,11 @@
                         @error('name') <span class="text-danger">{{$message}}</span> @enderror
                     </div>
                     <div class="form-group">
+                        <label for="exampleInputName">No telepon</label>
+                        <input type="text" class="form-control @error('no_tlp') is-invalid @enderror" id="exampleInputNo_tlp" placeholder="No Telepon" name="no_tlp" value="{{$user->no_tlp ?? old('no_tlp')}}">
+                        @error('no_tlp') <span class="text-danger">{{$message}}</span> @enderror
+                    </div>
+                    <div class="form-group">
                         <label for="exampleInputEmail">Email address</label>
                         <input type="email" class="form-control @error('email') is-invalid @enderror" id="exampleInputEmail" placeholder="Masukkan Email" name="email" value="{{$user->email ?? old('email')}}">
                         @error('email') <span class="text-danger">{{$message}}</span> @enderror

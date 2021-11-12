@@ -1,226 +1,234 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8"/>
-        <title>Simpel Pare</title>
-        <link rel="stylesheet" type="text/css" href="{{ asset('/css/homeuser.css') }}">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    </head>
-    
-    <body>
-    <div class ="container">
-      <!--Header-->
-      <div class = "header-box-blu">
-        <img class= "poin" src= "{{ ('/img/poin.png ') }}">
-        <p class ="jl"> Jl. Diponegoro No.37, Salatiga </p>
-        <img class= "fb" src= "{{ ('/img/fb.png ') }}">
-        <img class= "ig" src= "{{ ('/img/ig.png ') }}">
-      <div class="box-abu"></div>
-      </div>
-      <!--//Header-->
+<link rel="stylesheet" type="text/css" href="{{ asset('/css/general-layout.css') }}">
+<title>Sistem Informasi Pelayanan Pariwisata dan Ekonomi Kreatif Salatiga</title>
 
-      <!--Navbar-->
-      <div class="nav-box">
-            <img class= "salatiga" src= "{{ ('/img/salatiga.png') }}">
-            <div class="nav-box-menu">
-              <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="/home1">&emsp;Beranda&emsp;</a>
-                    </li>
+@include('headline-blue.headline-blue')
+@include('navigation bar.navigation-bar')
 
-                    <li class="nav-item">
-                      <a class="nav-link" href="{{ url('home1#scrollBerita') }}">Berita&emsp;</a>
-                    </li>
-
-                    <li class="nav-item">
-                      <a class="nav-link" href="{{ url('home1#scrollVidio') }}">Vidio&emsp;</a>
-                    </li>
-
-                    <li class="nav-item">
-                      <a class="nav-link" href="{{ url('home1#scrollKontak') }}">Kontak</a>
-                    </li>
-                  </ul>
-                </div>
-              </nav>
-            </div>
-          </div>
-      </div>
-      <!--//Navbar-->
-
-      <!--carousel -->
-      <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
-          <div class="carousel-item active" data-bs-interval="7000">
-            <img  class= "pare" src="{{ ('img/pare.png ') }}" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block"></div>
-          </div>
-            
-          <div class="carousel-item" data-bs-interval="7000">
-            <img src="..." class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block"></div>
-          </div>
-
-          <div class="carousel-item">
-            <img src="..." class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-          </div>
+            <div class="carousel-item active" data-interval="1500">
+                <img class="d-block w-100" src="{{asset ('img/pare.png ') }}" alt="First slide">
+            </div>
+        
+            <div class="carousel-item" data-interval="1500">
+                <img class="d-block w-100" src="{{asset ('img/kota.png ') }}" alt="Second slide">
+            </div>
+        
+            <div class="carousel-item" data-interval="1500">
+                <img class="d-block w-100" src="{{asset ('img/ragil-gg.png ') }}" alt="Third slide">
+            </div>
         </div>
-      </div>
-      <!--/carousel -->
-      
-      <!--Menu -->
-      <!--Menu Login -->
-      <div class="login-box">
-        <img class= "login" src= "{{ ('img/login.png ') }}">
-        <a class="txt-login" style="text-decoration:none;" href="{{ route('login') }}">{{ __('Login') }}</a>
-      </div>
-      <!--//Menu Login -->
-      
-      <!--Menu registrasi -->
-      <div class="register-box">
-        <img class= "regis" src= "{{ ('img/regis.png ') }}">
-        <a class="txt-register" style="text-decoration:none;"  href="{{ route('register') }}">{{ __('Register') }}</a>
-      </div>
-      <!--//Menu registrasi -->
-      
-      <!--Menu Kontak -->
-      <div class="kontak-box">
-        <img class= "login" src= "{{ ('img/kontak.png ') }}">
-        <p class ="txt-kontak"> Kontak </p>
-      </div>
-      <!--//Menu -->
+    </div>
 
-      <!--Berita-->
-      <div class ="berita">
-      <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
-        <h1 id="scrollBerita" class="h1">BERITA </h1>
-        <div class="card1">
-          <div class="row g-0">
-            <div class="col-md-4">
-              <img src="{{ ('img/pare.png ') }}" class="img-fluid rounded-start" alt="...">
+    <div class="container main-menu">
+        <div class="row">
+            <div class="col-md-4 d-flex justify-content-center">
+                <a href="{{ route('login') }}"><button class="main-button">
+                    <img class="back-img" src="{{asset ('img/login.png ') }}"/>
+                    <p class="label-menu">Masuk</p>
+                </button></a>
             </div>
 
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                <button type="button" class="btn btn-outline-secondary">Secondary</button>
-              </div>
+            <div class="col-md-4 d-flex justify-content-center">
+                <a href="{{ route('register') }}"><button class="main-button">
+                    <img class="back-img" src="{{asset ('img/regis.png ') }}">
+                    <p class="label-menu">Mendaftar</p>
+                </button></a>
             </div>
-          </div>
+
+            <div class="col-md-4 d-flex justify-content-center">
+                <a href="kontak"><button class="main-button">
+                    <img class="back-img" src="{{asset ('img/kontak.png ') }}">
+                    <p class="label-menu">Kontak</p>
+                </button></a>
+            </div>
         </div>
-</br>
-</br>
-        <div class="card2">
-          <div class="row g-0">
-            <div class="col-md-4">
-              <img src="{{ ('img/pare.png ') }}" class="img-fluid rounded-start" alt="...">
+
+    </div>
+
+    <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+    <div id="scrollBerita" class="container container-news">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Seputar Ekonomi Kreatif dan Pariwisata</h2>
             </div>
-            
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                <button type="button" class="btn btn-outline-secondary">Secondary</button>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
-      </div>
-      <!--//Berita-->
-     
-      <!--Vidio-->
-      <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
-            <div id="scrollVidio" class="box-vidio">
-                <h1 class="txtVidio">EKONOMI KREATIF </h1>
-                <iframe class="vidio1" width="500" height="335" src="https://www.youtube.com/embed/jQRVOtGYzxc?feature=player_embedded"></iframe>
-                
-                <iframe class="vidio2" width="500" height="335" src="https://www.youtube.com/embed/jQRVOtGYzxc?feature=player_embedded"></iframe>
-            </div>
-      </div> 
-      <!--Vidio-->
 
-      <!--Kontak-->
-      <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
-      <div class="box-kontak">
-        <h1 id="scrollKontak" class="txtKontak">KONTAK</h1>
-        <iframe class = "maps"src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.2847325827042!2d110.49792831477528!3d-7.3218798947158446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a7957460b7479%3A0x1fa65a28b6d6968d!2sDisbudpar%20Salatiga!5e0!3m2!1sid!2sid!4v1632035982501!5m2!1sid!2sid" style="border:0;" allowfullscreen=""></iframe>
-          <div class="box-txt"></div>
-      </div>
-      </div> 
-      <!--Kontak-->
-
-      <!--Footer-->
-      <div class="body my-">
-      <footer class="text-center text-lg-start border border-white mt-xl-5 pt-3">
-        <div class="container p-3">
-          <div class="row">
-            <div class="col-lg-3 col-md-6 mb-3 ">
-              <img class= "pare1" src= "{{ ('img/pare.png ') }}">
-            </div>
-            
-            <div class="txt-dekor col-lg-3 col-md-6 mb-3 ">
-              <h5 class="text-dark mb-4">Bantuan</h5>
-              <ul class="list-unstyled">
-                <li>
-                  <a href="/home1" style="text-decoration:none;" class="text-dark">Beranda</a>
-                </li>
-
-                <li>
-                  <a href="{{ url('home1#scrollBerita') }}" style="text-decoration:none;" class="text-dark">Berita</a>
-                </li>
-
-                <li>
-                  <a href="{{ url('home1#scrollVidio') }}" style="text-decoration:none;" class="text-dark">Vidio</a>
-                </li>
-
-                <li>
-                  <a href="{{ url('home1#scrollKontak') }}" style="text-decoration:none;" class="text-dark">Kontak</a>
-                </li>
-              </ul>
-            </div>
-            
-            <div class="col-lg-3 ">
-              <h5 class="text-dark mb-4 offset-1">Sign up to our newsletter</h5>
-              <div class="row justify-content-between">
-                <div class="form-outline form-white col-9  offset-1">
-                  <input type="email" id="form5Example2" class="form-control" placeholder="Email Address" >
-              </div>
-                <div class="col-2"> 
-                  <button type="submit" class="btn btn-outline-warning btn-block ">Subscribe</button>
+        <div class="row">
+            <div class="col-md-4 d-flex justify-content-center">
+                <div class="card" style="width: fit-content;">
+                    <div class="ctr-image">
+                        <img class="card-img-top" src="{{ ('/img/pare.png') }}" alt="Card image cap">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Pelaku Ekonomi Kreatif</h5>
+                        <p class="card-text">Ekonomi kreatif adalah salah satu sektor perekonomian yang menggunakan ide dan pengetahuan berkonsep ...</p>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">lanjutkan Membaca </button>
+                        <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLongTitle">Pelaku Ekonomi Kreatif</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                            <h6>Definisi Ekonomi Kreatif</h6>
+                            <p>Ekonomi kreatif adalah salah satu sektor perekonomian yang menggunakan ide dan pengetahuan berkonsep kreativitas 
+                                dari manusia yang berperan sebagai faktor produksi utamanya.</p>
+                            <p>Konsep perekonomian ini lebih mengutamakan kreativitas, ide, dan pengetahuan dari sumber daya manusianya.</p>
+                            <h6>Ciri-ciri Ekonomi Kreatif</h6>
+                            <p>Adapun ciri-ciri dari ekonomi kreatif yaitu :</p>
+                            <p>1. Ide dan gagasan sebagai ide utama oleh pelaku ekonomi.</p>
+                            <p>2. Adanya kreasi intelektual dalam sektor usahanya.</p>
+                            <p>3. Kegiatan usahanya bersifat terbuka dan tidak terbatas.</p>
+                            <p>4. Menghasilkan produk yang bernilai kreatif.</p>
+                            <p>5. Adanya kerja sama dari berbagai pihak.</p>
+                            <p>6. Memiliki konsep yang bersifat relatif dan mudah tergantikan.</p>
+                            <h6>Faktor Pendorong Ekonomi Kreatif</h6>
+                            <p>Ekonomi kreatif dapat terbentuk, tumbuh dan berkembang jika ada pendorongnya.
+                                Apa saja faktor-faktor yang mendorong terbentuk, tumbuh, dan berkembangnya ekonomi kreatif?</p>
+                            <h6>1. Kreativitas dalam Sektor Ekonomi</h6>
+                            <p>Membahas tentang ekonomi kreatif, tentu saja kreativitas harus ada dalam pembahasanya termasuk sebagai faktor pendorongnya.</p>
+                            <p>Kreativitas sendiri merupakan suatu proses mental seseorang dalam memunculkan ide dan gagasan yang sifatnya baru.</p>
+                            <p>Kreativitas yang ada dalam perekonomian biasanya memiliki tujuan untuk meningkatkan pemasukan dan hasil perekonomian.</p>
+                            <p>Objek dalam perekonomian ini umumnya berbentuk barang atau jasa kreatif hasil inovasi dan pemikiran manusia, sehingga perekonomian ini disebut sebagai ekonomi kreatif.</p>
+                            <h6>2. Teknologi Maju</h6>
+                            <p>Kemajuan teknologi adalah salah satu tumpuan dalam sektor perekonomian kreatif.</p>
+                            <p>Kemudahan akses yang dapat kamu ambil dari kemajuan teknologi dapat membantu perekonomian ini semakin maju.</p>
+                            <p>Jika dimanfaatkan dengan baik, teknologi dapat menekan kesulitan dan masalah yang ditemukan dalam proses perekonomian ini.</p>
+                            <p>Beberapa negara maju juga menggunakan kemajuan teknologi untuk menjalankan mode ekonomi kreatif seperti Jepang dan Amerika Serikat.</p>
+                            <h6>3. Tenaga Kerja</h6>
+                            <p>Tenaga kerja menjadi faktor pendorong utama dalam ekonomi kreatif.</p>
+                            <p>Hal ini dikarenakan manusia sebagai sumber daya yang menjadi penggerak perekonomian ini.</p>
+                            <p>Jika tenaga kerja yang menjadi sumber daya manusianya memadai dan berkualitas, maka perekonomian yang dijalankan juga akan berjalan dengan baik.</p>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                       
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
-        </div> 
 
-<!-- Copyright -->
-        <div class ="box-footer">
-        <div class="text-center p-3 border-top border-white text-white">© 2020 Copyright:
-          <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+            <div class="col-md-4 d-flex justify-content-center">
+                <div class="card card-center" style="width: fit-content;">
+                    <div class="ctr-image">
+                        <img class="card-img-top" src="{{ ('/img/pare.png') }}" alt="Card image cap">
+                    </div>
+                    <div class="card-body card-center">
+                        <h5 class="card-title title-cent">Seputar Simpel Pare</h5>
+                        <p class="card-text text-cent">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".simpel-example-modal-lg">lanjutkan Membaca </button>
+                        <div class="modal fade simpel-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLongTitle">Tentang Simpel Pare</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                            <h6>Definisi Simpel Pare</h6>
+                            <p>Ekonomi kreatif adalah salah satu sektor perekonomian yang menggunakan ide dan pengetahuan berkonsep kreativitas 
+                                dari manusia yang berperan sebagai faktor produksi utamanya.</p>
+                            <p>Konsep perekonomian ini lebih mengutamakan kreativitas, ide, dan pengetahuan dari sumber daya manusianya.</p>
+                            <h6>Ciri-ciri Ekonomi Kreatif</h6>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 d-flex justify-content-center">
+                <div class="card" style="width: fit-content;">
+                    <div class="ctr-image">
+                        <img class="card-img-top" src="{{ ('/img/pare.png') }}" alt="Card image cap">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Pariwisata Salatiga</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".par-example-modal-lg">lanjutkan Membaca </button>
+                        <div class="modal fade par-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLongTitle">Panduan Potensi Pembangunan Sektor Pariwisata dan Ekonomi Kreatif</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                            <p>Kementerian Pariwisata dan Ekonomi Kreatif/Badan Pariwisata dan Ekonomi Kreatif (Kemenparekraf/Baparekraf) Republik Indonesia terus berupaya untuk mengoptimalkan pembangunan sektor pariwisata dan ekonomi kreatif di Indonesia.</p>
+                            <p>Salah satu upaya yang dilakukan untuk pengembangan potensi sektor parekraf tersebut, adalah menyusun panduan perihal pembangunan pariwisata dan ekonomi kreatif di Indonesia.</p>
+                            <p>Berikut ini panduan potensi pembangunan pariwisata dan ekonomi kreatif menurut Kemenparekraf/Baparekraf RI:</p>
+                            <h6>Potensi Pembangunan Pariwisata</h6>
+                            <p>Sektor pariwisata telah lama menjadi tulang punggung dari ekonomi kreatif di Indonesia. Dalam rangka pembangunan pariwisata dan ekonomi kreatif, Kemenparekraf/Baparekraf membagi potensi sektor pariwisata atas 4 sub-bab antara lain:</p>
+                            <h6>1. Potensi pengembangan destinasi pariwisata</h6>
+                            <p>Destinasi pariwisata merupakan inti utama dari pembangunan pariwisata. Dalam pengembangannya, daya tarik wisata sebaiknya dibangun secara sinergis dengan memerhatikan fasilitas wisata, fasilitas umum, aksesibilitas/sarana prasarana.</p>
+                            <p>Tidak kalah penting, pembangunan pariwisata haruslah berbasis pemberdayaan masyarakat. Pemberdayaan ini harus mengadopsi sistem yang utuh dan berkelanjutan.</p>
+                            <p>Indonesia memiliki sejumlah potensi pembangunan pariwisata. Potensi ini sekaligus dapat menjadi kekuatan bangsa dalam pembangunan pariwisata dan ekonomi kreatif. Ragam potensi pariwisata tersebut antara lain:</p>
+                            <a href="https://kemenparekraf.go.id/ragam-pariwisata/Panduan-Potensi-Pembangunan-Sektor-Pariwisata-dan-Ekonomi-Kreatif" target="_blank"><button class="btn btn-primary">Lanjutkan</button></a>
+                            </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+    </div>
+    </div>
+
+    <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+    <div id="scrollVidio" class="container video-box">
+        <div class="row title-video-section">
+            <div class="col-md-12">
+                <h1 class="video-title">Seputar Ekonomi Kreatif dan Pariwisata</h1>
+            </div>
         </div>
-      </footer>
-    </div> 
-<!--//Copyright -->
 
-<!--//Footer-->
+        <div class="row d-flex ref-video">
+            <div class="col-lg-6 justify-content-center">
+                
+                 @foreach($vidio as $vidio)
+                 <iframe width="100%" height="300px" src="{{$vidio->link1}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                      
+            </div>
 
-  </div>
+            <div class="col-lg-6 justify-content-center">
+                 <iframe width="100%" height="300px" src="{{$vidio->link2}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                 @endforeach
+            </div>
+        </div>
+    </div>
+    </div>
+    
+    <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+    <div id="scrollKontak" class="container peta">
+        <div class="row judul-peta">
+            <h1>Kontak</h1>
+        </div>
+    </div>
+    </div>
 
-       
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>  
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" 
-        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" 
-        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>       
-    </body>
+        <div class="row peta-disbudpar">
+            <div class="col-md-12">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d989.3211860858582!2d110.49956982916581!3d-7.321878569500311!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a7957460b7479%3A0x1fa65a28b6d6968d!2sDisbudpar%20Salatiga!5e0!3m2!1sen!2sid!4v1635752000462!5m2!1sen!2sid" width="100%" height="500px" style="border:0;" allowfullscreen="" loading="lazy">
+                    Dinas Kebudayaan dan Pariwisata Salatiga
+                </iframe>
+            </div>
+        </div>
+    </div>
 
-</html>
+    @include('component.js.main')
+    @include('footer.footer')
+
+           

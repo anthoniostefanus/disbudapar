@@ -13,9 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('homeuser');
-});
+Route::get('/', [App\Http\Controllers\HomeUserController::class, 'index']);
 
 Route::get('/home', function () {
     return view('dashboard');
@@ -23,9 +21,23 @@ Route::get('/home', function () {
 Route::get('/profile', function () {
     return view('profile');
 });
+Route::get('/kontak', function () {
+    return view('maps.maps');
+});
+Route::get('/formulir', function () {
+    return view('formulir.main-formulir');
+});
+Route::resource('formulirekraf', \App\Http\Controllers\EkrafUserController::class)
+    ->middleware('auth');
+
+Route::get('/formulirpar', function () {
+    return view('formulir.regis-par');
+});
 Route::get('/loginadmin', function () {
     return view('vendor.adminlte.auth.login');
 });
+
+Route::get('/ekraf', [App\Http\Controllers\EkrafController::class, 'index'])->name('home');
 
 
 Auth::routes();
@@ -33,10 +45,8 @@ Auth::routes(['verify' => true]);
 Route::get('/logout', [App\Http\Controllers\Auth\LoginController::class, 'logout'])->name('logout');
 
 
-
-
-
 Route::get('/beranda', [App\Http\Controllers\HomeController::class, 'user'])->name('beranda');
+Route::get('/beranda', [App\Http\Controllers\BerandaUserController::class, 'index'])->name('beranda');
 
 Route::group(['middleware' => ['auth','ceklevel:Admin']],function(){  
 Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
@@ -46,8 +56,11 @@ Route::resource('users', \App\Http\Controllers\UserController::class)
 Route::get('/ekraf', [App\Http\Controllers\EkrafController::class, 'index'])->name('home');
 Route::get('/pariwisata', [App\Http\Controllers\PariwisataController::class, 'index'])->name('home');
 Route::get('/data', [App\Http\Controllers\DatadiriController::class, 'index'])->name('home');
-
-Route::resource('berita', \App\Http\Controllers\BeritaController::class)
+Route::resource('beritaekraf', \App\Http\Controllers\BeritaEkrafController::class)
+    ->middleware('auth');
+Route::resource('beritapariwisata', \App\Http\Controllers\BeritaPariwisataController::class)
+    ->middleware('auth');
+Route::resource('beritasalatiga', \App\Http\Controllers\BeritaSalatigaController::class)
     ->middleware('auth');
 Route::resource('kritiksaran', \App\Http\Controllers\KritiksaranController::class)
     ->middleware('auth');

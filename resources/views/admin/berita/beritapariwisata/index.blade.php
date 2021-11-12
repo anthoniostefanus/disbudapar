@@ -1,38 +1,38 @@
 @extends('adminlte::page')
-@section('title', 'List Berita')
+@section('title', 'List Berita pariwisata')
 @section('content_header')
-    <h1 class="m-0 text-dark">List Berita</h1>
+    <h1 class="m-0 text-dark">List Berita pariwisata</h1>
 @stop
 @section('content')
     <div class="row">
         <div class="col-12">
             <div class="card">
                 <div class="card-body">
-                    <a href="{{route('berita.create')}}" class="btn btn-primary mb-2">
+                    <a href="{{route('beritapariwisata.create')}}" class="btn btn-primary mb-2">
                         Tambah
                     </a>
                     <table class="table table-hover table-bordered table-stripped" id="example2">
                         <thead>
                         <tr>
                             <th>No</th>
-                            <th>Judul Berita</th>
-                            <th>Isi Berita</th>
-                            <th>Link</th>
+                            <th>Judul Berita pariwisata</th>
+                            <th>Isi Berita pariwisata</th>
+                            <th>Link pariwisata</th>
                             <th>Action</th>
                         </tr>
                         </thead>
                         <tbody>
-                        @foreach($berita as $key => $berita)
+                        @foreach($beritapariwisata as $key => $beritapariwisata)
                             <tr>
                                 <td>{{$key+1}}</td>
-                                <td>{{$berita->judul_berita}}</td>
-                                <td>{{$berita->isi_berita}}</td>
-                                <td>{{$berita->link}}</td>
+                                <td>{{$beritapariwisata->judul_beritapariwisata}}</td>
+                                <td>{{$beritapariwisata->isi_beritapariwisata}}</td>
+                                <td>{{$beritapariwisata->linkpariwisata}}</td>
                                 <td>
-                                    <a href="{{route('berita.edit', $berita)}}" class="btn btn-primary btn-xs">
+                                    <a href="{{route('beritapariwisata.edit', $beritapariwisata)}}" class="btn btn-primary btn-xs">
                                         Edit
                                     </a>
-                                    <a href="{{route('berita.destroy', $berita)}}" onclick="notificationBeforeDelete(event, this)" class="btn btn-danger btn-xs">
+                                    <a href="{{route('beritapariwisata.destroy', $beritapariwisata)}}" onclick="notificationBeforeDelete(event, this)" class="btn btn-danger btn-xs">
                                         Delete
                                     </a>
                                 </td>

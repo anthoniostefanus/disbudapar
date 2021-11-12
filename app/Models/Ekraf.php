@@ -18,15 +18,16 @@ class Ekraf extends Model
     protected $primaryKey = 'id';
     // protected $guarded
     protected $fillable = [
-        'nib',
-        'nama_usaha',
-        'tanggal_berdiri',
-        'no_telfon',
-        'deskripsi_produk',
+        'nama-usaha',
+        'tgl-mulai',
+        'nomor-nib',
+        'address',
+        'no-te',
+        'subj-usaha',
+        'desc',
         'omset',
         'aset',
-        'alasan_mendaftar',
-        'prestasi_usaha',
-        'nik',
+        'alasan',
+        'prestasi',
     ];
 }

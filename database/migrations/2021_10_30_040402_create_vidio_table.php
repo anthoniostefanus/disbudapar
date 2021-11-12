@@ -15,7 +15,8 @@ class CreateVidioTable extends Migration
     {
         Schema::create('vidio', function (Blueprint $table) {
             $table->id();
-            $table->string('link');
+            $table->string('link1');
+            $table->string('link2');
             $table->timestamps();
         });
     }

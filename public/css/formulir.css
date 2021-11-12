@@ -1,0 +1,44 @@
+.container-news{
+    margin-bottom: 5%;
+    align-items: center;
+}
+
+.card-img-top{
+    padding-left: auto;
+    padding-right: auto;
+}
+
+.ctr-image{
+    padding-top: 2%;
+    padding-bottom: 3%;
+    text-align: center;
+    width: 50%;
+    height: 50%;
+}
+
+.card{
+    margin-bottom: 10%;
+    align-items: center;
+}
+
+.card-body{
+    background-color: #1B263B;
+}
+
+.card-center{
+    background-color: #B76E1F;
+}
+
+.card-text, .card-title{
+    color: white;
+}
+
+h1{
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.title-cent, .text-cent{
+    color: black;
+}

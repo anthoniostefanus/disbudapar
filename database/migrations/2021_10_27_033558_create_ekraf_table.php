@@ -15,16 +15,17 @@ class CreateEkrafTable extends Migration
     {
         Schema::create('ekraf', function (Blueprint $table) {
             $table->id();
-            $table->string('nib', 18);
-            $table->string('nama_usaha');
-            $table->date('tanggal_berdiri');
-            $table->string('no_telfon');
-            $table->string('deskripsi_produk');
+            $table->string('nama-usaha');
+            $table->date('tgl-mulai');
+            $table->string('nomor-nib', 18);
+            $table->string('address');
+            $table->string('no-te');
+            $table->string('subj-usaha');
+            $table->string('desc');
             $table->string('omset');
             $table->string('aset');
-            $table->string('alasan_mendaftar');
-            $table->string('prestasi_usaha');
-            $table->string('nik', 16)->unique();
+            $table->string('alasan');
+            $table->string('prestasi');
             $table->timestamps();
         });
     }
