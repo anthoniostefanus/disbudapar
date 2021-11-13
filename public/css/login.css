@@ -19,7 +19,7 @@ h1, h2{
 
 input{
   border-radius: 3px;
-  text-align: center;
+  text-align: left;
   font-size: 64pt;
   width: 95%;
   height: 100%;
@@ -47,4 +47,31 @@ input{
 .pare2{
   width: 35%;
   height:  100px;
+}
+
+.h3-txt{
+  color: #F2F2F2;
+  font-family: Cardo;
+  font-size: 34px;
+  letter-spacing: 2px;
+  
+}
+.h5-txt{
+  color: #FEFEFE;
+  font-family: Cardo;
+  font-size: 23px;
+  letter-spacing: 2px;
+  opacity: 0.45;
+}
+.pare{
+  width: 35%;
+  height:  100px;
+}
+.txt-header{
+  color: #030404;
+  font-family: Domine;
+  font-size: 39px;
+  letter-spacing: 2px;
+  line-height: 50px;
+  width: 60%;
 }

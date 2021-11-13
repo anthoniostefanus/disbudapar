@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Vidio;
+use App\Models\Beritaekraf;
+use App\Models\Beritapariwisata;
+use App\Models\Beritasalatiga;
 
 class BerandaUserController extends Controller
 {
@@ -14,10 +17,11 @@ class BerandaUserController extends Controller
      */
     public function index()
     {
+        $beritaekraf = BeritaEkraf::all();
+        $beritapariwisata = BeritaPariwisata::all();
+        $beritasalatiga = BeritaSalatiga::all();
         $vidio = Vidio::all();
-        return view('user.home', [
-            'vidio' => $vidio
-        ]);
+        return view('user.home', ['vidio' => $vidio],  compact('beritaekraf', 'vidio', 'beritapariwisata', 'beritasalatiga'));
     }
 
     /**

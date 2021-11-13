@@ -34,19 +34,20 @@
                 <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
                     <h6 class="text-uppercase font-weight-bold mb-4">Menu Utama</h6>
                     <ul class="list-unstyled mb-0">
-                        <li class="mb-2"><a href="#" class="text-muted">Masuk</a></li>
-                        <li class="mb-2"><a href="#" class="text-muted">Registrasi</a></li>
-                        <li class="mb-2"><a href="#" class="text-muted">Kontak</a></li>
+                        <li class="mb-2"><a href="{{ route('login') }}"class="text-muted">Masuk</a></li>
+                        <li class="mb-2"><a href="{{ route('register') }}"class="text-muted">Registrasi</a></li>
+                        <li class="mb-2"><a href="kontak" class="text-muted">Kontak</a></li>
                     </ul>
                 </div>
 
                 <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
                     <h6 class="text-uppercase font-weight-bold mb-4">Menu</h6>
                     <ul class="list-unstyled mb-0">
-                        <li class="mb-2"><a href="#" class="text-muted">Beranda</a></li>
-                        <li class="mb-2"><a href="#" class="text-muted">Berita</a></li>
-                        <li class="mb-2"><a href="#" class="text-muted">Vidio</a></li>
-                        <li class="mb-2"><a href="#" class="text-muted">Hubungi Kami</a></li>
+                        <li class="mb-2"><a href="/" class="text-muted">Beranda</a></li>
+                        <li class="mb-2"><a href="{{ url('/#scrollBerita') }}" class="text-muted">Informasi</a></li>
+                        <li class="mb-2"><a href="{{ url('/#scrollVidio') }}" class="text-muted">Vidio</a></li>
+                        <li class="mb-2"><a href="{{ url('/#scrollKontak') }}" class="text-muted">Kontak</a></li>
+                        <li class="mb-2"><a href="{{ url('/#scrollKontak') }}" class="text-muted">Hubungi Kami</a></li>
                     </ul>
                 </div>
 

@@ -16,12 +16,12 @@
         <div class="col-md-4 d-flex justify-content-center">
             <div class="card" style="width: fit-content;">
                 <div class="ctr-image">
-                    <img class="card-img-top" src="{{ ('/img/icon/Tv.png') }}" alt="Card image cap">
+                    <img class="card-img-top" src="{{ ('/img/formekraf.png') }}" alt="Card image cap">
                 </div>
                 <div class="card-body">
                     <h5 class="card-title">Formulir Ekonomi Kreatif</h5>
                     <p class="card-text">Sektor usaha yang bergerak dibidang ekonomi kreatif</p>
-                    <a href="{{route('formulirekraf.create')}}" class="btn btn-primary mb-2">
+                    <a href="{{route('formulirekraf.create')}}" class="btn btn-warning mb-2">
                         Ayo Mendaftar
                     </a>
 </div>
@@ -31,12 +31,12 @@
         <div class="col-md-4 d-flex justify-content-center">
             <div class="card card-center" style="width: fit-content;">
                 <div class="ctr-image">
-                    <img class="card-img-top" src="{{ ('/img/icon/Tv.png') }}" alt="Card image cap">
+                    <img class="card-img-top" src="{{ ('/img/formpar.png') }}" alt="Card image cap">
                 </div>
                 <div class="card-body card-center">
                     <h5 class="card-title title-cent">Formulir Pariwisata</h5>
                     <p class="card-text text-cent">Sektor usaha yang bergerak dibidang pariwisata Salatiga</p>
-                    <a href="formulirpar" class="btn btn-primary btn-cent">Ayo Mandaftar!</a>
+                    <a href="{{route('formulirpariwisata.create')}}" class="btn btn-warning btn-cent">Ayo Mandaftar!</a>
                 </div>
             </div>
         </div>
@@ -44,7 +44,7 @@
         <div class="col-md-4 d-flex justify-content-center">
             <div class="card" style="width: fit-content;">
                 <div class="ctr-image">
-                    <img class="card-img-top" src="{{ ('/img/icon/Tv.png') }}" alt="Card image cap">
+                    <img class="card-img-top" src="{{ ('/img/formkur.png') }}" alt="Card image cap">
                 </div>
                 <div class="card-body">
                     <h5 class="card-title">Pinjaman Dana KUR</h5>

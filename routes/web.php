@@ -30,6 +30,9 @@ Route::get('/formulir', function () {
 Route::resource('formulirekraf', \App\Http\Controllers\EkrafUserController::class)
     ->middleware('auth');
 
+Route::resource('formulirpariwisata', \App\Http\Controllers\PariwisataUserController::class)
+->middleware('auth');
+
 Route::get('/formulirpar', function () {
     return view('formulir.regis-par');
 });

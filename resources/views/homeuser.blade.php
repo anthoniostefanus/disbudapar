@@ -6,16 +6,16 @@
 
     <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
-            <div class="carousel-item active" data-interval="1500">
+            <div class="carousel-item active" data-interval="7500">
                 <img class="d-block w-100" src="{{asset ('img/pare.png ') }}" alt="First slide">
             </div>
         
-            <div class="carousel-item" data-interval="1500">
-                <img class="d-block w-100" src="{{asset ('img/kota.png ') }}" alt="Second slide">
+            <div class="carousel-item" data-interval="7500">
+                <img class="d-block w-100" src="{{asset ('img/sal.png ') }}" alt="Second slide">
             </div>
         
-            <div class="carousel-item" data-interval="1500">
-                <img class="d-block w-100" src="{{asset ('img/ragil-gg.png ') }}" alt="Third slide">
+            <div class="carousel-item" data-interval="7500">
+                <img class="d-block w-100" src="{{asset ('img/dis.png ') }}" alt="Third slide">
             </div>
         </div>
     </div>
@@ -58,13 +58,13 @@
             <div class="col-md-4 d-flex justify-content-center">
                 <div class="card" style="width: fit-content;">
                     <div class="ctr-image">
-                        <img class="card-img-top" src="{{ ('/img/pare.png') }}" alt="Card image cap">
+                        <img class="card-img-top" src="{{ ('/img/tentangekraf.png') }}" alt="Card image cap">
                     </div>
                     <div class="card-body">
                         <h5 class="card-title">Pelaku Ekonomi Kreatif</h5>
                         <p class="card-text">Ekonomi kreatif adalah salah satu sektor perekonomian yang menggunakan ide dan pengetahuan berkonsep ...</p>
                         <!-- Button trigger modal -->
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">lanjutkan Membaca </button>
+                        <button type="button" class="btn btn-warning" data-toggle="modal" data-target=".bd-example-modal-lg">lanjutkan Membaca </button>
                         <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                         <div class="modal-dialog modal-lg">
                         <div class="modal-content">
@@ -116,13 +116,13 @@
             <div class="col-md-4 d-flex justify-content-center">
                 <div class="card card-center" style="width: fit-content;">
                     <div class="ctr-image">
-                        <img class="card-img-top" src="{{ ('/img/pare.png') }}" alt="Card image cap">
+                        <img class="card-img-top" src="{{ ('/img/tentangsimpel.png') }}" alt="Card image cap">
                     </div>
                     <div class="card-body card-center">
                         <h5 class="card-title title-cent">Seputar Simpel Pare</h5>
                         <p class="card-text text-cent">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         <!-- Button trigger modal -->
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".simpel-example-modal-lg">lanjutkan Membaca </button>
+                        <button type="button" class="btn btn-warning" data-toggle="modal" data-target=".simpel-example-modal-lg">lanjutkan Membaca </button>
                         <div class="modal fade simpel-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                         <div class="modal-dialog modal-lg">
                         <div class="modal-content">
@@ -149,13 +149,13 @@
             <div class="col-md-4 d-flex justify-content-center">
                 <div class="card" style="width: fit-content;">
                     <div class="ctr-image">
-                        <img class="card-img-top" src="{{ ('/img/pare.png') }}" alt="Card image cap">
+                        <img class="card-img-top" src="{{ ('/img/tentangpar.png') }}" alt="Card image cap">
                     </div>
                     <div class="card-body">
                         <h5 class="card-title">Pariwisata Salatiga</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         <!-- Button trigger modal -->
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".par-example-modal-lg">lanjutkan Membaca </button>
+                        <button type="button" class="btn btn-warning" data-toggle="modal" data-target=".par-example-modal-lg">lanjutkan Membaca </button>
                         <div class="modal fade par-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                         <div class="modal-dialog modal-lg">
                         <div class="modal-content">
@@ -216,8 +216,7 @@
         <div class="row judul-peta">
             <h1>Kontak</h1>
         </div>
-    </div>
-    </div>
+    
 
         <div class="row peta-disbudpar">
             <div class="col-md-12">
@@ -226,6 +225,7 @@
                 </iframe>
             </div>
         </div>
+    </div>
     </div>
 
     @include('component.js.main')

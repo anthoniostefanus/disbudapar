@@ -15,16 +15,16 @@ class CreatePariwisataTable extends Migration
     {
         Schema::create('pariwisata', function (Blueprint $table) {
             $table->id();
-            $table->string('nib', 18);
-            $table->string('nama_usaha');
-            $table->date('tanggal_berdiri');
-            $table->string('no_telfon');
-            $table->string('deskripsi_obyek_wisata');
+            $table->string('nama-usaha');
+            $table->date('tgl-mulai');
+            $table->string('nomor-nib')->unique();
+            $table->string('address');
+            $table->string('no-te');
+            $table->string('desc');
             $table->string('omset');
             $table->string('aset');
-            $table->string('alasan_mendaftar');
-            $table->string('prestasi_usaha');
-            $table->string('nik', 16)->unique();
+            $table->string('alasan');
+            $table->string('prestasi');
             $table->timestamps();
         });
     }

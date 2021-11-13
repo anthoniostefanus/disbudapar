@@ -18,8 +18,9 @@
     padding-top: 2%;
     padding-bottom: 3%;
     text-align: center;
-    width: 70%;
+    width: 50%;
     height: 50%;
+    
 }
 
 .card{
@@ -75,7 +76,7 @@
 }
 
 .card-center{
-    background-color: #B76E1F;
+    background-color: #1B263B;
 }
 
 .card-text, .card-title{
@@ -89,7 +90,7 @@ h2{
 }
 
 .title-cent, .text-cent{
-    color: black;
+    color: white;
 }
 
 .video-title{

@@ -1,0 +1,80 @@
+.main-login{
+    justify-content: left;
+    text-align: left;
+    margin-bottom: 5%;
+  }
+
+  .gambar, .mancing{
+      vertical-align: middle;
+  }
+  
+  .pict-main-login{
+    width: 50%;
+    height: 50%;
+  }
+  
+  h1, h2{
+    color: #F2F2F2;
+    font-family: Cardo;
+    letter-spacing: 4px;
+    line-height: 44px;
+    text-align: center;
+  }
+  
+  input{
+    border-radius: 3px;
+    text-align: left;
+    font-size: 64pt;
+    width: 95%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .main-form-login{
+    background-color: #E0E1DD;
+  }
+  
+  .side-input-field{
+    width: 26px;
+    height: 26px;
+  }
+  
+  .row-username{
+    margin-top: 2%;
+    margin-bottom: 2%;
+  }
+  
+  .row-password{
+      margin-bottom: 5%;
+  }
+  .pare2{
+    width: 35%;
+    height:  100px;
+  }
+  
+  .h3-txt{
+    color: #F2F2F2;
+    font-family: Cardo;
+    font-size: 34px;
+    letter-spacing: 2px;
+    
+  }
+  .h5-txt{
+    color: #FEFEFE;
+    font-family: Cardo;
+    font-size: 23px;
+    letter-spacing: 2px;
+    opacity: 0.45;
+  }
+  .pare{
+    width: 35%;
+    height:  100px;
+  }
+  .txt-header{
+    color: #030404;
+    font-family: Domine;
+    font-size: 39px;
+    letter-spacing: 2px;
+   
+  }

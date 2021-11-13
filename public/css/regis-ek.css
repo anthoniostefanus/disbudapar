@@ -47,12 +47,10 @@ label{
 input, select, textarea{
     border-radius: 3px;
     padding-left: 10px;
-    padding-right: 10px;
-    text-align: center;
+    text-align: left;
     font-size: 64pt;
     width: 100%;
     height: 100%;
-    margin-bottom: 7%;
     margin-left: auto;
     margin-right: auto;
     border: none;
@@ -61,21 +59,5 @@ input, select, textarea{
 textarea{
     text-align: left;
     vertical-align: middle;
-}
-
-.daftar{
-    background-color: #B76E1F;
-    border-radius: 10%;
-    width: fit-content;
-    height: fit-content;
-    padding-right: 10px;
-    padding-left: 10px;
-    padding-top: 2px;
-    padding-bottom: 2px;
-    color: #060707;
-    font-family: Bree Serif;
-    font-size: 20pt;
-    font-weight: 300;
-    line-height: 30pt;
 }
 

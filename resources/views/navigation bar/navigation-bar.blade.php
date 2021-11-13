@@ -9,7 +9,7 @@
 
     <section id ="nav-bar">
         <nav class="navbar navbar-expand-lg navbar-light">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="/">
                 <img src="{{ asset('img/salatiga.png ') }}">
                 <strong>Simpel Pare</strong></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -19,19 +19,19 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Home</a>
+                        <a class="nav-link" href="/">Home</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url('#scrollBerita') }}">Informasi</a>
+                        <a class="nav-link" href="{{ url('/#scrollBerita') }}">Informasi</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url('#scrollVidio') }}">Vidio</a>
+                        <a class="nav-link" href="{{ url('/#scrollVidio') }}">Vidio</a>
                     </li>
                     
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url('#scrollKontak') }}">Kontak</a>
+                        <a class="nav-link" href="{{ url('/#scrollKontak') }}">Kontak</a>
                     </li>
 
                     <li class="nav-item">

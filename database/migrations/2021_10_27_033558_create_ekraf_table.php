@@ -17,7 +17,7 @@ class CreateEkrafTable extends Migration
             $table->id();
             $table->string('nama-usaha');
             $table->date('tgl-mulai');
-            $table->string('nomor-nib', 18);
+            $table->string('nomor-nib')->unique();
             $table->string('address');
             $table->string('no-te');
             $table->string('subj-usaha');

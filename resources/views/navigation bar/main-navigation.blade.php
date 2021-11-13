@@ -19,19 +19,19 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Home</a>
+                        <a class="nav-link" href="/beranda">Home</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Category</a>
+                        <a class="nav-link" href="{{ url('/beranda#scrollKategori') }}">Kategori</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Berita</a>
+                        <a class="nav-link" href="{{ url('/beranda#scrollBerita') }}">Berita</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Vidio</a>
+                        <a class="nav-link" href="{{ url('/beranda#scrollVidio') }}">Vidio</a>
                     </li>
 
                     <li class="nav-item">

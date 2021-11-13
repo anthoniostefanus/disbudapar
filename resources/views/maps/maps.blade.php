@@ -1,7 +1,7 @@
 <title>Kontak Kami | Simpel Pare</title>
 
 @include('headline-blue.headline-blue')
-@include('navigation bar.main-navigation')
+@include('navigation bar.navigation-bar')
 
 <div class="container map-menu">
     <div class="row map-row">

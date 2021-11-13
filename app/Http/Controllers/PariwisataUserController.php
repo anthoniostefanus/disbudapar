@@ -3,21 +3,18 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Ekraf;
+use App\Models\Pariwisata;
 
-class EkrafController extends Controller
+class PariwisataUserController extends Controller
 {
-    /**
+     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        $ekraf = Ekraf::all();
-        return view('admin.ekraf.index', [
-            'ekraf' => $ekraf
-        ]);
+        return view('formulir.main-formulir');
     }
 
     /**
@@ -27,7 +24,7 @@ class EkrafController extends Controller
      */
     public function create()
     {
-        return view('admin.ekraf.create');
+        return view('formulir.regis-par');
     }
     
 
@@ -42,21 +39,20 @@ class EkrafController extends Controller
         $request->validate([
             'nama-usaha' => 'required',
             'tgl-mulai' => 'required',
-            'nomor-nib' => ['required', 'string', 'min:13', 'unique:ekraf'],
+            'nomor-nib' => 'required',
             'address' => 'required',
-            'no-te' => ['required', 'string', 'min:13', 'max:13'],
-            'subj-usaha' => 'required',
+            'no-te' => 'required',
             'desc' => 'required',
             'omset' => 'required',
             'aset' => 'required',
             'alasan' => 'required',
             'prestasi' => 'required'
-
-          
         ]);
         $array = $request->only([
-            'nama-usaha', 'tgl-mulai', 'nomor-nib','address','no-te','subj-usaha','desc','omset','aset','alasan','prestasi'
+            'nama-usaha', 'tgl-mulai', 'nomor-nib','address','no-te','desc','omset','aset','alasan','prestasi'
         ]);
+        $pariwisata = Pariwisata::create($array);
+        return redirect()->route('formulirpariwisata.index');
         
     } 
 
@@ -79,7 +75,7 @@ class EkrafController extends Controller
      */
     public function edit($id)
     {
-      //
+       //
     }
 
     /**
@@ -91,7 +87,7 @@ class EkrafController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+       //
     }
 
     /**
@@ -102,6 +98,6 @@ class EkrafController extends Controller
      */
     public function destroy(Request $request, $id)
     {
-       //
+        //
     }
 }

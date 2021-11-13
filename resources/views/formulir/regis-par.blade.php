@@ -26,7 +26,9 @@
                     <div class="container main-content">
                         <div class="row">
                             <div class="col-md-12">
-                                <form method="POST">
+                            <form action="{{route('formulirpariwisata.store')}}" method="post">
+                            @csrf
+                      
                                     <div class="container">
                                         <div class="row">
                                             <div class="col-md-3">
@@ -57,7 +59,12 @@
                                             </div>
 
                                             <div class="col-md-8">
-                                                <input id="tgl-mulai" class="tanggalan" placeholder="Nama Usaha" type="date">
+                                            <input id="tgl-mulai" type="date" class="form-control @error('nama-usaha') is-invalid @enderror" name="tgl-mulai" value="{{ old('tgl-mulai') }}" required autocomplete="tgl-mulai" autofocus placeholder="Tanggal Mulai Usaha">
+                                            @error('tgl-mulai')
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                            @enderror
                                             </div>
                                         </div>
 
@@ -71,7 +78,12 @@
                                             </div>
 
                                             <div class="col-md-8">
-                                                <input id="nomor-nib" class="nib" placeholder="Nomor Ijin Berusaha" type="text">
+                                            <input id="nomor-nib" type="text" class="form-control @error('no-nib') is-invalid @enderror" name="nomor-nib" value="{{ old('nomor-nib') }}" required autocomplete="nomor-nib" autofocus placeholder="NIB">
+                                            @error('nomor-nib')
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                            @enderror
                                             </div>
                                         </div>
 
@@ -85,7 +97,12 @@
                                             </div>
 
                                             <div class="col-md-8">
-                                                <input id="address" class="addr-usaha" placeholder="Alamat Usaha" type="text">
+                                            <input id="address" type="text" class="form-control @error('address') is-invalid @enderror" name="address" value="{{ old('address') }}" required autocomplete="address" autofocus placeholder="Alamat Usaha">
+                                            @error('address')
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                            @enderror
                                             </div>
                                         </div>
 
@@ -99,7 +116,12 @@
                                             </div>
 
                                             <div class="col-md-8">
-                                                <input id="no-te" class="nomor-telepon" placeholder="Nomor Telepon" type="text">
+                                            <input id="no-te" type="text" class="form-control @error('no-te') is-invalid @enderror" name="no-te" value="{{ old('no-te') }}" required autocomplete="no-te" autofocus placeholder="No Telepone">
+                                            @error('no-te')
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                            @enderror
                                             </div>
                                         </div>
 
@@ -113,7 +135,7 @@
                                             </div>
 
                                             <div class="col-md-8">
-                                                <textarea id="desc" class="desc-proc" placeholder="Deskripsi Produk" type="text" rows="7" cols="50"></textarea>
+                                            <textarea id="desc" class="desc-proc" placeholder="Deskripsi Produk" type="text" name="desc" rows="7" cols="50"></textarea>
                                             </div>
                                         </div>
 
@@ -127,7 +149,12 @@
                                             </div>
 
                                             <div class="col-md-8">
-                                                <input id="omset" class="dapet-brp" placeholder="Omset" type="text">
+                                            <input id="omset" type="text" class="form-control @error('omset') is-invalid @enderror" name="omset" value="{{ old('omset') }}" required autocomplete="omset" autofocus placeholder="Omset">
+                                            @error('omset')
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                            @enderror
                                             </div>
                                         </div>
 
@@ -141,7 +168,12 @@
                                             </div>
 
                                             <div class="col-md-8">
-                                                <input id="aset" class="harta" placeholder="Aset" type="text">
+                                            <input id="aset" type="text" class="form-control @error('aset') is-invalid @enderror" name="aset" value="{{ old('aset') }}" required autocomplete="aset" autofocus placeholder="Aset">
+                                            @error('aset')
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                            @enderror
                                             </div>
                                         </div>
 
@@ -155,7 +187,12 @@
                                             </div>
 
                                             <div class="col-md-8">
-                                                <textarea id="reason" class="alasan" placeholder="Alasan Mendaftar" type="text" rows="7" cols="50"></textarea>
+                                            <input id="alasan" type="text" class="form-control @error('alasan') is-invalid @enderror" name="alasan" value="{{ old('alasan') }}" required autocomplete="alasan" autofocus placeholder="Alasan Mendaftar">
+                                            @error('alasan')
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                            @enderror
                                             </div>
                                         </div>
 
@@ -169,7 +206,12 @@
                                             </div>
 
                                             <div class="col-md-8">
-                                                <input id="prestasi" class="proficiat" placeholder="Prestasi Usaha" type="text">
+                                            <input id="prestasi" type="text" class="form-control @error('prestasi') is-invalid @enderror" name="prestasi" value="{{ old('prestasi') }}" required autocomplete="prestasi" autofocus placeholder="Prestasi Usaha (jika tidak ada ketik tidak)">
+                                            @error('prestasi')
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                            @enderror
                                             </div>
                                         </div>
 
@@ -197,7 +239,7 @@
                                             </div>
 
                                             <div class="col-md-8">
-                                                <button type="button" id="submit" class="daftar">
+                                            <button type="submit" class="btn btn-primary">
                                                     Registrasi
                                                 </button>
                                             </div>
