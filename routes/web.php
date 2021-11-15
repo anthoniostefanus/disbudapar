@@ -32,9 +32,11 @@ Route::resource('formulirekraf', \App\Http\Controllers\EkrafUserController::clas
 
 Route::resource('formulirpariwisata', \App\Http\Controllers\PariwisataUserController::class)
 ->middleware('auth');
+Route::resource('pinjaman-kur', \App\Http\Controllers\KurUserController::class)
+->middleware('auth');
 
-Route::get('/formulirpar', function () {
-    return view('formulir.regis-par');
+Route::get('/pinjaman', function () {
+    return view('formulir.pinjaman-kur');
 });
 Route::get('/loginadmin', function () {
     return view('vendor.adminlte.auth.login');

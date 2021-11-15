@@ -15,9 +15,17 @@ class CreateKurTable extends Migration
     {
         Schema::create('kur', function (Blueprint $table) {
             $table->id();
-            $table->string('judul_kritiksaran');
-            $table->string('nama');
-            $table->string('isi_kritiksaran');
+            $table->string('nama-lengkap');
+            $table->string('nik');
+            $table->string('no-tlp');
+            $table->string('Kelurahan');
+            $table->string('Kecamatan');
+            $table->string('rt');
+            $table->string('rw');
+            $table->string('address');
+            $table->string('jumlah-pinjaman');
+            $table->string('pinjaman');
+            $table->string('survei');
             $table->timestamps();
         });
     }

@@ -1,0 +1,46 @@
+body{
+    font-family: sans-serif;
+}
+
+.kur-formulir{
+    margin-bottom: 5%;
+}
+
+.backdrop{
+    background-color: #B76E1F;
+}
+
+h1,h2{
+    color: #E0E1DD;
+}
+
+p, label{
+    color: #E0E1DD;
+    font-family: Merriweather;
+}
+
+.masukan-datadiri{
+    width: 100%;
+    height: 100%;
+    color: #E0E1DD;
+}
+
+.input-data-kur{
+    border-radius: 3px;
+    text-align: left;
+    margin-bottom: 7%;
+}
+
+input{
+    color: #E0E1DD;
+    border: none;
+}
+
+.data-kur{
+    height: fit-content;
+
+}
+
+.data-diri-kur{
+    background-color: #1B263B;
+}

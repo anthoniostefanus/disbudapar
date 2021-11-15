@@ -1,3 +1,4 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Formulir | Simpel Pare</title>
 <link rel="stylesheet" type="text/css" href="{{ asset('/css/formulir.css') }}">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -49,7 +50,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Pinjaman Dana KUR</h5>
                     <p class="card-text">Pinjaman Dana Kredit Usaha Rakyat untuk menunjang usaha Masyarakat</p>
-                    <a href="#" class="btn btn-warning">Ayo Mandaftar!</a>
+                    <a href="{{route('pinjaman-kur.create')}}" class="btn btn-warning">Ayo Mandaftar!</a>
                 </div>
             </div>
         </div>

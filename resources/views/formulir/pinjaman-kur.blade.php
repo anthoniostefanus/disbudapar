@@ -1,158 +1,176 @@
-<DOCTYPE! html>
-<html>
-    <head>
-        <link rel="stylesheet" type="text/css" href="{{ asset('/css/pinjaman.css') }}">
-        <title>Pinjaman Dana KUR | Sistem Informasi Pelayanan Pariwisata dan Ekonomi Kreatif</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
-    </head>
+<link rel="stylesheet" type="text/css" href="{{ asset('/css/pinjaman-kur-bri.css') }}">
+<title>Pinjaman KUR</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+@include('headline-blue.headline-blue')
+@include('navigation bar.main-navigation')
 
-    <body>
-        <div class="container">
-            <div class="row">
-                <!--Main Form-->
-                <div class="col-md-8 main-form-kur">
-                    <form method="POST">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <h1>Profil Anda</h1>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-md-3">
-                                    <label>Nama Lengkap</label>
-                                </div>
-
-                                <div class="col-md-1">
-                                    <label>:</label>
-                                </div>
-
-                                <div class="col-md-8">
-                                    <input id="nama-legkap" class="full-name" type="text" placeholder="Nama Lengkap">
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-md-3">
-                                    <label>NIK</label>
-                                </div>
-
-                                <div class="col-md-1">
-                                    <label>:</label>
-                                </div>
-
-                                <div class="col-md-8">
-                                    <input id="nik-ktp" class="full-nik" type="text" placeholder="Nomor Induk Kependudukan">
-                                </div>
-
-                            </div>
-
-                            <div class="row">
-                                <div class="col-md-3">
-                                    <label>No Telepon</label>
-                                </div>
-
-                                <div class="col-md-1">
-                                    <label>:</label>
-                                </div>
-
-                                <div class="col-md-8">
-                                    <input id="nomor-call" class="telpun" type="text" placeholder="Nomor Telepon">
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-md-3">
-                                    <label>Alamat</label>
-                                </div>
-
-                                <div class="col-md-1">
-                                    <label>:</label>
-                                </div>
-
-                                <div class="col-md-4">
-                                    <input id="alamat-lengkap" class="full-addr" type="text" placeholder="Alamat Lengkap">
-                                </div>
-
-                                <div class="col-md-2">
-                                    <input id="rt-addr" class="nort-addr" type="text" placeholder="RT">
-                                </div>
-
-                                <div class="col-md-2">
-                                    <input id="rw-addr" class="norw-addr" type="text" placeholder="RW">
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-md-3">
-                                    <label><!--Blank Space--></label>
-                                </div>
-
-                                <div class="col-md-1">
-                                    <label><!--Blank Space--></label>
-                                </div>
-
-                                <div class="col-md-3">
-                                    <select name="city" class="city-user" required>
-                                        <option value="" disabled selected>Kota</option>
-                                    </select>
-                                </div>
-
-                                <div class="col-md-2">
-                                    <select name="Kecamatan" class="land-user" required>
-                                        <option value="" disabled selected>Kecamatan</option>
-                                    </select>
-                                </div>
-
-                                <div class="col-md-3">
-                                    <select name="vil-age" class="village-user" required>
-                                        <option value="" disabled selected>Kelurahan</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-md-3">
-                                    <label>Unggah Foto KTP</label>
-                                </div>
-
-                                <div class="col-md-1">
-                                    <label>:</label>
-                                </div>
-
-                                <div class="col-md-8">
-                                    <input id="e-ktp" class="pri-ktp" type="file" accept=".jpg,.gif,.png" >
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-md-3">
-                                    <label>Unggah Foto KTP Suami/Istri</label>
-                                </div>
-
-                                <div class="col-md-1">
-                                    <label>:</label>
-                                </div>
-
-                                <div class="col-md-8">
-                                    <input id="e-ktp2" class="pri-ktp2" type="file" accept=".jpg,.gif,.png" >
-                                </div>
-                            </div>
-
-                        </div>
-                    </form>
-                </div>
-                <!--End of Main Form-->
-
-                <div class="col-md-4">
-                    <h1>Bantuan Permodalan</h1>
-                    <button>Berikutnya</button>
-                </div>
-            </div>    
+<div class="container kur-formulir">
+    <div class="row row-cover">
+        <div class="col-md-5 backdrop">
+            <!--Isi disini ya mas buat sebelah kirinya-->
         </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.min.js" integrity="sha384-PsUw7Xwds7x08Ew3exXhqzbhuEYmA2xnwc8BuD6SEr+UmEHlX8/MCltYEodzWA4u" crossorigin="anonymous"></script>
-    </body>
-</html>
+
+        <div class="col-md-7 data-diri-kur">
+        <form action="{{route('pinjaman-kur.store')}}" method="post">
+                            @csrf
+                <div class="row input-data-kur">
+                    <div class="col-md-12">
+                        <h1>Pinjaman KUR</h1>
+                    </div>
+                </div>
+
+                <div class="row input-data-kur">
+                    <div class="col-md-12 data-kur">
+                    <input id="nama-lengkap" type="text" class="form-control @error('nama-lengkap') is-invalid @enderror" name="nama-lengkap" value="{{ old('nama-lengkap') }}" required autocomplete="nama-lengkap" autofocus placeholder="Nama lengkap">
+                    @error('nama-lengkap')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                    @enderror
+                    </div>
+                </div>
+
+                <div class="row input-data-kur">
+                    <div class="col-6 data-kur">
+                    <input id="nik" type="text" class="form-control @error('nik') is-invalid @enderror" name="nik" value="{{ old('nik') }}" required autocomplete="nik" autofocus placeholder="NIK">
+                    @error('nik')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                    @enderror
+                    </div>
+
+                    <div class="col-6 data-kur">
+                    <input id="no-tlp" type="text" class="form-control @error('no-tlp') is-invalid @enderror" name="no-tlp" value="{{ old('no-tlp') }}" required autocomplete="no-tlp" autofocus placeholder="No Telepon">
+                    @error('no-tlp')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                    @enderror
+                    </div>
+                </div>
+
+                <div class="row input-data-kur">
+                    <div class="col-4 data-kur">
+                    <input id="Kelurahan" type="text" class="form-control @error('Kelurahan') is-invalid @enderror" name="Kelurahan" value="{{ old('Kelurahan') }}" required autocomplete="Kelurahan" autofocus placeholder="Kelurahan">
+                    @error('Kelurahan')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                    @enderror
+                    </div>
+
+                    <div class="col-4 data-kur">
+                    <input id="Kecamatan" type="text" class="form-control @error('Kecamatan') is-invalid @enderror" name="Kecamatan" value="{{ old('Kecamatan') }}" required autocomplete="Kecamatan" autofocus placeholder="Kecamatan">
+                    @error('Kecamatan')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                    @enderror
+                    </div>
+
+                    <div class="col-2 data-kur">
+                    <input id="rt" type="text" class="form-control @error('rt') is-invalid @enderror" name="rt" value="{{ old('rt') }}" required autocomplete="rt" autofocus placeholder="RT">
+                    @error('rt')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                    @enderror
+                    </div>
+
+                    <div class="col-2 data-kur">
+                    <input id="rw" type="text" class="form-control @error('rw') is-invalid @enderror" name="rw" value="{{ old('rw') }}" required autocomplete="rw" autofocus placeholder="RW">
+                    @error('rw')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                    @enderror
+                    </div>
+                </div>
+
+                <div class="row input-data-kur">
+                    <div class="col-md-12 data-kur">
+                    <input id="address" type="text" class="form-control @error('address') is-invalid @enderror" name="address" value="{{ old('address') }}" required autocomplete="address" autofocus placeholder="Alamat Rumah">
+                        @error('address')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                             </span>
+                    @enderror
+                    </div>
+                </div>
+
+                <div class="row input-data-kur">
+                    <div class="col-md-4 data-kur">
+                        <p>Masukan KTP</p>
+                    </div>
+
+                    <div class="col-md-1 data-kur">
+                        <p>:</p>
+                    </div>
+
+                    <div class="col-md-7 data-kur">
+                        <input class="masukan-datadiri" type="file" required>
+                    </div>
+                </div>
+
+                <div class="row input-data-kur">
+                    <div class="col-md-4 data-kur">
+                        <p>Masukan KTP Pasangan</p>
+                    </div>
+
+                    <div class="col-md-1 data-kur">
+                        <p>:</p>
+                    </div>
+
+                    <div class="col-md-7 data-kur">
+                        <input class="masukan-datadiri" type="file">
+                    </div>
+                </div>
+
+                <div class="row input-data-kur">
+                    <div class="col-md-12 data-kur">
+                    <input id="jumlah-pinjaman" type="text" class="form-control @error('jumlah-pinjaman') is-invalid @enderror" name="jumlah-pinjaman" value="{{ old('jumlah-pinjaman') }}" required autocomplete="jumlah-pinjaman" autofocus placeholder="Masukan Jumlah Pinjaman">
+                        @error('jumlah-pinjaman')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                             </span>
+                    @enderror
+                    </div>
+                </div>
+
+                <div class="row input-data-kur">
+                    <div class="col-md-12 data-kur">
+                    <h2>Apakah anda sedang ada pinjaman di bank?</h2>
+                     <div class="col-4 data-kur">
+                        <select id="pinjaman" class="form-control @error('pinjaman') is-invalid @enderror" name="pinjaman" value="{{ old('pinjaman') }}" required autocomplete="pinjaman" autofocus>
+                        <option value="" disabled selected>Pilih YA atau TIDAK</option>
+                        <option value="Ya">Ya</option>
+                        <option value="Tidak">Tidak</option>
+                    </select>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="row input-data-kur">
+                    <div class="col-md-12 data-kur">
+                        <h2>Dengan ini saya bersedia disurvey oleh pihak bank</h2>
+                        <div class="col-4 data-kur">
+                        <select id="survei" class="form-control @error('survei') is-invalid @enderror" name="survei" value="{{ old('survei') }}" required autocomplete="survei" autofocus>
+                        <option value="" disabled selected>Pilih YA atau TIDAK</option>
+                        <option value="Ya">Ya</option>
+                        <option value="Tidak">Tidak</option>
+                    </select>
+                    </div>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                <button type="submit" class="btn btn-primary">
+                Daftar
+                </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@include('footer.main-footer')
