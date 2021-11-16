@@ -24,10 +24,10 @@
                                 <td>{{$pariwisata->nib}}</td>
                                 <td>{{$pariwisata->nama_usaha}}</td>
                                 <td>
-                                    <a href="{{route('users.edit', $user)}}" class="btn btn-primary btn-xs">
+                                    <a href="{{route('pariwisata.edit', $pariwisata)}}" class="btn btn-primary btn-xs">
                                         Edit
                                     </a>
-                                    <a href="{{route('users.destroy', $user)}}" onclick="notificationBeforeDelete(event, this)" class="btn btn-danger btn-xs">
+                                    <a href="{{route('pariwisata.destroy', $pariwisata)}}" onclick="notificationBeforeDelete(event, this)" class="btn btn-danger btn-xs">
                                         Delete
                                     </a>
                                 </td>

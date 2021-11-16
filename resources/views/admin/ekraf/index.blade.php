@@ -21,15 +21,9 @@
                         @foreach($ekraf as $key => $ekraf)
                             <tr>
                                 <td>{{$key+1}}</td>
-                                <td>{{$ekraf->nib}}</td>
+                                <td>{{$ekraf->nomor_nib}}</td>
                                 <td>{{$ekraf->nama_usaha}}</td>
                                 <td>
-                                    <a href="{{route('users.edit', $user)}}" class="btn btn-primary btn-xs">
-                                        Edit
-                                    </a>
-                                    <a href="{{route('users.destroy', $user)}}" onclick="notificationBeforeDelete(event, this)" class="btn btn-danger btn-xs">
-                                        Delete
-                                    </a>
                                 </td>
                             </tr>
                         @endforeach

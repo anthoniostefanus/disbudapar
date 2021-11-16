@@ -39,24 +39,6 @@ class EkrafController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'nama-usaha' => 'required',
-            'tgl-mulai' => 'required',
-            'nomor-nib' => ['required', 'string', 'min:13', 'unique:ekraf'],
-            'address' => 'required',
-            'no-te' => ['required', 'string', 'min:13', 'max:13'],
-            'subj-usaha' => 'required',
-            'desc' => 'required',
-            'omset' => 'required',
-            'aset' => 'required',
-            'alasan' => 'required',
-            'prestasi' => 'required'
-
-          
-        ]);
-        $array = $request->only([
-            'nama-usaha', 'tgl-mulai', 'nomor-nib','address','no-te','subj-usaha','desc','omset','aset','alasan','prestasi'
-        ]);
         
     } 
 

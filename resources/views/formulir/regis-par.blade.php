@@ -26,7 +26,7 @@
                     <div class="container main-content">
                         <div class="row">
                             <div class="col-md-12">
-                            <form action="{{route('formulirpariwisata.store')}}" method="post">
+                            <form action="{{route('formulirpariwisata.store')}}" method="post" enctype="multipart/form-data">
                             @csrf
                       
                                     <div class="container">
@@ -40,8 +40,8 @@
                                             </div>
 
                                             <div class="col-md-8">
-                                            <input id="nama-usaha" type="text" class="form-control @error('nama-usaha') is-invalid @enderror" name="nama-usaha" value="{{ old('nama-usaha') }}" required autocomplete="nama-usaha" autofocus placeholder="Nama Usaha">
-                                            @error('nama-usaha')
+                                            <input id="nama_usaha" type="text" class="form-control @error('nama_usaha') is-invalid @enderror" name="nama_usaha" value="{{ old('nama_usaha') }}" required autocomplete="nama_usaha" autofocus placeholder="Nama Usaha">
+                                            @error('nama_usaha')
                                                 <span class="invalid-feedback" role="alert">
                                                     <strong>{{ $message }}</strong>
                                                 </span>
@@ -59,8 +59,8 @@
                                             </div>
 
                                             <div class="col-md-8">
-                                            <input id="tgl-mulai" type="date" class="form-control @error('nama-usaha') is-invalid @enderror" name="tgl-mulai" value="{{ old('tgl-mulai') }}" required autocomplete="tgl-mulai" autofocus placeholder="Tanggal Mulai Usaha">
-                                            @error('tgl-mulai')
+                                            <input id="tgl_mulai" type="date" class="form-control @error('nama-usaha') is-invalid @enderror" name="tgl_mulai" value="{{ old('tgl_mulai') }}" required autocomplete="tgl_mulai" autofocus placeholder="Tanggal Mulai Usaha">
+                                            @error('tgl_mulai')
                                                 <span class="invalid-feedback" role="alert">
                                                     <strong>{{ $message }}</strong>
                                                 </span>
@@ -78,8 +78,8 @@
                                             </div>
 
                                             <div class="col-md-8">
-                                            <input id="nomor-nib" type="text" class="form-control @error('no-nib') is-invalid @enderror" name="nomor-nib" value="{{ old('nomor-nib') }}" required autocomplete="nomor-nib" autofocus placeholder="NIB">
-                                            @error('nomor-nib')
+                                            <input id="nomor_nib" type="text" class="form-control @error('no-nib') is-invalid @enderror" name="nomor_nib" value="{{ old('nomor_nib') }}" required autocomplete="nomor_nib" autofocus placeholder="NIB">
+                                            @error('nomor_nib')
                                                 <span class="invalid-feedback" role="alert">
                                                     <strong>{{ $message }}</strong>
                                                 </span>
@@ -116,8 +116,8 @@
                                             </div>
 
                                             <div class="col-md-8">
-                                            <input id="no-te" type="text" class="form-control @error('no-te') is-invalid @enderror" name="no-te" value="{{ old('no-te') }}" required autocomplete="no-te" autofocus placeholder="No Telepone">
-                                            @error('no-te')
+                                            <input id="no_te" type="text" class="form-control @error('no_te') is-invalid @enderror" name="no_te" value="{{ old('no_te') }}" required autocomplete="no_te" autofocus placeholder="No Telepone">
+                                            @error('no_te')
                                                 <span class="invalid-feedback" role="alert">
                                                     <strong>{{ $message }}</strong>
                                                 </span>
@@ -225,7 +225,7 @@
                                             </div>
 
                                             <div class="col-md-8">
-                                                <input id="foto" class="photo" placeholder="Foto" type="file" accept=".jpg,.gif,.png" >
+                                            <input type="file" name="berkas">
                                             </div>
                                         </div>
 

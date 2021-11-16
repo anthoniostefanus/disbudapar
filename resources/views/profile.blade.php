@@ -32,7 +32,7 @@
 
             <div class="row">
                 <div class="col-md-12 edit-profile">
-                    <a href="#" class="btn btn-secondary">Kembali</a>
+                <input  class="btn btn-secondary" type="button" value="Kembali" onclick="history.back(-1)" />
                 </div>
             </div>
         </div>

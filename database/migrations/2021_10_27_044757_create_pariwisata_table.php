@@ -15,11 +15,11 @@ class CreatePariwisataTable extends Migration
     {
         Schema::create('pariwisata', function (Blueprint $table) {
             $table->id();
-            $table->string('nama-usaha');
-            $table->date('tgl-mulai');
-            $table->string('nomor-nib')->unique();
+            $table->string('nama_usaha');
+            $table->date('tgl_mulai');
+            $table->string('nomor_nib')->unique();
             $table->string('address');
-            $table->string('no-te');
+            $table->string('no_te');
             $table->string('desc');
             $table->string('omset');
             $table->string('aset');

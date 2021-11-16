@@ -18,16 +18,16 @@ class Pariwisata extends Model
     protected $primaryKey = 'id';
     // protected $guarded
     protected $fillable = [
-        'nama-usaha',
-        'tgl-mulai',
-        'nomor-nib',
+        'nama_usaha',
+        'tgl_mulai',
+        'nomor_nib',
         'address',
-        'no-te',
-        'subj-usaha',
+        'no_te',
         'desc',
         'omset',
         'aset',
         'alasan',
         'prestasi',
+        'berkas',
     ];
 }

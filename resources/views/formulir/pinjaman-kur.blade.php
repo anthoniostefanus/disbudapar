@@ -11,7 +11,7 @@
         </div>
 
         <div class="col-md-7 data-diri-kur">
-        <form action="{{route('pinjaman-kur.store')}}" method="post">
+        <form action="{{route('pinjaman-kur.store')}}" method="post" enctype="multipart/form-data">
                             @csrf
                 <div class="row input-data-kur">
                     <div class="col-md-12">
@@ -21,8 +21,8 @@
 
                 <div class="row input-data-kur">
                     <div class="col-md-12 data-kur">
-                    <input id="nama-lengkap" type="text" class="form-control @error('nama-lengkap') is-invalid @enderror" name="nama-lengkap" value="{{ old('nama-lengkap') }}" required autocomplete="nama-lengkap" autofocus placeholder="Nama lengkap">
-                    @error('nama-lengkap')
+                    <input id="nama_lengkap" type="text" class="form-control @error('nama_lengkap') is-invalid @enderror" name="nama_lengkap" value="{{ old('nama_lengkap') }}" required autocomplete="nama_lengkap" autofocus placeholder="Nama lengkap">
+                    @error('nama_lengkap')
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
                     </span>
@@ -41,8 +41,8 @@
                     </div>
 
                     <div class="col-6 data-kur">
-                    <input id="no-tlp" type="text" class="form-control @error('no-tlp') is-invalid @enderror" name="no-tlp" value="{{ old('no-tlp') }}" required autocomplete="no-tlp" autofocus placeholder="No Telepon">
-                    @error('no-tlp')
+                    <input id="no_tlp" type="text" class="form-control @error('no_tlp') is-invalid @enderror" name="no_tlp" value="{{ old('no_tlp') }}" required autocomplete="no_tlp" autofocus placeholder="No Telepon">
+                    @error('no_tlp')
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
                     </span>
@@ -109,7 +109,7 @@
                     </div>
 
                     <div class="col-md-7 data-kur">
-                        <input class="masukan-datadiri" type="file" required>
+                    <input type="file" name="berkas_ktp">
                     </div>
                 </div>
 
@@ -123,14 +123,14 @@
                     </div>
 
                     <div class="col-md-7 data-kur">
-                        <input class="masukan-datadiri" type="file">
+                    <input type="file" name="berkas_ktp_pasangan">
                     </div>
                 </div>
 
                 <div class="row input-data-kur">
                     <div class="col-md-12 data-kur">
-                    <input id="jumlah-pinjaman" type="text" class="form-control @error('jumlah-pinjaman') is-invalid @enderror" name="jumlah-pinjaman" value="{{ old('jumlah-pinjaman') }}" required autocomplete="jumlah-pinjaman" autofocus placeholder="Masukan Jumlah Pinjaman">
-                        @error('jumlah-pinjaman')
+                    <input id="jumlah_pinjaman" type="text" class="form-control @error('jumlah_pinjaman') is-invalid @enderror" name="jumlah_pinjaman" value="{{ old('jumlah_pinjaman') }}" required autocomplete="jumlah_pinjaman" autofocus placeholder="Masukan Jumlah Pinjaman">
+                        @error('jumlah_pinjaman')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
                              </span>

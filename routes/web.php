@@ -59,6 +59,7 @@ Route::resource('users', \App\Http\Controllers\UserController::class)
 ->middleware('auth');
 
 Route::get('/ekraf', [App\Http\Controllers\EkrafController::class, 'index'])->name('home');
+Route::get('/kur', [App\Http\Controllers\KurController::class, 'index'])->name('home');
 Route::get('/pariwisata', [App\Http\Controllers\PariwisataController::class, 'index'])->name('home');
 Route::get('/data', [App\Http\Controllers\DatadiriController::class, 'index'])->name('home');
 Route::resource('beritaekraf', \App\Http\Controllers\BeritaEkrafController::class)

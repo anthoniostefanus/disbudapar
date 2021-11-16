@@ -15,12 +15,12 @@ class CreateEkrafTable extends Migration
     {
         Schema::create('ekraf', function (Blueprint $table) {
             $table->id();
-            $table->string('nama-usaha');
-            $table->date('tgl-mulai');
-            $table->string('nomor-nib')->unique();
+            $table->string('nama_usaha');
+            $table->date('tgl_mulai');
+            $table->string('nomor_nib')->unique();
             $table->string('address');
-            $table->string('no-te');
-            $table->string('subj-usaha');
+            $table->string('no_te');
+            $table->string('subj_usaha');
             $table->string('desc');
             $table->string('omset');
             $table->string('aset');

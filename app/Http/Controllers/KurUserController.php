@@ -14,7 +14,7 @@ class KurUserController extends Controller
      */
     public function index()
     {
-        return view('formulir.main-formulir');
+        return view('formulir.thxcard');
     }
 
     /**
@@ -37,22 +37,49 @@ class KurUserController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'nama-lengkap' => 'required',
+            'nama_lengkap' => 'required',
             'nik' => 'required',
-            'no-tlp' => 'required',
+            'no_tlp' => 'required',
             'Kelurahan' => 'required',
             'Kecamatan' => 'required',
             'rt' => 'required',
             'rw' => 'required',
             'address' => 'required',
-            'jumlah-pinjaman' => 'required',
+            'berkas_ktp' => 'required|mimes:JPEG,jpeg|max:2000',
+            'berkas_ktp_pasangan' => 'required|mimes:JPEG,jpeg|max:2000',
+            'jumlah_pinjaman' => 'required',
             'pinjaman' => 'required',
             'survei' => 'required'
         ]);
-        $array = $request->only([
-            'nama-lengkap', 'nik', 'no-tlp','Kelurahan','Kecamatan','rt','rw','address','jumlah-pinjaman','pinjaman','survei'
+        $berkas_ktp = $request->file('berkas_ktp');
+        $berkas_ktp_pasangan = $request->file('berkas_ktp_pasangan');
+        $nama_file_ktp = $request->nik.$request->no_tlp.".jpeg";
+        $nama_file_ktp_pasangan = $request->no_tlp.$request->nik.".jpeg";
+        
+        // $tujuan_upload = Storage::putFile(
+        //     'public/file',
+        //     $berkas, $nama_file
+        // );
+        $berkas_ktp->move(storage_path('app/public/file'),$nama_file_ktp);
+        $berkas_ktp_pasangan->move(storage_path('app/public/file'),$nama_file_ktp_pasangan);
+    
+        $request->file('berkas_ktp')->getClientOriginalName();
+        $request->file('berkas_ktp_pasangan')->getClientOriginalName();
+        Kur::create([
+            'nama_lengkap' => $request->nama_lengkap, 
+            'nik' => $request->nik, 
+            'no_tlp' => $request->no_tlp, 
+            'Kelurahan' => $request->Kelurahan, 
+            'Kecamatan' => $request->Kecamatan, 
+            'rt' => $request->rt, 
+            'rw' => $request->rw, 
+            'address' => $request->address, 
+            'berkas_ktp' => $nama_file_ktp, 
+            'berkas_ktp_pasangan' => $nama_file_ktp_pasangan, 
+            'jumlah_pinjaman' => $request->jumlah_pinjaman, 
+            'pinjaman' =>  $request->pinjaman,
+            'survei' =>  $request->survei,
         ]);
-        $kur = Kur::create($array);
         return redirect()->route('pinjaman-kur.index');
         
     } 

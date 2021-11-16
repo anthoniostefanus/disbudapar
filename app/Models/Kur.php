@@ -18,15 +18,17 @@ class Kur extends Model
     protected $primaryKey = 'id';
     // protected $guarded
     protected $fillable = [
-        'nama-lengkap',
+        'nama_lengkap',
         'nik',
-        'no-tlp',
+        'no_tlp',
         'Kelurahan',
         'Kecamatan',
         'rt',
         'rw',
         'address',
-        'jumlah-pinjaman',
+        'berkas_ktp',
+        'berkas_ktp_pasangan',
+        'jumlah_pinjaman',
         'pinjaman',
         'survei',
     ];

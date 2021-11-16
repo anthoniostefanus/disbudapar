@@ -14,7 +14,7 @@ class PariwisataUserController extends Controller
      */
     public function index()
     {
-        return view('formulir.main-formulir');
+        return view('formulir.thxcard');
     }
 
     /**
@@ -37,21 +37,41 @@ class PariwisataUserController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'nama-usaha' => 'required',
-            'tgl-mulai' => 'required',
-            'nomor-nib' => 'required',
+            'nama_usaha' => 'required',
+            'tgl_mulai' => 'required',
+            'nomor_nib' => 'required',
             'address' => 'required',
-            'no-te' => 'required',
+            'no_te' => 'required',
             'desc' => 'required',
             'omset' => 'required',
             'aset' => 'required',
             'alasan' => 'required',
-            'prestasi' => 'required'
+            'prestasi' => 'required',
+            'berkas' => 'required|mimes:JPEG,jpeg|max:2000'
         ]);
-        $array = $request->only([
-            'nama-usaha', 'tgl-mulai', 'nomor-nib','address','no-te','desc','omset','aset','alasan','prestasi'
+         $berkas = $request->file('berkas');
+        $nama_file = $request->nomor_nib.$request->nama_usaha.".jpeg";
+        
+        // $tujuan_upload = Storage::putFile(
+        //     'public/file',
+        //     $berkas, $nama_file
+        // );
+        $berkas->move(storage_path('app/public/file'),$nama_file);
+    
+        $request->file('berkas')->getClientOriginalName();
+        Pariwisata::create([
+            'nama_usaha' => $request->nama_usaha, 
+            'tgl_mulai' => $request->tgl_mulai, 
+            'nomor_nib' => $request->nomor_nib, 
+            'address' => $request->address, 
+            'no_te' => $request->no_te, 
+            'desc' => $request->desc, 
+            'omset' => $request->omset, 
+            'aset' => $request->aset, 
+            'alasan' => $request->alasan, 
+            'prestasi' => $request->prestasi, 
+            'berkas' => $nama_file,
         ]);
-        $pariwisata = Pariwisata::create($array);
         return redirect()->route('formulirpariwisata.index');
         
     } 
