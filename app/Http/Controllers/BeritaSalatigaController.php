@@ -40,12 +40,18 @@ class BeritaSalatigaController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'judul_beritasalatiga' => 'required',
-            'isi_beritasalatiga' => 'required',
-            'linksalatiga' => 'required'
+            'judul_beritasalatiga1' => 'required',
+            'isi_beritasalatiga1' => 'required',
+            'linksalatiga1' => 'required',
+            'judul_beritasalatiga2' => 'required',
+            'isi_beritasalatiga2' => 'required',
+            'linksalatiga2' => 'required',
+            'judul_beritasalatiga3' => 'required',
+            'isi_beritasalatiga3' => 'required',
+            'linksalatiga3' => 'required',
         ]);
         $array = $request->only([
-            'judul_beritasalatiga', 'isi_beritasalatiga', 'linksalatiga'
+            'judul_beritasalatiga1', 'isi_beritasalatiga1', 'linksalatiga1','judul_beritasalatiga2', 'isi_beritasalatiga2', 'linksalatiga2','judul_beritasalatiga3', 'isi_beritasalatiga3', 'linksalatiga3'
         ]);
         $beritasalatiga = Beritasalatiga::create($array);
         return redirect()->route('beritasalatiga.index')
@@ -89,14 +95,26 @@ class BeritaSalatigaController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            'judul_beritasalatiga' => 'required',
-            'isi_beritasalatiga' => 'required',
-            'linksalatiga' => 'required'
+            'judul_beritasalatiga1' => 'required',
+            'isi_beritasalatiga1' => 'required',
+            'linksalatiga1' => 'required',
+            'judul_beritasalatiga2' => 'required',
+            'isi_beritasalatiga2' => 'required',
+            'linksalatiga2' => 'required',
+            'judul_beritasalatiga3' => 'required',
+            'isi_beritasalatiga3' => 'required',
+            'linksalatiga3' => 'required'
         ]);
         $beritasalatiga = Beritasalatiga::find($id);
-        $beritasalatiga->judul_beritasalatiga = $request->judul_beritasalatiga;
-        $beritasalatiga->isi_beritasalatiga = $request->isi_beritasalatiga;
-        $beritasalatiga->linksalatiga = $request->linksalatiga;
+        $beritasalatiga->judul_beritasalatiga1 = $request->judul_beritasalatiga1;
+        $beritasalatiga->isi_beritasalatiga1 = $request->isi_beritasalatiga1;
+        $beritasalatiga->linksalatiga1 = $request->linksalatiga1;
+        $beritasalatiga->judul_beritasalatiga2 = $request->judul_beritasalatiga2;
+        $beritasalatiga->isi_beritasalatiga2 = $request->isi_beritasalatiga2;
+        $beritasalatiga->linksalatiga2 = $request->linksalatiga2;
+        $beritasalatiga->judul_beritasalatiga3 = $request->judul_beritasalatiga3;
+        $beritasalatiga->isi_beritasalatiga3 = $request->isi_beritasalatiga3;
+        $beritasalatiga->linksalatiga3 = $request->linksalatiga3;
         $beritasalatiga->save();
         return redirect()->route('beritasalatiga.index')
             ->with('success_message', 'Berhasil mengubah berita');

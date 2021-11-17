@@ -19,9 +19,15 @@ class Beritaekraf extends Model
     protected $primaryKey = 'id';
     // protected $guarded
     protected $fillable = [
-        'judul_beritaekraf',
-        'isi_beritaekraf',
-        'linkekraf',
+        'judul_beritaekraf1',
+        'isi_beritaekraf1',
+        'linkekraf1',
+        'judul_beritaekraf2',
+        'isi_beritaekraf2',
+        'linkekraf2',
+        'judul_beritaekraf3',
+        'isi_beritaekraf3',
+        'linkekraf3',
         'created_at',
         'updated_at',
     ];

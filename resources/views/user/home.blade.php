@@ -386,12 +386,17 @@
                             </div>
                             <div class="modal-body">
                             @foreach($beritaekraf as $beritaekraf)
-                                <h5>{{$beritaekraf->judul_beritaekraf}}</h5>
-                                <p> {{$beritaekraf->isi_beritaekraf}}...</p>
-                                <a href="{{$beritaekraf->linkekraf}}" role="button" class="btn btn-primary popover-test" title="Popover title" data-content="Popover body content is set in this attribute.">lanjutkan Membaca</a>
+                                <h5>{{$beritaekraf->judul_beritaekraf1}}</h5>
+                                <p> {{$beritaekraf->isi_beritaekraf1}}...</p>
+                                <a href="{{$beritaekraf->linkekraf1}}" role="button" class="btn btn-primary popover-test" title="Popover title" data-content="Popover body content is set in this attribute.">lanjutkan Membaca</a>
                                 <hr>
-                                <h5>Tooltips in a modal</h5>
-                                <p><a href="#" class="tooltip-test" title="Tooltip">This link</a> and <a href="#" class="tooltip-test" title="Tooltip">that link</a> have tooltips on hover.</p>
+                                <h5>{{$beritaekraf->judul_beritaekraf2}}</h5>
+                                <p> {{$beritaekraf->isi_beritaekraf2}}...</p>
+                                <a href="{{$beritaekraf->linkekraf2}}" role="button" class="btn btn-primary popover-test" title="Popover title" data-content="Popover body content is set in this attribute.">lanjutkan Membaca</a>
+                                <hr>
+                                <h5>{{$beritaekraf->judul_beritaekraf3}}</h5>
+                                <p> {{$beritaekraf->isi_beritaekraf3}}...</p>
+                                <a href="{{$beritaekraf->linkekraf3}}" role="button" class="btn btn-primary popover-test" title="Popover title" data-content="Popover body content is set in this attribute.">lanjutkan Membaca</a>
                             @endforeach
                             </div>
                             </div>
@@ -421,15 +426,17 @@
                             </div>
                             <div class="modal-body">
                             @foreach($beritapariwisata as $beritapariwisata)
-                                <h5>{{$beritapariwisata->judul_beritapariwisata}}</h5>
-                                <p> {{$beritapariwisata->isi_beritapariwisata}}...</p>
-                                <a href="{{$beritapariwisata->linkpariwisata}}" role="button" class="btn btn-primary popover-test" title="Popover title" data-content="Popover body content is set in this attribute.">lanjutkan Membaca</a>
+                                <h5>{{$beritapariwisata->judul_beritapariwisata1}}</h5>
+                                <p> {{$beritapariwisata->isi_beritapariwisata1}}...</p>
+                                <a href="{{$beritapariwisata->linkpariwisata1}}" role="button" class="btn btn-primary popover-test" title="Popover title" data-content="Popover body content is set in this attribute.">lanjutkan Membaca</a>
                                 <hr>
-                                <h5>Tooltips in a modal</h5>
-                                <p><a href="#" class="tooltip-test" title="Tooltip">This link</a> and <a href="#" class="tooltip-test" title="Tooltip">that link</a> have tooltips on hover.</p>
+                                <h5>{{$beritapariwisata->judul_beritapariwisata2}}</h5>
+                                <p> {{$beritapariwisata->isi_beritapariwisata2}}...</p>
+                                <a href="{{$beritapariwisata->linkpariwisata2}}" role="button" class="btn btn-primary popover-test" title="Popover title" data-content="Popover body content is set in this attribute.">lanjutkan Membaca</a>
                                 <hr>
-                                <h5>Tooltips in a modal</h5>
-                                <p><a href="#" class="tooltip-test" title="Tooltip">This link</a> and <a href="#" class="tooltip-test" title="Tooltip">that link</a> have tooltips on hover.</p>
+                                <h5>{{$beritapariwisata->judul_beritapariwisata3}}</h5>
+                                <p> {{$beritapariwisata->isi_beritapariwisata3}}...</p>
+                                <a href="{{$beritapariwisata->linkpariwisata3}}" role="button" class="btn btn-primary popover-test" title="Popover title" data-content="Popover body content is set in this attribute.">lanjutkan Membaca</a>
                             @endforeach
                             </div>
                             </div>
@@ -459,15 +466,17 @@
                             </div>
                             <div class="modal-body">
                             @foreach($beritasalatiga as $beritasalatiga)
-                                <h5>{{$beritasalatiga->judul_beritasalatiga}}</h5>
-                                <p> {{$beritasalatiga->isi_beritasalatiga}}...</p>
-                                <a href="{{$beritasalatiga->linksalatiga}}" role="button" class="btn btn-primary popover-test" title="Popover title" data-content="Popover body content is set in this attribute.">lanjutkan Membaca</a>
+                                <h5>{{$beritasalatiga->judul_beritasalatiga1}}</h5>
+                                <p> {{$beritasalatiga->isi_beritasalatiga1}}...</p>
+                                <a href="{{$beritasalatiga->linksalatiga1}}" role="button" class="btn btn-primary popover-test" title="Popover title" data-content="Popover body content is set in this attribute.">lanjutkan Membaca</a>
                                 <hr>
-                                <h5>Tooltips in a modal</h5>
-                                <p><a href="#" class="tooltip-test" title="Tooltip">This link</a> and <a href="#" class="tooltip-test" title="Tooltip">that link</a> have tooltips on hover.</p>
+                                <h5>{{$beritasalatiga->judul_beritasalatiga2}}</h5>
+                                <p> {{$beritasalatiga->isi_beritasalatiga2}}...</p>
+                                <a href="{{$beritasalatiga->linksalatiga2}}" role="button" class="btn btn-primary popover-test" title="Popover title" data-content="Popover body content is set in this attribute.">lanjutkan Membaca</a>
                                 <hr>
-                                <h5>Tooltips in a modal</h5>
-                                <p><a href="#" class="tooltip-test" title="Tooltip">This link</a> and <a href="#" class="tooltip-test" title="Tooltip">that link</a> have tooltips on hover.</p>
+                                <h5>{{$beritasalatiga->judul_beritasalatiga3}}</h5>
+                                <p> {{$beritasalatiga->isi_beritasalatiga3}}...</p>
+                                <a href="{{$beritasalatiga->linksalatiga3}}" role="button" class="btn btn-primary popover-test" title="Popover title" data-content="Popover body content is set in this attribute.">lanjutkan Membaca</a>
                             @endforeach
                             </div>
                             </div>

@@ -25,9 +25,9 @@
                         @foreach($beritapariwisata as $key => $beritapariwisata)
                             <tr>
                                 <td>{{$key+1}}</td>
-                                <td>{{$beritapariwisata->judul_beritapariwisata}}</td>
-                                <td>{{$beritapariwisata->isi_beritapariwisata}}</td>
-                                <td>{{$beritapariwisata->linkpariwisata}}</td>
+                                <td>{{$beritapariwisata->judul_beritapariwisata1}}</td>
+                                <td>{{$beritapariwisata->isi_beritapariwisata1}}</td>
+                                <td>{{$beritapariwisata->linkpariwisata1}}</td>
                                 <td>
                                     <a href="{{route('beritapariwisata.edit', $beritapariwisata)}}" class="btn btn-primary btn-xs">
                                         Edit

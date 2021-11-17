@@ -15,9 +15,15 @@ class CreateBeritaekrafTable extends Migration
     {
         Schema::create('beritaekraf', function (Blueprint $table) {
             $table->id();
-            $table->string('judul_beritaekraf');
-            $table->string('isi_beritaekraf');
-            $table->string('linkekraf');
+            $table->string('judul_beritaekraf1');
+            $table->string('isi_beritaekraf1');
+            $table->string('linkekraf1');
+            $table->string('judul_beritaekraf2');
+            $table->string('isi_beritaekraf2');
+            $table->string('linkekraf2');
+            $table->string('judul_beritaekraf3');
+            $table->string('isi_beritaekraf3');
+            $table->string('linkekraf3');
             $table->timestamps();
         });
     }

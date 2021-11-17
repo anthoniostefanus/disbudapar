@@ -15,9 +15,15 @@ class CreateBeritasalatigaTable extends Migration
     {
         Schema::create('beritasalatiga', function (Blueprint $table) {
             $table->id();
-            $table->string('judul_beritasalatiga');
-            $table->string('isi_beritasalatiga');
-            $table->string('linksalatiga');
+            $table->string('judul_beritasalatiga1');
+            $table->string('isi_beritasalatiga1');
+            $table->string('linksalatiga1');
+            $table->string('judul_beritasalatiga2');
+            $table->string('isi_beritasalatiga2');
+            $table->string('linksalatiga2');
+            $table->string('judul_beritasalatiga3');
+            $table->string('isi_beritasalatiga3');
+            $table->string('linksalatiga3');
             $table->timestamps();
         });
     }

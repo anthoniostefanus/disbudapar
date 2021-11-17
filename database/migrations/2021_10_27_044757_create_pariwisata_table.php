@@ -25,6 +25,7 @@ class CreatePariwisataTable extends Migration
             $table->string('aset');
             $table->string('alasan');
             $table->string('prestasi');
+            $table->string('berkas');
             $table->timestamps();
         });
     }

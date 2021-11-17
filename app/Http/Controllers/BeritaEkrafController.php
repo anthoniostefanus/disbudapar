@@ -40,12 +40,18 @@ class BeritaEkrafController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'judul_beritaekraf' => 'required',
-            'isi_beritaekraf' => 'required',
-            'linkekraf' => 'required'
+            'judul_beritaekraf1' => 'required',
+            'isi_beritaekraf1' => 'required',
+            'linkekraf1' => 'required',
+            'judul_beritaekraf2' => 'required',
+            'isi_beritaekraf2' => 'required',
+            'linkekraf2' => 'required',
+            'judul_beritaekraf3' => 'required',
+            'isi_beritaekraf3' => 'required',
+            'linkekraf3' => 'required'
         ]);
         $array = $request->only([
-            'judul_beritaekraf', 'isi_beritaekraf', 'linkekraf'
+            'judul_beritaekraf1', 'isi_beritaekraf1', 'linkekraf1','judul_beritaekraf2', 'isi_beritaekraf2', 'linkekraf2','judul_beritaekraf3', 'isi_beritaekraf3', 'linkekraf3'
         ]);
         $beritaekraf = BeritaEkraf::create($array);
         return redirect()->route('beritaekraf.index')
@@ -89,14 +95,26 @@ class BeritaEkrafController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            'judul_beritaekraf' => 'required',
-            'isi_beritaekraf' => 'required',
-            'linkekraf' => 'required'
+            'judul_beritaekraf1' => 'required',
+            'isi_beritaekraf1' => 'required',
+            'linkekraf1' => 'required',
+            'judul_beritaekraf2' => 'required',
+            'isi_beritaekraf2' => 'required',
+            'linkekraf2' => 'required',
+            'judul_beritaekraf3' => 'required',
+            'isi_beritaekraf3' => 'required',
+            'linkekraf3' => 'required'
         ]);
         $beritaekraf = Beritaekraf::find($id);
-        $beritaekraf->judul_beritaekraf = $request->judul_beritaekraf;
-        $beritaekraf->isi_beritaekraf = $request->isi_beritaekraf;
-        $beritaekraf->linkekraf = $request->linkekraf;
+        $beritaekraf->judul_beritaekraf1 = $request->judul_beritaekraf1;
+        $beritaekraf->isi_beritaekraf1 = $request->isi_beritaekraf1;
+        $beritaekraf->linkekraf1 = $request->linkekraf1;
+        $beritaekraf->judul_beritaekraf2 = $request->judul_beritaekraf2;
+        $beritaekraf->isi_beritaekraf2 = $request->isi_beritaekraf2;
+        $beritaekraf->linkekraf2 = $request->linkekraf2;
+        $beritaekraf->judul_beritaekraf3 = $request->judul_beritaekraf3;
+        $beritaekraf->isi_beritaekraf3 = $request->isi_beritaekraf3;
+        $beritaekraf->linkekraf3 = $request->linkekraf3;
         $beritaekraf->save();
         return redirect()->route('beritaekraf.index')
             ->with('success_message', 'Berhasil mengubah berita');

@@ -25,9 +25,9 @@
                         @foreach($beritaekraf as $key => $beritaekraf)
                             <tr>
                                 <td>{{$key+1}}</td>
-                                <td>{{$beritaekraf->judul_beritaekraf}}</td>
-                                <td>{{$beritaekraf->isi_beritaekraf}}</td>
-                                <td>{{$beritaekraf->linkekraf}}</td>
+                                <td>{{$beritaekraf->judul_beritaekraf1}}</td>
+                                <td>{{$beritaekraf->isi_beritaekraf1}}</td>
+                                <td>{{$beritaekraf->linkekraf1}}</td>
                                 <td>
                                     <a href="{{route('beritaekraf.edit', $beritaekraf)}}" class="btn btn-primary btn-xs">
                                         Edit

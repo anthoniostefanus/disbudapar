@@ -23,6 +23,8 @@ class CreateKurTable extends Migration
             $table->string('rt');
             $table->string('rw');
             $table->string('address');
+            $table->string('berkas_ktp');
+            $table->string('berkas_ktp_pasangan');
             $table->string('jumlah_pinjaman');
             $table->string('pinjaman');
             $table->string('survei');

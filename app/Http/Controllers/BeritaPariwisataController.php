@@ -40,12 +40,18 @@ class BeritaPariwisataController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'judul_beritapariwisata' => 'required',
-            'isi_beritapariwisata' => 'required',
-            'linkpariwisata' => 'required'
+            'judul_beritapariwisata1' => 'required',
+            'isi_beritapariwisata1' => 'required',
+            'linkpariwisata1' => 'required',
+            'judul_beritapariwisata2' => 'required',
+            'isi_beritapariwisata2' => 'required',
+            'linkpariwisata2' => 'required',
+            'judul_beritapariwisata3' => 'required',
+            'isi_beritapariwisata3' => 'required',
+            'linkpariwisata3' => 'required',
         ]);
         $array = $request->only([
-            'judul_beritapariwisata', 'isi_beritapariwisata', 'linkpariwisata'
+            'judul_beritapariwisata1', 'isi_beritapariwisata1', 'linkpariwisata1','judul_beritapariwisata2', 'isi_beritapariwisata2', 'linkpariwisata2','judul_beritapariwisata3', 'isi_beritapariwisata3', 'linkpariwisata3'
         ]);
         $beritapariwisata = Beritapariwisata::create($array);
         return redirect()->route('beritapariwisata.index')
@@ -89,14 +95,26 @@ class BeritaPariwisataController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            'judul_beritapariwisata' => 'required',
-            'isi_beritapariwisata' => 'required',
-            'linkpariwisata' => 'required'
+            'judul_beritapariwisata1' => 'required',
+            'isi_beritapariwisata1' => 'required',
+            'linkpariwisata1' => 'required',
+            'judul_beritapariwisata2' => 'required',
+            'isi_beritapariwisata2' => 'required',
+            'linkpariwisata2' => 'required',
+            'judul_beritapariwisata3' => 'required',
+            'isi_beritapariwisata3' => 'required',
+            'linkpariwisata3' => 'required'
         ]);
         $beritapariwisata = Beritapariwisata::find($id);
-        $beritapariwisata->judul_beritapariwisata = $request->judul_beritapariwisata;
-        $beritapariwisata->isi_beritapariwisata = $request->isi_beritapariwisata;
-        $beritapariwisata->linkpariwisata = $request->linkpariwisata;
+        $beritapariwisata->judul_beritapariwisata1 = $request->judul_beritapariwisata1;
+        $beritapariwisata->isi_beritapariwisata1 = $request->isi_beritapariwisata1;
+        $beritapariwisata->linkpariwisata1 = $request->linkpariwisata1;
+        $beritapariwisata->judul_beritapariwisata2 = $request->judul_beritapariwisata2;
+        $beritapariwisata->isi_beritapariwisata2 = $request->isi_beritapariwisata2;
+        $beritapariwisata->linkpariwisata2 = $request->linkpariwisata2;
+        $beritapariwisata->judul_beritapariwisata3 = $request->judul_beritapariwisata3;
+        $beritapariwisata->isi_beritapariwisata3 = $request->isi_beritapariwisata3;
+        $beritapariwisata->linkpariwisata3 = $request->linkpariwisata3;
         $beritapariwisata->save();
         return redirect()->route('beritapariwisata.index')
             ->with('success_message', 'Berhasil mengubah berita');

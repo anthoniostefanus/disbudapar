@@ -15,9 +15,15 @@ class CreateBeritapariwisataTable extends Migration
     {
         Schema::create('beritapariwisata', function (Blueprint $table) {
             $table->id();
-            $table->string('judul_beritapariwisata');
-            $table->string('isi_beritapariwisata');
-            $table->string('linkpariwisata');
+            $table->string('judul_beritapariwisata1');
+            $table->string('isi_beritapariwisata1');
+            $table->string('linkpariwisata1');
+            $table->string('judul_beritapariwisata2');
+            $table->string('isi_beritapariwisata2');
+            $table->string('linkpariwisata2');
+            $table->string('judul_beritapariwisata3');
+            $table->string('isi_beritapariwisata3');
+            $table->string('linkpariwisata3');
             $table->timestamps();
         });
     }

@@ -19,9 +19,15 @@ class Beritasalatiga extends Model
     protected $primaryKey = 'id';
     // protected $guarded
     protected $fillable = [
-        'judul_beritasalatiga',
-        'isi_beritasalatiga',
-        'linksalatiga',
+        'judul_beritasalatiga1',
+        'isi_beritasalatiga1',
+        'linksalatiga1',
+        'judul_beritasalatiga2',
+        'isi_beritasalatiga2',
+        'linksalatiga2',
+        'judul_beritasalatiga3',
+        'isi_beritasalatiga3',
+        'linksalatiga3',
         'created_at',
         'updated_at',
     ];

@@ -19,9 +19,15 @@ class Beritapariwisata extends Model
     protected $primaryKey = 'id';
     // protected $guarded
     protected $fillable = [
-        'judul_beritapariwisata',
-        'isi_beritapariwisata',
-        'linkpariwisata',
+        'judul_beritapariwisata1',
+        'isi_beritapariwisata1',
+        'linkpariwisata1',
+        'judul_beritapariwisata2',
+        'isi_beritapariwisata2',
+        'linkpariwisata2',
+        'judul_beritapariwisata3',
+        'isi_beritapariwisata3',
+        'linkpariwisata3',
         'created_at',
         'updated_at',
     ];

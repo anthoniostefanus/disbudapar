@@ -25,9 +25,9 @@
                         @foreach($beritasalatiga as $key => $beritasalatiga)
                             <tr>
                                 <td>{{$key+1}}</td>
-                                <td>{{$beritasalatiga->judul_beritasalatiga}}</td>
-                                <td>{{$beritasalatiga->isi_beritasalatiga}}</td>
-                                <td>{{$beritasalatiga->linksalatiga}}</td>
+                                <td>{{$beritasalatiga->judul_beritasalatiga1}}</td>
+                                <td>{{$beritasalatiga->isi_beritasalatiga1}}</td>
+                                <td>{{$beritasalatiga->linksalatiga1}}</td>
                                 <td>
                                     <a href="{{route('beritasalatiga.edit', $beritasalatiga)}}" class="btn btn-primary btn-xs">
                                         Edit
