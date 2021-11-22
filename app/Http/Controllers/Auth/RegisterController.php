@@ -54,7 +54,34 @@ class RegisterController extends Controller
             'no_tlp'=> ['required', 'string', 'min:8', 'max:13'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'nik' => ['required', 'string', 'max:255'],
+            'nama_depan' => ['required', 'string', 'max:255'],
+            'nama_belakang' => ['required', 'string', 'max:255'],
+            'tempat_lahir' => ['required', 'string', 'max:255'],
+            'tanggal_lahir' => ['required'],
+            'alamat'  => ['required', 'string', 'max:255'],
+            'kecamatan' => ['required', 'string', 'max:255'],
+            'kelurahan'  => ['required', 'string', 'max:255'],
+            'rt'  => ['required', 'string', 'max:255'],
+            'rw'  => ['required', 'string', 'max:255'],
+            'agama'  => ['required'],
+            'kwn' => ['required'],
+            'pekerjaan' => ['required', 'string', 'max:255'],
+            'warga' => ['required'],
+            'nama_ibu' => ['required', 'string', 'max:255'],
+            'berkas' => 'required|mimes:jpeg,png,jpg,gif,svg|max:2048',
+           
+            
         ]);
+        // $berkas = $request->file('berkas');
+        // $nama_file = $request->nik.$request->nama_depan.".jpeg";
+        // $berkas->move(storage_path('app/public/file'),$nama_file);
+        // $request->file('berkas')->getClientOriginalName();
+        // User::create ([
+        //     'berkas' => $nama_file,
+        // ]);
+        
+        // return $nama_file;
     }
 
     /**
@@ -63,13 +90,33 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \App\Models\User
      */
-    protected function create(array $data)
+    protected function create(array $data )
     {
+        // $berkas = $data['name_file'];
+        $nama_file = $data['nik'].$data['nama_depan'].".jpeg";
+        $data['berkas']->move(storage_path('app/public/file'),$nama_file);
+        // return $data['name'];
         return User::create([
             'name' => $data['name'],
             'no_tlp' => $data['no_tlp'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
+            'nik' => $data['nik'],
+            'nama_depan' => $data['nama_depan'],
+            'nama_belakang' => $data['nama_belakang'],
+            'tempat_lahir' => $data['tempat_lahir'],
+            'tanggal_lahir' => $data['tanggal_lahir'],
+            'alamat' => $data['alamat'],
+            'kecamatan' => $data['kecamatan'],
+            'kelurahan' => $data['kelurahan'],
+            'rt' => $data['rt'],
+            'rw' => $data['rw'],
+            'agama' => $data['agama'],
+            'kwn' => $data['kwn'],
+            'pekerjaan' => $data['pekerjaan'],
+            'warga' => $data['warga'],
+            'nama_ibu' => $data['nama_ibu'],
+            'berkas' => $nama_file,
         ]);
     }
 }

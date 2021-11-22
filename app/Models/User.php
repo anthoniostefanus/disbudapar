@@ -22,6 +22,22 @@ class User extends Authenticatable
         'no_tlp',
         'email',
         'password',
+        'nik',
+        'nama_depan',
+        'nama_belakang',
+        'tempat_lahir',
+        'tanggal_lahir',
+        'alamat',
+        'kecamatan',
+        'kelurahan',
+        'rt',
+        'rw',
+        'agama',
+        'kwn',
+        'pekerjaan',
+        'warga',
+        'berkas',
+        'nama_ibu',
     ];
 
     /**

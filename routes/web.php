@@ -18,9 +18,7 @@ Route::get('/', [App\Http\Controllers\HomeUserController::class, 'index']);
 Route::get('/home', function () {
     return view('dashboard');
 });
-Route::get('/profile', function () {
-    return view('profile');
-});
+
 Route::get('/kontak', function () {
     return view('maps.maps');
 });
@@ -52,15 +50,19 @@ Route::get('/logout', [App\Http\Controllers\Auth\LoginController::class, 'logout
 
 Route::get('/beranda', [App\Http\Controllers\HomeController::class, 'user'])->name('beranda');
 Route::get('/beranda', [App\Http\Controllers\BerandaUserController::class, 'index'])->name('beranda');
+Route::get('/profile', [App\Http\Controllers\ProfileController::class, 'index'])->name('profile');
 
 Route::group(['middleware' => ['auth','ceklevel:Admin']],function(){  
 Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
 Route::resource('users', \App\Http\Controllers\UserController::class)
 ->middleware('auth');
 
-Route::get('/ekraf', [App\Http\Controllers\EkrafController::class, 'index'])->name('home');
+Route::resource('ekraf', \App\Http\Controllers\EkrafController::class)
+->middleware('auth');
+Route::resource('pariwisata', \App\Http\Controllers\PariwisataController::class)
+->middleware('auth');
+    
 Route::get('/kur', [App\Http\Controllers\KurController::class, 'index'])->name('home');
-Route::get('/pariwisata', [App\Http\Controllers\PariwisataController::class, 'index'])->name('home');
 Route::get('/data', [App\Http\Controllers\DatadiriController::class, 'index'])->name('home');
 Route::resource('beritaekraf', \App\Http\Controllers\BeritaEkrafController::class)
     ->middleware('auth');

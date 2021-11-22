@@ -24,6 +24,15 @@
                                 <td>{{$ekraf->nomor_nib}}</td>
                                 <td>{{$ekraf->nama_usaha}}</td>
                                 <td>
+                                <a href="{{route('ekraf.show', $ekraf)}}" class="btn btn-primary btn-xs">
+                                        info
+                                    </a>
+                                    <a href="{{route('ekraf.edit', $ekraf)}}" class="btn btn-primary btn-xs">
+                                        Edit
+                                    </a>
+                                    <a href="{{route('ekraf.destroy', $ekraf)}}" onclick="notificationBeforeDelete(event, this)" class="btn btn-danger btn-xs">
+                                        Delete
+                                    </a>
                                 </td>
                             </tr>
                         @endforeach
