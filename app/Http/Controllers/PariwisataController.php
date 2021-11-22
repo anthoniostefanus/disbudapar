@@ -95,7 +95,8 @@ class PariwisataController extends Controller
             'alasan' => 'required',
             'prestasi' => 'required',
         ]);
-        $pariwisata = pariwisata::find($id);
+        $berkas = $request->file('berkas');
+        $pariwisata = Pariwisata::find($id);
         $pariwisata->nama_usaha = $request->nama_usaha;
         $pariwisata->tgl_mulai = $request->tgl_mulai;
         $pariwisata->nomor_nib = $request->nomor_nib;
@@ -106,8 +107,20 @@ class PariwisataController extends Controller
         $pariwisata->aset = $request->aset;
         $pariwisata->alasan = $request->alasan;
         $pariwisata->prestasi = $request->prestasi;
+        $namaFileLama = $pariwisata->berkas;
+        $nama_file = $request->nomor_nib.$request->nama_usaha.".jpeg";
+        if ($request->file('berkas')){
+            $tujuan_upload = 'storage';
+            @unlink($tujuan_upload.$nama_file); //menghapus file lama
+            $berkas = $request->file('berkas');
+            $berkas->move(storage_path('app/public/file'),$nama_file);
+        }
+        else{
+            Storage::move(storage_path('app/public/file/'. $namaFileLama), storage_path('app/public/file/'. $nama_file));
+        }
+        $pariwisata->berkas=$nama_file;
         $pariwisata->save();
-        return redirect()->route('ekraf.index')
+        return redirect()->route('pariwisata.index')
             ->with('success_message', 'Berhasil mengubah Formulir');
     }
 
@@ -124,4 +137,12 @@ class PariwisataController extends Controller
         return redirect()->route('pariwisata.index')
             ->with('success_message', 'Berhasil menghapus pariwisata');
     }
+
+    public function download($berkas)
+    {
+        $pariwisata = Pariwisata::where('berkas', $berkas)->firstOrFail();
+        $pathToFile = storage_path('app/public/file/'. $pariwisata->berkas);
+        return response()->download($pathToFile);
+    }
+
 }

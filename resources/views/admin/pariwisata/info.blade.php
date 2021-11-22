@@ -49,10 +49,9 @@
                             <td>{{ $pariwisata->prestasi}}</td>
                         </tr>
 
-                        <tr><td>File Peraturan</td>
-                            <td>
-                               
-                            </td>
+                        <tr><td>Gambar</td>
+                        <td> <img class="d-block w-50" src = "{{ route('pariwisata.download', $pariwisata->berkas) }}"></td>
+                          
                         </tr>
                     </table>
                 </div>

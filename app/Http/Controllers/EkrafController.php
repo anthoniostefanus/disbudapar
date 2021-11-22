@@ -96,6 +96,8 @@ class EkrafController extends Controller
         return view('admin.ekraf.info', [
             'ekraf' => $ekraf
         ]);
+
+        
     }
 
     /**
@@ -136,6 +138,7 @@ class EkrafController extends Controller
             'alasan' => 'required',
             'prestasi' => 'required',
         ]);
+        $berkas = $request->file('berkas');
         $ekraf = ekraf::find($id);
         $ekraf->nama_usaha = $request->nama_usaha;
         $ekraf->tgl_mulai = $request->tgl_mulai;
@@ -148,6 +151,18 @@ class EkrafController extends Controller
         $ekraf->aset = $request->aset;
         $ekraf->alasan = $request->alasan;
         $ekraf->prestasi = $request->prestasi;
+        $namaFileLama = $ekraf->berkas;
+        $nama_file = $request->nomor_nib.$request->nama_usaha.".jpeg";
+        if ($request->file('berkas')){
+            $tujuan_upload = 'storage';
+            @unlink($tujuan_upload.$nama_file); //menghapus file lama
+            $berkas = $request->file('berkas');
+            $berkas->move(storage_path('app/public/file'),$nama_file);
+        }
+        else{
+            Storage::move(storage_path('app/public/file/'. $namaFileLama), storage_path('app/public/file/'. $nama_file));
+        }
+        $ekraf->berkas=$nama_file;
         $ekraf->save();
         return redirect()->route('ekraf.index')
             ->with('success_message', 'Berhasil mengubah Formulir');
@@ -166,4 +181,12 @@ class EkrafController extends Controller
        return redirect()->route('ekraf.index')
            ->with('success_message', 'Berhasil menghapus ekraf');
     }
+    
+    public function download($berkas)
+    {
+        $ekraf = Ekraf::where('berkas', $berkas)->firstOrFail();
+        $pathToFile = storage_path('app/public/file/'. $ekraf->berkas);
+        return response()->download($pathToFile);
+    }
+
 }

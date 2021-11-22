@@ -32,4 +32,9 @@ class Kur extends Model
         'pinjaman',
         'survei',
     ];
+
+    public function user()
+    {
+        return $this->belongTo(User::class);
+    }
 }

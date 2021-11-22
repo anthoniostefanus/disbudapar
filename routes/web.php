@@ -61,8 +61,8 @@ Route::resource('ekraf', \App\Http\Controllers\EkrafController::class)
 ->middleware('auth');
 Route::resource('pariwisata', \App\Http\Controllers\PariwisataController::class)
 ->middleware('auth');
-    
-Route::get('/kur', [App\Http\Controllers\KurController::class, 'index'])->name('home');
+Route::resource('kur', \App\Http\Controllers\KurController::class)
+->middleware('auth');
 Route::get('/data', [App\Http\Controllers\DatadiriController::class, 'index'])->name('home');
 Route::resource('beritaekraf', \App\Http\Controllers\BeritaEkrafController::class)
     ->middleware('auth');
@@ -76,4 +76,8 @@ Route::resource('vidio', \App\Http\Controllers\VidioController::class)
     ->middleware('auth');
 Route::resource('datadiri', \App\Http\Controllers\DatadiriController::class)
     ->middleware('auth');
+Route::get('ekraf/{berkas}/download', [App\Http\Controllers\EkrafController::class, 'download'])->name('ekraf.download');
+Route::get('pariwisata/{berkas}/download', [App\Http\Controllers\PariwisataController::class, 'download'])->name('pariwisata.download');
+Route::get('kur/{berkas}/download', [App\Http\Controllers\kurController::class, 'download'])->name('kur.download');
+Route::get('kur/{berkas}/download', [App\Http\Controllers\kurController::class, 'download1'])->name('kur.download');
 });

@@ -30,4 +30,9 @@ class Pariwisata extends Model
         'prestasi',
         'berkas',
     ];
+
+    public function user()
+    {
+        return $this->belongTo(User::class);
+    }
 }

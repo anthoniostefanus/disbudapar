@@ -30,5 +30,11 @@ class Ekraf extends Model
         'alasan',
         'prestasi',
         'berkas',
+        'user_id'
     ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

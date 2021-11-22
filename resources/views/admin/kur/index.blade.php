@@ -22,8 +22,11 @@
                             <tr>
                                 <td>{{$key+1}}</td>
                                 <td>{{$kur->nik}}</td>
-                                <td>{{$kur->nama-lengkap}}</td>
+                                <td>{{$kur->nama_lengkap}}</td>
                                 <td>
+                                <a href="{{route('kur.show', $kur)}}" class="btn btn-primary btn-xs">
+                                        info
+                                    </a>
                                     <a href="{{route('kur.edit', $kur)}}" class="btn btn-primary btn-xs">
                                         Edit
                                     </a>

@@ -53,10 +53,9 @@
                             <td>{{ $ekraf->prestasi}}</td>
                         </tr>
 
-                        <tr><td>File Peraturan</td>
-                            <td>
-                               
-                            </td>
+                        <tr><td>Gambar</td>
+                        <td> <img class="d-block w-50" src = "{{ route('ekraf.download', $ekraf->berkas) }}"></td>
+                          
                         </tr>
                     </table>
                 </div>

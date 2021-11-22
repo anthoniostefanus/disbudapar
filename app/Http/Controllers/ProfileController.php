@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\Ekraf;
 use App\Models\Pariwisata;
 use App\Models\Kur;
+use App\Models\user;
 
 use Illuminate\Http\Request;
 
