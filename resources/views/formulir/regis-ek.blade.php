@@ -29,6 +29,19 @@
                             @csrf
                       
                                     <div class="container">
+                                    <div class="row">
+                                            <!-- <div class="col-md-3">
+                                                <label>User Id</label>
+                                            </div>
+
+                                            <div class="col-md-1">
+                                                <label>:</label>
+                                            </div> -->
+
+                                            <!-- <div class="col-md-8">
+                                                <input id="user_id" type="text" class="form-control @error('user_id') is-invalid @enderror" name="user_id" value="{{Auth::user()->id ?? old('user_id')}}" required autocomplete="user_id" autofocus placeholder="Nama Usaha" > 
+                                            </div> -->
+                                        </div>
                                         <div class="row">
                                             <div class="col-md-3">
                                                 <label>Nama Usaha</label>

@@ -5,13 +5,12 @@ use App\Models\Ekraf;
 use App\Models\Pariwisata;
 use App\Models\Kur;
 use App\Models\user;
-use App\Models\Profile;
 use Auth;
 use Illuminate\Http\Request;
 
-class ProfileController extends Controller
+class ProfileKURController extends Controller
 {
-     /**
+      /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
@@ -21,8 +20,7 @@ class ProfileController extends Controller
         $ekraf = Ekraf::where('user_id',Auth::user()->id)->get();
         $pariwisata = Pariwisata::where('user_id',Auth::user()->id)->get();
         $kur = Kur::where('user_id',Auth::user()->id)->get();
-        $profile = Profile::where('user_id',Auth::user()->id)->get();
-        return view('profile.index', ['ekraf' => $ekraf],  compact('ekraf', 'kur', 'pariwisata','profile'));
+        return view('profile.index', ['ekraf' => $ekraf],  compact('ekraf', 'kur', 'pariwisata'));
        
        
     }
@@ -46,21 +44,7 @@ class ProfileController extends Controller
      */
     public function store(Request $request)
     {
-        $user = Auth::user();
-        $request->validate([
-            'berkas' => 'required|mimes:JPEG,jpeg|max:2000'
-        ]);
-
-        $berkas = $request->file('berkas');
-        $nama_file = $user->id.".jpeg";
-        $berkas->move(storage_path('app/public/file'),$nama_file);
-        $request->file('berkas')->getClientOriginalName();
-        Profile::create([
-            'berkas' => $nama_file,
-            'user_id' => $user->id,
-        ]);
-        return redirect()->route('profile.index');
-        
+        //
     } 
 
     /**
@@ -71,8 +55,8 @@ class ProfileController extends Controller
      */
     public function show()
     {
-     $profile = profile::where('user_id',Auth::user()->id)->get();
-        return view('profile.index', ['profile' => $profile]);
+        $kur = kur::where('user_id',Auth::user()->id)->get();
+        return view('profile.info-kur', ['kur' => $kur]);
     }
 
 
@@ -84,7 +68,7 @@ class ProfileController extends Controller
      */
     public function edit()
     {
-       
+        
     }
 
     /**
@@ -109,10 +93,16 @@ class ProfileController extends Controller
     {
         
     }
-    public function download($berkas)
+    public function download($berkas_ktp)
     {
-        $profile = profile::where('berkas', $berkas)->firstOrFail();
-        $pathToFile = storage_path('app/public/file/'. $profile->berkas);
+        $kur = kur::where('berkas_ktp', $berkas_ktp)->firstOrFail();
+        $pathToFile = storage_path('app/public/file/'. $kur->berkas_ktp);
+        return response()->download($pathToFile);
+    }
+    public function download1($berkas_ktp_pasangan)
+    {
+        $kur = kur::where('berkas_ktp_pasangan', $berkas_ktp_pasangan)->firstOrFail();
+        $pathToFile = storage_path('app/public/file/'. $kur->berkas_ktp_pasangan);
         return response()->download($pathToFile);
     }
 }

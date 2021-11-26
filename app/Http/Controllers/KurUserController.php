@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Kur;
+use Auth;
 
 class KurUserController extends Controller
 {
@@ -36,6 +37,7 @@ class KurUserController extends Controller
      */
     public function store(Request $request)
     {
+        $user = Auth::user();
         $request->validate([
             'nama_lengkap' => 'required',
             'nik' => 'required',
@@ -79,6 +81,7 @@ class KurUserController extends Controller
             'jumlah_pinjaman' => $request->jumlah_pinjaman, 
             'pinjaman' =>  $request->pinjaman,
             'survei' =>  $request->survei,
+            'user_id' => $user->id, 
         ]);
         return redirect()->route('pinjaman-kur.index');
         

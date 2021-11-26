@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Pariwisata;
+use Auth;
 
 class PariwisataUserController extends Controller
 {
@@ -36,6 +37,7 @@ class PariwisataUserController extends Controller
      */
     public function store(Request $request)
     {
+        $user = Auth::user();
         $request->validate([
             'nama_usaha' => 'required',
             'tgl_mulai' => 'required',
@@ -71,6 +73,7 @@ class PariwisataUserController extends Controller
             'alasan' => $request->alasan, 
             'prestasi' => $request->prestasi, 
             'berkas' => $nama_file,
+            'user_id' => $user->id, 
         ]);
         return redirect()->route('formulirpariwisata.index');
         

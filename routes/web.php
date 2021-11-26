@@ -14,24 +14,38 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [App\Http\Controllers\HomeUserController::class, 'index']);
-
 Route::get('/home', function () {
     return view('dashboard');
 });
-
 Route::get('/kontak', function () {
     return view('maps.maps');
 });
 Route::get('/formulir', function () {
     return view('formulir.main-formulir');
 });
+Route::get('profile/{berkas}/download', [App\Http\Controllers\ProfileController::class, 'download'])->name('profile.download');
 Route::resource('formulirekraf', \App\Http\Controllers\EkrafUserController::class)
     ->middleware('auth');
-
 Route::resource('formulirpariwisata', \App\Http\Controllers\PariwisataUserController::class)
-->middleware('auth');
+    ->middleware('auth');
 Route::resource('pinjaman-kur', \App\Http\Controllers\KurUserController::class)
-->middleware('auth');
+    ->middleware('auth');
+Route::resource('profile', \App\Http\Controllers\ProfileController::class)
+    ->middleware('auth');
+Route::resource('profile-liat-EKRAF', \App\Http\Controllers\ProfileEkrafController::class)
+    ->middleware('auth');
+Route::get('profile-liat-EKRAF/{berkas}/download', [App\Http\Controllers\ProfileEkrafController::class, 'download'])->name('profile-liat-EKRAF.download')
+    ->middleware('auth');
+Route::resource('profile-liat-KUR', \App\Http\Controllers\ProfileKURController::class)
+    ->middleware('auth');
+Route::get('profile-liat-KUR/{berkas}/download', [App\Http\Controllers\ProfileKURController::class, 'download'])->name('profile-liat-KUR.download')
+    ->middleware('auth');
+Route::get('profile-liat-KUR/{berkas}/download1', [App\Http\Controllers\ProfileKURController::class, 'download1'])->name('profile-liat-KUR.download1')
+    ->middleware('auth');
+Route::resource('profile-liat-PAR', \App\Http\Controllers\ProfilePARController::class)
+    ->middleware('auth');
+Route::get('profile-liat-PAR/{berkas}/download', [App\Http\Controllers\ProfilePARController::class, 'download'])->name('profile-liat-PAR.download')
+    ->middleware('auth');
 
 Route::get('/pinjaman', function () {
     return view('formulir.pinjaman-kur');
@@ -39,30 +53,21 @@ Route::get('/pinjaman', function () {
 Route::get('/loginadmin', function () {
     return view('vendor.adminlte.auth.login');
 });
-
 Route::get('/ekraf', [App\Http\Controllers\EkrafController::class, 'index'])->name('home');
-
-
 Auth::routes();
 Auth::routes(['verify' => true]);
 Route::get('/logout', [App\Http\Controllers\Auth\LoginController::class, 'logout'])->name('logout');
-
-
 Route::get('/beranda', [App\Http\Controllers\HomeController::class, 'user'])->name('beranda');
 Route::get('/beranda', [App\Http\Controllers\BerandaUserController::class, 'index'])->name('beranda');
-Route::get('/profile', [App\Http\Controllers\ProfileController::class, 'index'])->name('profile');
-
-Route::group(['middleware' => ['auth','ceklevel:Admin']],function(){  
+Route::group(['middleware' => ['auth','ceklevel:Admin']],function() {  
 Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
-Route::resource('users', \App\Http\Controllers\UserController::class)
-->middleware('auth');
-
+Route::resource('users', \App\Http\Controllers\UserController::class);
 Route::resource('ekraf', \App\Http\Controllers\EkrafController::class)
-->middleware('auth');
+    ->middleware('auth');
 Route::resource('pariwisata', \App\Http\Controllers\PariwisataController::class)
-->middleware('auth');
+    ->middleware('auth');
 Route::resource('kur', \App\Http\Controllers\KurController::class)
-->middleware('auth');
+    ->middleware('auth');
 Route::get('/data', [App\Http\Controllers\DatadiriController::class, 'index'])->name('home');
 Route::resource('beritaekraf', \App\Http\Controllers\BeritaEkrafController::class)
     ->middleware('auth');
@@ -79,5 +84,13 @@ Route::resource('datadiri', \App\Http\Controllers\DatadiriController::class)
 Route::get('ekraf/{berkas}/download', [App\Http\Controllers\EkrafController::class, 'download'])->name('ekraf.download');
 Route::get('pariwisata/{berkas}/download', [App\Http\Controllers\PariwisataController::class, 'download'])->name('pariwisata.download');
 Route::get('kur/{berkas}/download', [App\Http\Controllers\kurController::class, 'download'])->name('kur.download');
-Route::get('kur/{berkas}/download', [App\Http\Controllers\kurController::class, 'download1'])->name('kur.download');
+Route::get('kur/{berkas}/download1', [App\Http\Controllers\kurController::class, 'download1'])->name('kur.download1');
+});
+Route::group(['middleware' => ['auth','ceklevel:Bri']],function() {  
+Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
+Route::resource('kur', \App\Http\Controllers\KurController::class)
+    ->middleware('auth');
+Route::get('/data', [App\Http\Controllers\DatadiriController::class, 'index'])->name('home');
+Route::get('kur/{berkas}/download', [App\Http\Controllers\kurController::class, 'download'])->name('kur.download');
+Route::get('kur/{berkas}/download1', [App\Http\Controllers\kurController::class, 'download1'])->name('kur.download1');
 });

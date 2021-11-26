@@ -14,11 +14,15 @@ class CekLevel
      * @param  \Closure  $next
      * @return mixed
      */
-    public function handle(Request $request, Closure $next)
+    public function handle(Request $request, Closure $next, ...$levels)
     {
         if (auth()->check() && $request->user()->level == 'Admin'){
             return $next($request);
-        } else {
+        } 
+        else if (in_array($request->user()->level,$levels)){
+            return $next($request);
+        } 
+        else {
             return redirect()->guest('beranda');
         }
     }

@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Pariwisata extends Model
+class Profile extends Model
 {
     use HasFactory;
 
@@ -14,22 +14,10 @@ class Pariwisata extends Model
      *
      * @var array
      */
-    protected $table = 'pariwisata';
+    protected $table = 'profile';
     protected $primaryKey = 'id';
-    // protected $guarded
     protected $fillable = [
-        'nama_usaha',
-        'tgl_mulai',
-        'nomor_nib',
-        'address',
-        'no_te',
-        'desc',
-        'omset',
-        'aset',
-        'alasan',
-        'prestasi',
         'berkas',
         'user_id',
     ];
-
 }

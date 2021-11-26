@@ -234,6 +234,7 @@ return [
             'text' => 'User',
             'url'  => '/users',
             'icon'  => 'fa fa-users',
+            'can'   =>  'user-menu',
         ],
         [
             'text' => 'Form',
@@ -242,10 +243,12 @@ return [
                 [
                     'text' => 'Ekonomi Kreatif',
                     'url'  => '/ekraf',
+                    'can'   =>  'user-menu',
                 ],
                 [
                     'text' => 'Pariwisata',
                     'url'  => '/pariwisata',
+                    'can'   =>  'user-menu',
                 ],
                 [
                     'text' => 'Kredit Usaha Rakyat',
@@ -256,6 +259,7 @@ return [
         [
             'text' => 'Berita',
             'icon' => 'fas fa-newspaper',
+            'can'   =>  'user-menu',
             'submenu' => [
                 [
                     'text' => 'Berita Ekonomi Kreatif',
@@ -275,16 +279,19 @@ return [
             'text' => 'Vidio',
             'url'  => '/vidio',
             'icon' => 'fas fa-video',
+            'can'   =>  'user-menu',
         ],
         [
             'text' => 'Data Diri',
             'url'  => '/datadiri',
             'icon'  => 'fas fa-address-card',
+            'can'   =>  'user-menu',
         ],
         [
             'text' => 'Kritik & Saran',
             'url'  => '/kritiksaran',
             'icon' => 'fas fa-inbox',
+            'can'   =>  'user-menu',
         ],
     ],
 

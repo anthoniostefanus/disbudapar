@@ -1,17 +1,5 @@
-@extends('adminlte::page')
-
-@section('title', 'Info Peraturan')
-
-@section('content_header')
-    <h1 class="m-0 text-dark">Info Peraturan</h1>
-@stop
-
-@section('content')
-                    <table class='table table-striped table-hover'>
-                        <tr>
-                            <td>User ID</td>
-                            <td>{{ $ekraf->user_id}}</td>
-                        </tr>
+@foreach($ekraf as $key => $ekraf)
+<table class='table table-striped table-hover'>
 
                         <tr>
                             <td>Nama usaha</td>
@@ -59,17 +47,15 @@
                         </tr>
 
                         <tr><td>Gambar</td>
-                        <td> <img class="d-block w-50" src = "{{ route('ekraf.download', $ekraf->berkas) }}"></td>
+                        <td> <img class="d-block w-50" src = "{{ route('profile-liat-EKRAF.download', $ekraf->berkas) }}"></td>
+                          
+                        </tr>
                           
                         </tr>
                     </table>
-                </div>
-                <div class="card-footer">
-                    <a href="{{route('ekraf.index')}}" class="btn btn-default">
+                    <div class="card-footer">
+                    <a href="{{route('profile.index')}}" class="btn btn-default">
                         Kembali
                     </a>
                 </div>
-            </div>
-        </div>
-    </div>
-@stop
+                        @endforeach

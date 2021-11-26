@@ -28,6 +28,7 @@ class CreateKurTable extends Migration
             $table->string('jumlah_pinjaman');
             $table->string('pinjaman');
             $table->string('survei');
+            $table->string('user_id');
             $table->timestamps();
         });
     }

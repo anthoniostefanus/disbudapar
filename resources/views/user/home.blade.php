@@ -23,7 +23,7 @@
     <div class="container main-menu">
         <div  class="row">
             <div class="col-md-4 d-flex justify-content-center">
-                <a href="profile"><button class="main-button">
+                <a href="{{route('profile.index')}}"><button class="main-button">
                     <img class="back-img" src="{{asset ('img/login.png ') }}"/>
                     <p class="label-menu">Profil</p>
                 </button></a>

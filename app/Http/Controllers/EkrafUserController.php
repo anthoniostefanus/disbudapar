@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Ekraf;
+use Auth;
 
 class EkrafUserController extends Controller
 {
@@ -36,6 +37,8 @@ class EkrafUserController extends Controller
      */
     public function store(Request $request)
     {
+        $user = Auth::user();
+        // return $user;
         $request->validate([
             'nama_usaha' => 'required',
             'tgl_mulai' => 'required',
@@ -74,6 +77,7 @@ class EkrafUserController extends Controller
             'alasan' => $request->alasan, 
             'prestasi' => $request->prestasi, 
             'berkas' => $nama_file,
+            'user_id' => $user->id, 
         ]);
         return redirect()->route('formulirekraf.index');
         

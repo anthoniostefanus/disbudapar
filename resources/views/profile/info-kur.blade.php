@@ -1,13 +1,5 @@
-@extends('adminlte::page')
-
-@section('title', 'Info Peraturan')
-
-@section('content_header')
-    <h1 class="m-0 text-dark">Info Peraturan</h1>
-@stop
-
-@section('content')
-                    <table class='table table-striped table-hover'>
+@foreach($kur as $key => $kur)
+<table class='table table-striped table-hover'>
                         <tr>
                             <td>Nama lengkap</td>
                             <td>{{ $kur->nama_lengkap}}</td>
@@ -41,10 +33,10 @@
                             <td>{{ $kur->address}}</td>
                         </tr>
                         <tr><td>Berkas KTP</td>
-                        <td> <img class="d-block w-50" src = "{{ route('kur.download', $kur->berkas_ktp) }}"></td>
+                        <td> <img class="d-block w-50" src = "{{ route('profile-liat-KUR.download', $kur->berkas_ktp) }}"></td>
                         </tr>
                         <tr><td>Berkas KTP Pasangan</td>
-                        <td> <img class="d-block w-50" src = "{{ route('kur.download1', $kur->berkas_ktp_pasangan) }}"></td>
+                        <td> <img class="d-block w-50" src = "{{ route('profile-liat-KUR.download1', $kur->berkas_ktp_pasangan) }}"></td>
                         </tr>
                         <tr>
                             <td>Jumlah Pinjaman</td>
@@ -59,13 +51,9 @@
                             <td>{{ $kur->survei}}</td>
                         </tr>
                     </table>
-                </div>
-                <div class="card-footer">
-                    <a href="{{route('kur.index')}}" class="btn btn-default">
+                    <div class="card-footer">
+                    <a href="{{route('profile.index')}}" class="btn btn-default">
                         Kembali
                     </a>
                 </div>
-            </div>
-        </div>
-    </div>
-@stop
+                        @endforeach

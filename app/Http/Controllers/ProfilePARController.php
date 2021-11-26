@@ -1,23 +1,28 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Ekraf;
+use App\Models\Pariwisata;
+use App\Models\Kur;
+use App\Models\user;
+use Auth;
 use Illuminate\Http\Request;
-use App\Models\Vidio;
 
-class HomeUSerController extends Controller
+class ProfilePARController extends Controller
 {
-    /**
+      /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        $vidio = Vidio::all();
-        return view('homeuser', [
-            'vidio' => $vidio
-        ]);
+        $ekraf = Ekraf::where('user_id',Auth::user()->id)->get();
+        $pariwisata = Pariwisata::where('user_id',Auth::user()->id)->get();
+        $kur = Kur::where('user_id',Auth::user()->id)->get();
+        return view('profile.index', ['ekraf' => $ekraf],  compact('ekraf', 'kur', 'pariwisata'));
+       
+       
     }
 
     /**
@@ -48,10 +53,12 @@ class HomeUSerController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show()
     {
-        //
+        $pariwisata = pariwisata::where('user_id',Auth::user()->id)->get();
+        return view('profile.info-par', ['pariwisata' => $pariwisata]);
     }
+
 
     /**
      * Show the form for editing the specified resource.
@@ -59,9 +66,9 @@ class HomeUSerController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit()
     {
-      //
+        
     }
 
     /**
@@ -71,9 +78,9 @@ class HomeUSerController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update()
     {
-        //
+        
     }
 
     /**
@@ -82,8 +89,16 @@ class HomeUSerController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Request $request, $id)
+    public function destroy()
     {
-    //
+        
     }
+
+    public function download($berkas)
+    {
+        $pariwisata = Pariwisata::where('berkas', $berkas)->firstOrFail();
+        $pathToFile = storage_path('app/public/file/'. $pariwisata->berkas);
+        return response()->download($pathToFile);
+    }
+
 }

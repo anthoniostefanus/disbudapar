@@ -27,6 +27,7 @@ class CreateEkrafTable extends Migration
             $table->string('alasan');
             $table->string('prestasi');
             $table->string('berkas');
+            $table->string('user_id');
             $table->timestamps();
         });
     }

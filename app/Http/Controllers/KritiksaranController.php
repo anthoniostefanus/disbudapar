@@ -116,4 +116,3 @@ class KritiksaranController extends Controller
             ->with('success_message', 'Berhasil menghapus kritiksaran');
     }
 }
-
