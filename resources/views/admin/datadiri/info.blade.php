@@ -10,59 +10,63 @@
                     <table class='table table-striped table-hover'>
                         <tr>
                             <td>NIK</td>
-                            <td>{{ Auth::user()->nik }}</td>
+                            <td>{{$user->nik}}</td>
                         </tr>
                         <tr>
                             <td>Nama Depan</td>
-                            <td>{{ Auth::user()->nama_depan }}</td>
+                            <td>{{$user->nama_depan }}</td>
                         </tr>
                         <tr>
                             <td>Nama Belakang</td>
-                            <td>{{ Auth::user()->nama_belakang }}</td>
+                            <td>{{$user->nama_belakang }}</td>
                         </tr>
                         <tr>
                             <td>Tempat Lahir</td>
-                            <td>{{ Auth::user()->tempat_lahir }}</td>
+                            <td>{{$user->tempat_lahir }}</td>
                         </tr>
                         <tr>
                             <td>Tanggal Lahir</td>
-                            <td>{{ Auth::user()->tanggal_lahir }}</td>
+                            <td>{{$user->tanggal_lahir }}</td>
                         </tr>
                         <tr>
                             <td>Alamat</td>
-                            <td>{{ Auth::user()->alamat }}</td>
+                            <td>{{$user->alamat }}</td>
                         </tr>
                        <tr>
                             <td>Kecamatan</td>
-                            <td>{{ Auth::user()->kecamatan }}</td>
+                            <td>{{$user->kecamatan }}</td>
                         </tr>
                         <tr>
                             <td>Kelurahan</td>
-                            <td>{{ Auth::user()->kelurahan }}</td>
+                            <td>{{$user->kelurahan }}</td>
                         </tr>
                         <tr>
                             <td>RT</td>
-                            <td>{{ Auth::user()->rt }}</td>
+                            <td>{{$user->rt }}</td>
                         </tr>
                         <tr>
                             <td>RW</td>
-                            <td>{{ Auth::user()->rw }}</td>
+                            <td>{{$user->rw }}</td>
                         </tr>
                         <tr>
                             <td>Agama</td>
-                            <td>{{ Auth::user()->agama }}</td>
+                            <td>{{$user->agama }}</td>
                         </tr>
                         <tr>
                             <td>Status Perkawinan</td>
-                            <td>{{ Auth::user()->kwn }}</td>
+                            <td>{{$user->kwn }}</td>
                         </tr>
                         <tr>
                             <td>Pekerjaan</td>
-                            <td>{{ Auth::user()->pekerjaan }}</td>
+                            <td>{{$user->pekerjaan }}</td>
                         </tr>
                         <tr>
                             <td>Kewarganegaraan</td>
-                            <td>{{ Auth::user()->warga }}</td>
+                            <td>{{$user->warga }}</td>
+                        </tr>
+                        <tr>
+                            <td>Foto KTP</td>
+                            <td> <img class="d-block w-50" src = "{{ route('datadiri.download', $user->berkas) }}"></td>
                         </tr>
                     </table>
                 </div>

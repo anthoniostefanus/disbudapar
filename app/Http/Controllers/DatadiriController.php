@@ -96,21 +96,50 @@ class DatadiriController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            'level' => 'required',
-            'name' => 'required',
-            'No_Telepon' => 'required',
-            'email' => 'required|email|unique:users,email,'.$id,
-            'password' => 'sometimes|nullable|confirmed'
+            'nama_depan' => ['required', 'string', 'max:255'],
+            'nama_belakang' => ['required', 'string', 'max:255'],
+            'tempat_lahir' => ['required', 'string', 'max:255'],
+            'tanggal_lahir' => ['required'],
+            'alamat'  => ['required', 'string', 'max:255'],
+            'kecamatan' => ['required', 'string', 'max:255'],
+            'kelurahan'  => ['required', 'string', 'max:255'],
+            'rt'  => ['required', 'string', 'max:255'],
+            'rw'  => ['required', 'string', 'max:255'],
+            'agama'  => ['required'],
+            'kwn' => ['required'],
+            'pekerjaan' => ['required', 'string', 'max:255'],
+            'warga' => ['required'],
+            'berkas' => 'required|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
         $user = User::find($id);
-        $user->level = $request->level;
-        $user->name = $request->name;
-        $user->No_Telepon = $request->No_Telepon;
-        $user->email = $request->email;
-        if ($request->password) $user->password = bcrypt($request->password);
+        $user->nama_depan = $request->nama_depan;
+        $user->nama_belakang = $request->nama_belakang;
+        $user->tempat_lahir = $request->tempat_lahir;
+        $user->tanggal_lahir = $request->tanggal_lahir;
+        $user->alamat = $request->alamat;
+        $user->kecamatan = $request->kecamatan;
+        $user->kelurahan = $request->kelurahan;
+        $user->rt = $request->rt;
+        $user->rw = $request->rw;
+        $user->agama = $request->agama;
+        $user->kwn = $request->kwn;
+        $user->pekerjaan = $request->pekerjaan;
+        $user->warga = $request->warga;
+        $namaFileLama = $user->berkas;
+        $nama_file = $request->nik.$request->nama_depan.".jpeg";
+        if ($request->file('berkas')){
+            $tujuan_upload = 'storage';
+            @unlink($tujuan_upload.$nama_file); //menghapus file lama
+            $berkas = $request->file('berkas');
+            $berkas->move(storage_path('app/public/file'),$nama_file);
+        }
+        else{
+            Storage::move(storage_path('app/public/file/'. $namaFileLama), storage_path('app/public/file/'. $nama_file));
+        }
+        $user->berkas=$nama_file;
         $user->save();
-        return redirect()->route('users.index')
-            ->with('success_message', 'Berhasil mengubah user');
+        return redirect()->route('datadiri.index')
+            ->with('success_message', 'Berhasil mengubah Formulir');
     }
 
     /**
@@ -127,5 +156,11 @@ class DatadiriController extends Controller
         if ($user) $user->delete();
         return redirect()->route('users.index')
             ->with('success_message', 'Berhasil menghapus user');
+    }
+    public function download($berkas)
+    {
+        $user = user::where('berkas', $berkas)->firstOrFail();
+        $pathToFile = storage_path('app/public/file/'. $user->berkas);
+        return response()->download($pathToFile);
     }
 }

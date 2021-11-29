@@ -22,9 +22,8 @@ class ProfileController extends Controller
         $pariwisata = Pariwisata::where('user_id',Auth::user()->id)->get();
         $kur = Kur::where('user_id',Auth::user()->id)->get();
         $profile = Profile::where('user_id',Auth::user()->id)->get();
-        return view('profile.index', ['ekraf' => $ekraf],  compact('ekraf', 'kur', 'pariwisata','profile'));
-       
-       
+        $user = Auth::user()->id;
+        return view('profile.index', ['user' => $user],  compact('ekraf', 'kur', 'pariwisata','profile','user'));   
     }
 
     /**
@@ -82,9 +81,14 @@ class ProfileController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit()
+    public function edit($id)
     {
-       
+        $user = User::find($id);
+        if (!$user) return redirect()->route('profile.index')
+            ->with('error_message', 'User dengan id'.$id.' tidak ditemukan');
+        return view('profile.gantipass', [
+            'user' => $user
+        ]);
     }
 
     /**
@@ -94,9 +98,16 @@ class ProfileController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update()
+    public function update(Request $request, $id)
     {
-        
+        $request->validate([
+            'password' => 'sometimes|nullable|confirmed'
+        ]);
+        $user = User::find($id);
+        if ($request->password) $user->password = bcrypt($request->password);
+        $user->save();
+        return redirect()->route('profile.index')
+            ->with('success_message', 'Berhasil mengubah user');
     }
 
     /**

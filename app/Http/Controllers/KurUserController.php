@@ -57,14 +57,8 @@ class KurUserController extends Controller
         $berkas_ktp_pasangan = $request->file('berkas_ktp_pasangan');
         $nama_file_ktp = $request->nik.$request->no_tlp.".jpeg";
         $nama_file_ktp_pasangan = $request->no_tlp.$request->nik.".jpeg";
-        
-        // $tujuan_upload = Storage::putFile(
-        //     'public/file',
-        //     $berkas, $nama_file
-        // );
         $berkas_ktp->move(storage_path('app/public/file'),$nama_file_ktp);
         $berkas_ktp_pasangan->move(storage_path('app/public/file'),$nama_file_ktp_pasangan);
-    
         $request->file('berkas_ktp')->getClientOriginalName();
         $request->file('berkas_ktp_pasangan')->getClientOriginalName();
         Kur::create([

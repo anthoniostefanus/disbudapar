@@ -34,7 +34,7 @@
                                         Edit
                                     </a>
                                     <a href="{{route('users.destroy', $user)}}" onclick="notificationBeforeDelete(event, this)" class="btn btn-danger btn-xs">
-                                        Delete
+                                        Hapus
                                     </a>
                                 </td>
                             </tr>

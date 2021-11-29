@@ -37,7 +37,7 @@
             </div>
 
             <div class="col-md-4 d-flex justify-content-center">
-                <a><button class="main-button">
+                <a href="kontak"><button class="main-button">
                     <img class="back-img" src="{{asset ('img/kontak.png ') }}">
                     <p class="label-menu">Kontak</p>
                 </button></a>
@@ -344,10 +344,10 @@
             </div>
 
             <div class="col-md-3 d-flex justify-content-center">
-                <a>
+                <a href="{{route('kategori.index')}}">
                     <button class="btn btn-outline-light" >
                         <img class="img-logo" src="{{asset ('img/icon/logo-dll.png ') }}">
-                        <p class="label-category">Lainnya</p>
+                        <p href="{{route('kategori.index')}}" class="label-category">Lainnya</p>
                     </button>
                 </a>
             </div>

@@ -20,8 +20,6 @@
         </div>
     </div>
   <!-- End -->
-
-
   <!-- Footer -->
     <footer class="bg-white">
         <div class="container py-5">
@@ -30,7 +28,6 @@
                     <img src="{{asset ('img/pare.png ') }}" alt="" width="180" class="mb-3">
                     <p class="font-italic text-muted">Sistem Informasi Pelayanan Pariwisata dan Ekonomi Kreatif Salatiga - 2021</p>
                 </div>
-
                 <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
                     <h6 class="text-uppercase font-weight-bold mb-4">Menu Utama</h6>
                     <ul class="list-unstyled mb-0">
@@ -39,7 +36,6 @@
                         <li class="mb-2"><a href="kontak" class="text-muted">Kontak</a></li>
                     </ul>
                 </div>
-
                 <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
                     <h6 class="text-uppercase font-weight-bold mb-4">Menu</h6>
                     <ul class="list-unstyled mb-0">
@@ -50,14 +46,12 @@
                         <li class="mb-2"><a href="{{ url('/#scrollKontak') }}" class="text-muted">Hubungi Kami</a></li>
                     </ul>
                 </div>
-
                 <div class="col-lg-4 col-md-6 mb-lg-0">
                     <h6 class="text-uppercase font-weight-bold mb-4">Pelayanan Ekonomi Kreatif dan Pariwisata</h6>
                     <p class="text-muted mb-4">Serta pemberdayaan ekonomi kreatif dan pariwisata di salatiga</p>
                 </div>
             </div>
         </div>
-
     <!-- Copyrights -->
         <div class="bg-light py-4">
             <div class="container text-center">

@@ -12,7 +12,6 @@
                             <td>User ID</td>
                             <td>{{ $ekraf->user_id}}</td>
                         </tr>
-
                         <tr>
                             <td>Nama usaha</td>
                             <td>{{ $ekraf->nama_usaha}}</td>
@@ -57,10 +56,9 @@
                             <td>Prestasi</td>
                             <td>{{ $ekraf->prestasi}}</td>
                         </tr>
-
-                        <tr><td>Gambar</td>
-                        <td> <img class="d-block w-50" src = "{{ route('ekraf.download', $ekraf->berkas) }}"></td>
-                          
+                        <tr>
+                            <td>Gambar</td>
+                            <td> <img class="d-block w-50" src = "{{ route('ekraf.download', $ekraf->berkas) }}"></td>
                         </tr>
                     </table>
                 </div>

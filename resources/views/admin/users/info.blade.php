@@ -10,15 +10,15 @@
                     <table class='table table-striped table-hover'>
                         <tr>
                             <td>NIK</td>
-                            <td>{{ Auth::user()->name }}</td>
+                            <td>{{ $user->name}}</td>
                         </tr>
                         <tr>
                             <td>Email</td>
-                            <td>{{ Auth::user()->email }}</td>
+                            <td>{{ $user->email}}</td>
                         </tr>
                         <tr>
                             <td>No Telepon</td>
-                            <td>{{ Auth::user()->No_Telepon }}</td>
+                            <td>{{ $user->No_Telepon}}</td>
                         </tr>
                     </table>
                 </div>

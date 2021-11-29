@@ -24,7 +24,7 @@ Route::get('/formulir', function () {
     return view('formulir.main-formulir');
 });
 Route::get('profile/{berkas}/download', [App\Http\Controllers\ProfileController::class, 'download'])->name('profile.download');
-Route::resource('gantipass', \App\Http\Controllers\GantiPassController::class)
+Route::resource('kategori', \App\Http\Controllers\KategoriController::class)
     ->middleware('auth');
 Route::resource('formulirekraf', \App\Http\Controllers\EkrafUserController::class)
     ->middleware('auth');
@@ -48,7 +48,6 @@ Route::resource('profile-liat-PAR', \App\Http\Controllers\ProfilePARController::
     ->middleware('auth');
 Route::get('profile-liat-PAR/{berkas}/download', [App\Http\Controllers\ProfilePARController::class, 'download'])->name('profile-liat-PAR.download')
     ->middleware('auth');
-
 Route::get('/pinjaman', function () {
     return view('formulir.pinjaman-kur');
 });
@@ -83,6 +82,7 @@ Route::resource('vidio', \App\Http\Controllers\VidioController::class)
     ->middleware('auth');
 Route::resource('datadiri', \App\Http\Controllers\DatadiriController::class)
     ->middleware('auth');
+Route::get('datadiri/{berkas}/download', [App\Http\Controllers\DatadiriController::class, 'download'])->name('datadiri.download');
 Route::get('ekraf/{berkas}/download', [App\Http\Controllers\EkrafController::class, 'download'])->name('ekraf.download');
 Route::get('pariwisata/{berkas}/download', [App\Http\Controllers\PariwisataController::class, 'download'])->name('pariwisata.download');
 Route::get('kur/{berkas}/download', [App\Http\Controllers\kurController::class, 'download'])->name('kur.download');

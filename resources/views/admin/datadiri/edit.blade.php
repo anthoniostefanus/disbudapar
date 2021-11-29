@@ -4,7 +4,7 @@
     <h1 class="m-0 text-dark">Edit User</h1>
 @stop
 @section('content')
-    <form action="{{route('users.update', $user)}}" method="post">
+    <form action="{{route('datadiri.update', $user)}}" method="post" enctype="multipart/form-data">
         @method('PUT')
         @csrf
     <div class="row">
@@ -13,7 +13,7 @@
                 <div class="card-body">
                     <div class="form-group">
                         <label for="exampleInputName">NIK</label>
-                        <input type="text" class="form-control @error('nik') is-invalid @enderror" id="exampleInputnik" placeholder="NIK" name="nik" value="{{$user->nik ?? old('nik')}}">
+                        <input type="text" class="form-control @error('nik') is-invalid @enderror" id="exampleInputnik" placeholder="NIK" name="nik" value="{{$user->nik ?? old('nik')}}" disabled>
                         @error('nik') <span class="text-danger">{{$message}}</span> @enderror
                     </div>
                     <div class="form-group">
@@ -101,9 +101,6 @@
                         <label class="fieldlabels">Masukan Foto KTP: </label>
                         <input type="file" name="berkas">
                     </div>
-                   
-
-
                 </div>
                 <div class="card-footer">
                     <button type="submit" class="btn btn-primary">Simpan</button>
