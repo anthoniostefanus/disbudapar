@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use DB;
+use App\Models\User;
 
 class HomeController extends Controller
 {
@@ -23,7 +25,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $users = DB::table('users')
+        ->selectRaw('level, count(level) as jumlah')
+        ->groupBy('level')
+        ->get();
+        return view('home', ['users' => $users]);
     }
 
     public function user()

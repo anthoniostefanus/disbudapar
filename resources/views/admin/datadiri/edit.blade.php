@@ -11,42 +11,6 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-body">
-
-                <div class="form-group">
-                        <label for="level">Level</label>
-                        <select name="level" class="form-control @error('level') is-invalid @enderror">
-                            @error('level') <span class="text-danger">{{$message}}</span> @enderror>
-                            <option {{ ($user->level) == 'User' ? "selected" : ""}} value="User">User</option>
-                            <option {{ ($user->level) == 'Admin' ? "selected" : ""}} value="Admin">Admin</option>
-                            <option {{ ($user->level) == 'Bri' ? "selected" : ""}} value="Bri">Bri</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="exampleInputName">Nama</label>
-                        <input type="text" class="form-control @error('name') is-invalid @enderror" id="exampleInputName" placeholder="Nama lengkap" name="name" value="{{$user->name ?? old('name')}}">
-                        @error('name') <span class="text-danger">{{$message}}</span> @enderror
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputName">No telepon</label>
-                        <input type="text" class="form-control @error('No_Telepon') is-invalid @enderror" id="exampleInputNo_Telepon" placeholder="No Telepon" name="No_Telepon" value="{{$user->No_Telepon ?? old('No_Telepon')}}">
-                        @error('No_Telepon') <span class="text-danger">{{$message}}</span> @enderror
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputEmail">Email address</label>
-                        <input type="email" class="form-control @error('email') is-invalid @enderror" id="exampleInputEmail" placeholder="Masukkan Email" name="email" value="{{$user->email ?? old('email')}}">
-                        @error('email') <span class="text-danger">{{$message}}</span> @enderror
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputPassword">Password</label>
-                        <input type="password" class="form-control @error('password') is-invalid @enderror" id="exampleInputPassword" placeholder="Password" name="password">
-                        @error('password') <span class="text-danger">{{$message}}</span> @enderror
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputPassword">Konfirmasi Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword" placeholder="Konfirmasi Password" name="password_confirmation">
-                    </div>
-                    <h3>EDIT KTP </h3>
                     <div class="form-group">
                         <label for="exampleInputName">NIK</label>
                         <input type="text" class="form-control @error('nik') is-invalid @enderror" id="exampleInputnik" placeholder="NIK" name="nik" value="{{$user->nik ?? old('nik')}}">

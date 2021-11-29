@@ -17,8 +17,8 @@
                     </div>
                     <div class="form-group">
                         <label for="exampleInputName">No Telepon</label>
-                        <input type="text" class="form-control @error('no_tlp') is-invalid @enderror" id="exampleInputNo_tlp" placeholder="No Telepon" name="no_tlp" value="{{old('no_tlp')}}">
-                        @error('no_tlp') <span class="text-danger">{{$message}}</span> @enderror
+                        <input type="text" class="form-control @error('No_Telepon') is-invalid @enderror" id="exampleInputNo_Telepon" placeholder="No Telepon" name="No_Telepon" value="{{old('No_Telepon')}}">
+                        @error('No_Telepon') <span class="text-danger">{{$message}}</span> @enderror
                     </div>
                     <div class="form-group">
                         <label for="exampleInputEmail">Email address</label>

@@ -42,7 +42,7 @@ class KurController extends Controller
         $request->validate([
             'nama_lengkap' => 'required',
             'nik' => 'required',
-            'no_tlp' => 'required',
+            'No_Telepon' => 'required',
             'Kelurahan' => 'required',
             'Kecamatan' => 'required',
             'rt' => 'required',
@@ -104,7 +104,7 @@ class KurController extends Controller
         $request->validate([
             'nama_lengkap' => 'required',
             'nik' => 'required',
-            'no_tlp' => 'required',
+            'No_Telepon' => 'required',
             'Kelurahan' => 'required',
             'Kecamatan' => 'required',
             'rt' => 'required',
@@ -119,7 +119,7 @@ class KurController extends Controller
         $kur = kur::find($id);
         $kur->nama_lengkap = $request->nama_lengkap;
         $kur->nik = $request->nik;
-        $kur->no_tlp = $request->no_tlp;
+        $kur->No_Telepon = $request->No_Telepon;
         $kur->Kelurahan = $request->Kelurahan;
         $kur->Kecamatan = $request->Kecamatan;
         $kur->rt = $request->rt;

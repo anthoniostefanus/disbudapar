@@ -8,9 +8,9 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-body">
-                    <a href="{{route('users.create')}}" class="btn btn-primary mb-2">
+                    <!-- <a href="{{route('users.create')}}" class="btn btn-primary mb-2">
                         Tambah
-                    </a>
+                    </a> -->
                     <table class="table table-hover table-bordered table-stripped" id="example2">
                         <thead>
                         <tr>
@@ -18,6 +18,7 @@
                             <th>Nama</th>
                             <th>No Telepon</th>
                             <th>Email</th>
+                            <th>Level</th>
                             <th>Opsi</th>
                         </tr>
                         </thead>
@@ -26,9 +27,13 @@
                             <tr>
                                 <td>{{$key+1}}</td>
                                 <td>{{$user->name}}</td>
-                                <td>{{$user->no_tlp}}</td>
+                                <td>{{$user->No_Telepon}}</td>
                                 <td>{{$user->email}}</td>
+                                <td>{{$user->level}}</td>
                                 <td>
+                                <a href="{{route('users.show', $user)}}" class="btn btn-primary btn-xs">
+                                        info
+                                    </a>
                                     <a href="{{route('users.edit', $user)}}" class="btn btn-primary btn-xs">
                                         Edit
                                     </a>

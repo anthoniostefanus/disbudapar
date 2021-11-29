@@ -40,18 +40,18 @@ class EkrafUserController extends Controller
         $user = Auth::user();
         // return $user;
         $request->validate([
-            'nama_usaha' => 'required',
-            'tgl_mulai' => 'required',
-            'nomor_nib' => 'required',
-            'address' => 'required',
-            'no_te' => 'required',
+            'Nama_Usaha' => 'required',
+            'Tanggal_Mulai' => 'required',
+            'nib' => ['required', 'string', 'min:13', 'max:13'],
+            'Alamat' => 'required',
+            'No_Telepon' => ['required', 'string', 'min:8', 'max:13'],
             'subj_usaha' => 'required',
-            'desc' => 'required',
+            'desc' => ['required', 'string', 'max:25500'],
             'omset' => 'required',
             'aset' => 'required',
             'alasan' => 'required',
             'prestasi' => 'required',
-            'berkas' => 'required|mimes:JPEG,jpeg|max:2000'
+            'berkas' => 'required|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
 
         $berkas = $request->file('berkas');
@@ -65,11 +65,11 @@ class EkrafUserController extends Controller
     
         $request->file('berkas')->getClientOriginalName();
         Ekraf::create([
-            'nama_usaha' => $request->nama_usaha, 
-            'tgl_mulai' => $request->tgl_mulai, 
-            'nomor_nib' => $request->nomor_nib, 
-            'address' => $request->address, 
-            'no_te' => $request->no_te, 
+            'Nama_usaha' => $request->Nama_usaha, 
+            'Tanggal_Mulai' => $request->Tanggal_Mulai, 
+            'nib' => $request->nib, 
+            'Alamat' => $request->Alamat, 
+            'No_Telepon' => $request->No_Telepon, 
             'subj_usaha' => $request->subj_usaha, 
             'desc' => $request->desc, 
             'omset' => $request->omset, 

@@ -40,6 +40,12 @@
 
             <div class="row">
                 <div class="col-md-12 edit-profile">
+
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12 edit-profile">
                 <input  class="btn btn-secondary" type="button" value="Kembali" onclick="history.back(-1)" />
                 </div>
             </div>
@@ -62,7 +68,7 @@
 
                         <div class="d-flex align-items-center justify-content-between border-bottom">
                             <p class="py-2">No.Telepon</p>
-                            <p class="py-2 text-muted">{{ Auth::user()->no_tlp }}</p>
+                            <p class="py-2 text-muted">{{ Auth::user()->No_Telepon }}</p>
                         </div>
                     </div>
                     <h3> Data KTP {{ Auth::user()->name }}</h3>

@@ -39,17 +39,17 @@ class PariwisataUserController extends Controller
     {
         $user = Auth::user();
         $request->validate([
-            'nama_usaha' => 'required',
-            'tgl_mulai' => 'required',
-            'nomor_nib' => 'required',
-            'address' => 'required',
-            'no_te' => 'required',
-            'desc' => 'required',
+            'Nama_Usaha' => 'required',
+            'Tanggal_Mulai' => 'required',
+            'nib' => 'required',
+            'Alamat' => 'required',
+            'No_Telepon' => ['required', 'string', 'min:8', 'max:13'],
+            'desc' => ['required', 'string', 'max:25500000'],
             'omset' => 'required',
             'aset' => 'required',
             'alasan' => 'required',
             'prestasi' => 'required',
-            'berkas' => 'required|mimes:JPEG,jpeg|max:2000'
+            'berkas' => 'required|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
          $berkas = $request->file('berkas');
         $nama_file = $request->nomor_nib.$request->nama_usaha.".jpeg";
@@ -62,11 +62,11 @@ class PariwisataUserController extends Controller
     
         $request->file('berkas')->getClientOriginalName();
         Pariwisata::create([
-            'nama_usaha' => $request->nama_usaha, 
-            'tgl_mulai' => $request->tgl_mulai, 
-            'nomor_nib' => $request->nomor_nib, 
-            'address' => $request->address, 
-            'no_te' => $request->no_te, 
+            'Nama_Usaha' => $request->Nama_Usaha, 
+            'Tanggal_Mulai' => $request->Tanggal_Mulai, 
+            'nib' => $request->nib, 
+            'Alamat' => $request->Alamat, 
+            'No_Telepon' => $request->No_Telepon, 
             'desc' => $request->desc, 
             'omset' => $request->omset, 
             'aset' => $request->aset, 

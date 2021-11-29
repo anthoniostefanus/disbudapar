@@ -17,11 +17,11 @@ class CreateUsersTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('level');
-            $table->string('no_tlp');
+            $table->string('No_Telepon');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->string('nik');
+            $table->string('nik', 16)->unique();
             $table->string('nama_depan');
             $table->string('nama_belakang');
             $table->string('tempat_lahir');

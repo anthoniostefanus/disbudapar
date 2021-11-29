@@ -126,25 +126,26 @@ class EkrafController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            'nama_usaha' => 'required',
-            'tgl_mulai' => 'required',
-            'nomor_nib' => 'required',
-            'address' => 'required',
-            'no_te' => 'required',
+           'Nama_Usaha' => 'required',
+            'Tanggal_Mulai' => 'required',
+            'nib' => ['required', 'string', 'min:13', 'max:13'],
+            'Alamat' => 'required',
+            'No_Telepon' => ['required', 'string', 'min:8', 'max:13'],
             'subj_usaha' => 'required',
-            'desc' => 'required',
+            'desc' => ['required', 'string', 'max:25500'],
             'omset' => 'required',
             'aset' => 'required',
             'alasan' => 'required',
             'prestasi' => 'required',
+            'berkas' => 'required|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
         $berkas = $request->file('berkas');
         $ekraf = ekraf::find($id);
-        $ekraf->nama_usaha = $request->nama_usaha;
-        $ekraf->tgl_mulai = $request->tgl_mulai;
-        $ekraf->nomor_nib = $request->nomor_nib;
-        $ekraf->address = $request->address;
-        $ekraf->no_te = $request->no_te;
+        $ekraf->Nama_Usaha = $request->Nama_Usaha;
+        $ekraf->Tanggal_Mulai = $request->Tanggal_Mulai;
+        $ekraf->nib = $request->nib;
+        $ekraf->Alamat = $request->Alamat;
+        $ekraf->No_Telepon = $request->No_Telepon;
         $ekraf->subj_usaha = $request->subj_usaha;
         $ekraf->desc = $request->desc;
         $ekraf->omset = $request->omset;

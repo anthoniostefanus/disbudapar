@@ -3,20 +3,20 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Datadiri;
+use App\Models\User;
 
 class DatadiriController extends Controller
 {
-    /**
+     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        $datadiri = Datadiri::all();
+        $users = User::all();
         return view('admin.datadiri.index', [
-            'datadiri' => $datadiri
+            'users' => $users
         ]);
     }
 
@@ -27,7 +27,7 @@ class DatadiriController extends Controller
      */
     public function create()
     {
-        return view('users.create');
+        return view('admin.datadiri.create');
     }
     
 
@@ -41,11 +41,12 @@ class DatadiriController extends Controller
     {
         $request->validate([
             'name' => 'required',
+            'No_Telepon' => 'required',
             'email' => 'required|email|unique:users,email',
             'password' => 'required|confirmed'
         ]);
         $array = $request->only([
-            'name', 'email', 'password'
+            'name','No_Telepon','email','password'
         ]);
         $array['password'] = bcrypt($array['password']);
         $user = User::create($array);
@@ -61,7 +62,12 @@ class DatadiriController extends Controller
      */
     public function show($id)
     {
-        //
+        $user = User::find($id);
+        if (!$user) return redirect()->route('users.index')
+            ->with('error_message', 'User dengan id'.$id.' tidak ditemukan');
+        return view('admin.datadiri.info', [
+            'user' => $user
+        ]);
     }
 
     /**
@@ -75,7 +81,7 @@ class DatadiriController extends Controller
         $user = User::find($id);
         if (!$user) return redirect()->route('users.index')
             ->with('error_message', 'User dengan id'.$id.' tidak ditemukan');
-        return view('users.edit', [
+        return view('admin.datadiri.edit', [
             'user' => $user
         ]);
     }
@@ -90,12 +96,16 @@ class DatadiriController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
+            'level' => 'required',
             'name' => 'required',
+            'No_Telepon' => 'required',
             'email' => 'required|email|unique:users,email,'.$id,
             'password' => 'sometimes|nullable|confirmed'
         ]);
         $user = User::find($id);
+        $user->level = $request->level;
         $user->name = $request->name;
+        $user->No_Telepon = $request->No_Telepon;
         $user->email = $request->email;
         if ($request->password) $user->password = bcrypt($request->password);
         $user->save();

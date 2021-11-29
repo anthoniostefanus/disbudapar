@@ -24,6 +24,8 @@ Route::get('/formulir', function () {
     return view('formulir.main-formulir');
 });
 Route::get('profile/{berkas}/download', [App\Http\Controllers\ProfileController::class, 'download'])->name('profile.download');
+Route::resource('gantipass', \App\Http\Controllers\GantiPassController::class)
+    ->middleware('auth');
 Route::resource('formulirekraf', \App\Http\Controllers\EkrafUserController::class)
     ->middleware('auth');
 Route::resource('formulirpariwisata', \App\Http\Controllers\PariwisataUserController::class)

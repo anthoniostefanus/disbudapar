@@ -16,8 +16,8 @@ class CreateKurTable extends Migration
         Schema::create('kur', function (Blueprint $table) {
             $table->id();
             $table->string('nama_lengkap');
-            $table->string('nik');
-            $table->string('no_tlp');
+            $table->string('nik', 16)->unique();
+            $table->string('No_Telepon');
             $table->string('Kelurahan');
             $table->string('Kecamatan');
             $table->string('rt');

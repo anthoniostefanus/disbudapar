@@ -282,7 +282,7 @@ return [
             'can'   =>  'user-menu',
         ],
         [
-            'text' => 'Data Diri',
+            'text' => 'Data KTP',
             'url'  => '/datadiri',
             'icon'  => 'fas fa-address-card',
             'can'   =>  'user-menu',

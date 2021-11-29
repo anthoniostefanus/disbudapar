@@ -1,33 +1,36 @@
 @extends('adminlte::page')
-@section('title', 'List Ekonomi Kreaatif')
+@section('title', 'List User')
 @section('content_header')
-    <h1 class="m-0 text-dark">List Ekonomi Kreatif</h1>
+    <h1 class="m-0 text-dark">List User</h1>
 @stop
 @section('content')
     <div class="row">
         <div class="col-12">
             <div class="card">
                 <div class="card-body">
-                    <a href="{{route('users.create')}}" class="btn btn-primary mb-2">
+                    <!-- <a href="{{route('users.create')}}" class="btn btn-primary mb-2">
                         Tambah
-                    </a>
+                    </a> -->
                     <table class="table table-hover table-bordered table-stripped" id="example2">
                         <thead>
                         <tr>
-                            <th>No</th>
-                            <th>NIB</th>
-                            <th>Nama Usaha</th>
-                            <th>Action</th>
+                            <th>No.</th>
+                            <th>NIK</th>
+                            <th>Nama Depan</th>
+                            <th>Opsi</th>
                         </tr>
                         </thead>
                         <tbody>
-                        {{-- @foreach($users as $key => $user)
+                        @foreach($users as $key => $user)
                             <tr>
                                 <td>{{$key+1}}</td>
-                                <td>{{$user->name}}</td>
-                                <td>{{$user->email}}</td>
+                                <td>{{$user->nik}}</td>
+                                <td>{{$user->nama_depan}}</td>
                                 <td>
-                                    <a href="{{route('users.edit', $user)}}" class="btn btn-primary btn-xs">
+                                <a href="{{route('datadiri.show', $user)}}" class="btn btn-primary btn-xs">
+                                        info
+                                    </a>
+                                    <a href="{{route('datadiri.edit', $user)}}" class="btn btn-primary btn-xs">
                                         Edit
                                     </a>
                                     <a href="{{route('users.destroy', $user)}}" onclick="notificationBeforeDelete(event, this)" class="btn btn-danger btn-xs">
@@ -35,7 +38,7 @@
                                     </a>
                                 </td>
                             </tr>
-                        @endforeach --}}
+                        @endforeach
                         </tbody>
                     </table>
                 </div>

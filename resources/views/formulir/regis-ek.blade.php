@@ -29,19 +29,6 @@
                             @csrf
                       
                                     <div class="container">
-                                    <div class="row">
-                                            <!-- <div class="col-md-3">
-                                                <label>User Id</label>
-                                            </div>
-
-                                            <div class="col-md-1">
-                                                <label>:</label>
-                                            </div> -->
-
-                                            <!-- <div class="col-md-8">
-                                                <input id="user_id" type="text" class="form-control @error('user_id') is-invalid @enderror" name="user_id" value="{{Auth::user()->id ?? old('user_id')}}" required autocomplete="user_id" autofocus placeholder="Nama Usaha" > 
-                                            </div> -->
-                                        </div>
                                         <div class="row">
                                             <div class="col-md-3">
                                                 <label>Nama Usaha</label>
@@ -52,8 +39,8 @@
                                             </div>
 
                                             <div class="col-md-8">
-                                                <input id="nama_usaha" type="text" class="form-control @error('nama_usaha') is-invalid @enderror" name="nama_usaha" value="{{ old('nama_usaha') }}" required autocomplete="nama_usaha" autofocus placeholder="Nama Usaha">
-                                            @error('nama_usaha')
+                                                <input id="Nama_Usaha" type="text" class="form-control @error('Nama_Usaha') is-invalid @enderror" name="Nama_Usaha" value="{{ old('Nama_Usaha') }}" required autocomplete="Nama_Usaha" autofocus placeholder="Nama Usaha">
+                                            @error('Nama_Usaha')
                                                 <span class="invalid-feedback" role="alert">
                                                     <strong>{{ $message }}</strong>
                                                 </span>
@@ -71,8 +58,8 @@
                                             </div>
 
                                             <div class="col-md-8">
-                                                <input id="tgl_mulai" type="date" class="form-control @error('tgl_mulai') is-invalid @enderror" name="tgl_mulai" value="{{ old('tgl_mulai') }}" required autocomplete="tgl_mulai" autofocus placeholder="Tanggal Mulai Usaha">
-                                            @error('tgl_mulai')
+                                                <input id="Tanggal_Mulai" type="date" class="form-control @error('Tanggal_Mulai') is-invalid @enderror" name="Tanggal_Mulai" value="{{ old('Tanggal_Mulai') }}" required autocomplete="Tanggal_Mulai" autofocus placeholder="Tanggal Mulai Usaha">
+                                            @error('Tanggal_Mulai')
                                                 <span class="invalid-feedback" role="alert">
                                                     <strong>{{ $message }}</strong>
                                                 </span>
@@ -90,8 +77,8 @@
                                             </div>
 
                                             <div class="col-md-8">
-                                                <input id="nomor_nib" type="text" class="form-control @error('nomor-nib') is-invalid @enderror" name="nomor_nib" value="{{ old('nomor_nib') }}" required autocomplete="nomor_nib" autofocus placeholder="NIB">
-                                            @error('nomor_nib')
+                                                <input id="nib" type="text" class="form-control @error('nib') is-invalid @enderror" name="nib" value="{{ old('nib') }}" required autocomplete="nib" autofocus placeholder="NIB">
+                                            @error('nib')
                                                 <span class="invalid-feedback" role="alert">
                                                     <strong>{{ $message }}</strong>
                                                 </span>
@@ -109,8 +96,8 @@
                                             </div>
 
                                             <div class="col-md-8">
-                                                <input id="address" type="text" class="form-control @error('address') is-invalid @enderror" name="address" value="{{ old('address') }}" required autocomplete="address" autofocus placeholder="Alamat Usaha">
-                                            @error('address')
+                                                <input id="Alamat" type="text" class="form-control @error('Alamat') is-invalid @enderror" name="Alamat" value="{{ old('Alamat') }}" required autocomplete="Alamat" autofocus placeholder="Alamat Usaha">
+                                            @error('Alamat')
                                                 <span class="invalid-feedback" role="alert">
                                                     <strong>{{ $message }}</strong>
                                                 </span>
@@ -128,8 +115,8 @@
                                             </div>
 
                                             <div class="col-md-8">
-                                                <input id="no_te" type="text" class="form-control @error('no_te') is-invalid @enderror" name="no_te" value="{{ old('no_te') }}" required autocomplete="no_te" autofocus placeholder="No Telepone">
-                                            @error('no_te')
+                                                <input id="No_Telepon" type="text" class="form-control @error('No_Telepon') is-invalid @enderror" name="No_Telepon" value="{{ old('No_Telepon') }}" required autocomplete="No_Telepon" autofocus placeholder="No Telepone">
+                                            @error('No_Telepon')
                                                 <span class="invalid-feedback" role="alert">
                                                     <strong>{{ $message }}</strong>
                                                 </span>

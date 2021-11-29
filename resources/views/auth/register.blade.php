@@ -50,8 +50,8 @@
                             </span>
                             @enderror
                             <label class="fieldlabels">No telepon: </label> 
-                            <input id="no_tlp" type="text" class="form-control @error('no_tlp') is-invalid @enderror" name="no_tlp" value="{{ old('no_tlp') }}" required autocomplete="no_tlp" autofocus  placeholder="No Telepon">
-                            @error('no_tlp')
+                            <input id="No_Telepon" type="text" class="form-control @error('No_Telepon') is-invalid @enderror" name="No_Telepon" value="{{ old('No_Telepon') }}" required autocomplete="No_Telepon" autofocus  placeholder="No Telepon">
+                            @error('No_Telepon')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
                             </span>
@@ -157,7 +157,7 @@
                                 <option value="hindu">Hindhu</option>
                                 <option value="konghuchu">Konghuchu</option>
                             </select>
-                            <label class="fieldlabels">Pekawainan: </label> 
+                            <label class="fieldlabels">Pekawinan: </label> 
                             <select id="kwn" class="form-control @error('kwn') is-invalid @enderror" name="kwn" value="{{ old('kwn') }}" required autocomplete="kwn" autofocus>
                                 <option value="status" disabled selected>Status Perkawinan</option>
                                 <option value="belumkawin">Belum Kawin</option>

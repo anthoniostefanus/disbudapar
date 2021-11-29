@@ -20,7 +20,7 @@ class Kur extends Model
     protected $fillable = [
         'nama_lengkap',
         'nik',
-        'no_tlp',
+        'No_Telepon',
         'Kelurahan',
         'Kecamatan',
         'rt',

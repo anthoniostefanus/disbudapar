@@ -40,15 +40,15 @@ class KurUserController extends Controller
         $user = Auth::user();
         $request->validate([
             'nama_lengkap' => 'required',
-            'nik' => 'required',
-            'no_tlp' => 'required',
+            'nik' => ['required', 'string','min:16','max:16'],
+            'No_Telepon' => ['required', 'string', 'min:8', 'max:13'],
             'Kelurahan' => 'required',
             'Kecamatan' => 'required',
             'rt' => 'required',
             'rw' => 'required',
             'address' => 'required',
-            'berkas_ktp' => 'required|mimes:JPEG,jpeg|max:2000',
-            'berkas_ktp_pasangan' => 'required|mimes:JPEG,jpeg|max:2000',
+            'berkas_ktp' => 'required|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'berkas_ktp_pasangan' => 'required|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'jumlah_pinjaman' => 'required',
             'pinjaman' => 'required',
             'survei' => 'required'
@@ -70,7 +70,7 @@ class KurUserController extends Controller
         Kur::create([
             'nama_lengkap' => $request->nama_lengkap, 
             'nik' => $request->nik, 
-            'no_tlp' => $request->no_tlp, 
+            'No_Telepon' => $request->No_Telepon, 
             'Kelurahan' => $request->Kelurahan, 
             'Kecamatan' => $request->Kecamatan, 
             'rt' => $request->rt, 

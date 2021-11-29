@@ -84,11 +84,11 @@ class PariwisataController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            'nama_usaha' => 'required',
-            'tgl_mulai' => 'required',
-            'nomor_nib' => 'required',
-            'address' => 'required',
-            'no_te' => 'required',
+            'Nama_Usaha' => 'required',
+            'Tanggal_Mulai' => 'required',
+            'nib' => 'required',
+            'Alamat' => 'required',
+            'No_Telepon' => 'required',
             'desc' => 'required',
             'omset' => 'required',
             'aset' => 'required',
@@ -97,11 +97,11 @@ class PariwisataController extends Controller
         ]);
         $berkas = $request->file('berkas');
         $pariwisata = Pariwisata::find($id);
-        $pariwisata->nama_usaha = $request->nama_usaha;
-        $pariwisata->tgl_mulai = $request->tgl_mulai;
-        $pariwisata->nomor_nib = $request->nomor_nib;
-        $pariwisata->address = $request->address;
-        $pariwisata->no_te = $request->no_te;
+        $pariwisata->Nama_Usaha = $request->Nama_Usaha;
+        $pariwisata->Tanggal_Mulai = $request->Tanggal_Mulai;
+        $pariwisata->nib = $request->nib;
+        $pariwisata->Alamat = $request->Alamat;
+        $pariwisata->No_Telepon = $request->No_Telepon;
         $pariwisata->desc = $request->desc;
         $pariwisata->omset = $request->omset;
         $pariwisata->aset = $request->aset;
