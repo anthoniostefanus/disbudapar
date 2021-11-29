@@ -40,8 +40,8 @@
 
             <div class="row">
                 <div class="col-md-12 edit-profile">
-
-                </div>
+               <a  href="{{route('profile.edit', $user)}}" class="btn btn-warning">Ganti Kata Sandi</a>
+            </div>
             </div>
 
             <div class="row">
