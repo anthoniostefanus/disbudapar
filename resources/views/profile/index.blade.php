@@ -152,8 +152,8 @@
                         @foreach($ekraf as $key => $ekraf)
                             <tr>
                                 <td>{{$key+1}}</td>
-                                <td>{{$ekraf->nomor_nib}}</td>
-                                <td>{{$ekraf->nama_usaha}}</td>
+                                <td>{{$ekraf->nib}}</td>
+                                <td>{{$ekraf->Nama_Usaha}}</td>
                                 <td>
                                 <a href="{{route('profile-liat-EKRAF.show', $ekraf)}}" class="btn btn-primary btn-xs">
                                         info
@@ -177,8 +177,8 @@
                         @foreach($pariwisata as $key => $pariwisata)
                             <tr>
                                 <td>{{$key+1}}</td>
-                                <td>{{$pariwisata->nomor_nib}}</td>
-                                <td>{{$pariwisata->nama_usaha}}</td>
+                                <td>{{$pariwisata->nib}}</td>
+                                <td>{{$pariwisata->Nama_Usaha}}</td>
                                 <td>
                                 <a href="{{route('profile-liat-PAR.show', $pariwisata)}}" class="btn btn-primary btn-xs">
                                         info

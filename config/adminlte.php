@@ -287,12 +287,6 @@ return [
             'icon'  => 'fas fa-address-card',
             'can'   =>  'user-menu',
         ],
-        [
-            'text' => 'Kritik & Saran',
-            'url'  => '/kritiksaran',
-            'icon' => 'fas fa-inbox',
-            'can'   =>  'user-menu',
-        ],
     ],
 
     /*

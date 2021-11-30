@@ -41,8 +41,8 @@
                     </div>
 
                     <div class="col-6 data-kur">
-                    <input id="No_telepon" type="text" class="form-control @error('No_telepon') is-invalid @enderror" name="No_telepon" value="{{ old('No_telepon') }}" required autocomplete="No_telepon" autofocus placeholder="No Telepon">
-                    @error('No_telepon')
+                    <input id="No_Telepon" type="text" class="form-control @error('No_Telepon') is-invalid @enderror" name="No_Telepon" value="{{ old('No_Telepon') }}" required autocomplete="No_Telepon" autofocus placeholder="No Telepon">
+                    @error('No_Telepon')
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
                     </span>

@@ -19,7 +19,7 @@ class CreatePariwisataTable extends Migration
             $table->date('Tanggal_Mulai');
             $table->string('nib');
             $table->string('Alamat');
-            $table->string('No_Telepen');
+            $table->string('No_Telepon');
             $table->string('desc');
             $table->string('omset');
             $table->string('aset');

@@ -65,7 +65,7 @@ class EkrafUserController extends Controller
     
         $request->file('berkas')->getClientOriginalName();
         Ekraf::create([
-            'Nama_usaha' => $request->Nama_usaha, 
+            'Nama_Usaha' => $request->Nama_Usaha, 
             'Tanggal_Mulai' => $request->Tanggal_Mulai, 
             'nib' => $request->nib, 
             'Alamat' => $request->Alamat, 

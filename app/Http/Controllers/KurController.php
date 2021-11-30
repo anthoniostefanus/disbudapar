@@ -55,7 +55,7 @@ class KurController extends Controller
           
         ]);
         $array = $request->only([
-            'nama_lengkap', 'nik', 'no_tlp','Kelurahan','Kecamatan','rt','rw','address','jumlah_pinjaman','pinjaman','survei'
+            'nama_lengkap', 'nik', 'No_Telepon','Kelurahan','Kecamatan','rt','rw','address','jumlah_pinjaman','pinjaman','survei'
         ]);
         
     } 
