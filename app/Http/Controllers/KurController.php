@@ -113,6 +113,8 @@ class KurController extends Controller
             'jumlah_pinjaman' => 'required',
             'pinjaman' => 'required',
             'survei' => 'required',
+            'berkas_ktp' => 'required|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'berkas_ktp_pasangan' => 'required|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
         $berkas_ktp = $request->file('berkas_ktp');
         $berkas_ktp_pasangan = $request->file('berkas_ktp_pasangan');
@@ -130,20 +132,21 @@ class KurController extends Controller
         $kur->survei = $request->survei;
         $namaFileLama1 = $kur->berkas_ktp;
         $namaFileLama2 = $kur->berkas_ktp_pasangan;
-        $nama_file_ktp = $request->nomor_nib.$request->nama_usaha.".jpeg";
-        $nama_file_ktp_pasangan = $request->nama_usaha.$request->nomor_nib.".jpeg";
-        if ($request->file('berkas_ktp') && $request->file('berkas_ktp_pasangan'))
-        {
+        $nama_file_ktp = $request->nik.$request->nama_lengkap.".jpeg";
+        $nama_file_ktp_pasangan = $request->nama_lengkap.$request->nik.".jpeg";
+        if ($request->file('berkas_ktp')){
             $tujuan_upload = 'storage';
-            @unlink($tujuan_upload.$nama_file_ktp);
-            @unlink($tujuan_upload.$nama_file_ktp_pasangan);
-             //menghapus file lama
-            $berkas_ktp = $request->file('berkas_ktp','berkas_ktp_pasangan');
-            $berkas_ktp->move(storage_path('app/public/file'),$nama_file_ktp)->move(storage_path('app/public/file'),$nama_file_ktp_pasangan);
-           
+            @unlink($tujuan_upload.$nama_file_ktp); //menghapus file lama
+            $berkas_ktp = $request->file('berkas_ktp');
+            $berkas_ktp->move(storage_path('app/public/file'),$nama_file_ktp);
         }
-        else
-        {
+        if ($request->file('berkas_ktp_pasangan')){
+            $tujuan_upload = 'storage';
+            @unlink($tujuan_upload.$nama_file_ktp_pasangan); //menghapus file lama
+            $berkas_ktp_pasangan = $request->file('berkas_ktp_pasangan');
+            $berkas_ktp_pasangan->move(storage_path('app/public/file'),$nama_file_ktp_pasangan);
+        }
+        else{
             Storage::move(storage_path('app/public/file/'. $namaFileLama1), storage_path('app/public/file/'. $nama_file_ktp));
             Storage::move(storage_path('app/public/file/'. $namaFileLama2), storage_path('app/public/file/'. $nama_file_ktp_pasangan));
         }
@@ -162,7 +165,10 @@ class KurController extends Controller
      */
     public function destroy(Request $request, $id)
     {
-       //
+       $kur = kur::find($id);
+       if ($kur) $kur->delete();
+       return redirect()->route('kur.index')
+           ->with('success_message', 'Berhasil menghapus kur');
     }
     public function download($berkas_ktp)
     {

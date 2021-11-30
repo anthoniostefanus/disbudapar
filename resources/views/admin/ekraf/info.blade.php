@@ -14,23 +14,23 @@
                         </tr>
                         <tr>
                             <td>Nama usaha</td>
-                            <td>{{ $ekraf->nama_usaha}}</td>
+                            <td>{{ $ekraf->Nama_Usaha}}</td>
                         </tr>
                         <tr>
                             <td>Tanggal Mulai</td>
-                            <td>{{ $ekraf->tgl_mulai}}</td>
+                            <td>{{ $ekraf->Tanggal_Mulai}}</td>
                         </tr>
                         <tr>
                             <td>NIB</td>
-                            <td>{{ $ekraf->nomor_nib}}</td>
+                            <td>{{ $ekraf->nib}}</td>
                         </tr>
                         <tr>
                             <td>Alamat</td>
-                            <td>{{ $ekraf->address}}</td>
+                            <td>{{ $ekraf->Alamat}}</td>
                         </tr>
                         <tr>
                             <td>No Telepon</td>
-                            <td>{{ $ekraf->no_te}}</td>
+                            <td>{{ $ekraf->No_Telepon}}</td>
                         </tr>
                         <tr>
                             <td>subjek Usaha</td>

@@ -13,28 +13,28 @@
                 <div class="card-body">
                     <div class="form-group">
                         <label for="nama_usaha">Nama usaha</label>
-                        <input type="text" class="form-control @error('nama_usaha') is-invalid @enderror" id="nama_usaha" placeholder="Nama Usaha" name="nama_usaha" value="{{$ekraf->nama_usaha ?? old('nama_usaha')}}">
-                        @error('nama_usaha') <span class="text-danger">{{$message}}</span> @enderror
+                        <input type="text" class="form-control @error('Nama_Usaha') is-invalid @enderror" id="Nama_Usaha" placeholder="Nama Usaha" name="Nama_Usaha" value="{{$ekraf->Nama_Usaha ?? old('Nama_Usaha')}}">
+                        @error('Nama_Usaha') <span class="text-danger">{{$message}}</span> @enderror
                     </div>
                     <div class="form-group">
-                        <label for="tgl_mulai">Tanggal Mulai usaha</label>
-                        <input type="date" class="form-control @error('tgl_mulai') is-invalid @enderror" id="tgl_mulai" placeholder="Tanggal Mulai Usaha" name="tgl_mulai" value="{{$ekraf->tgl_mulai ?? old('tgl_mulai')}}">
-                        @error('tgl_mulai') <span class="text-danger">{{$message}}</span> @enderror
+                        <label for="Tanggal_Mulai">Tanggal Mulai usaha</label>
+                        <input type="date" class="form-control @error('Tanggal_Mulai') is-invalid @enderror" id="Tanggal_Mulai" placeholder="Tanggal Mulai Usaha" name="Tanggal_Mulai" value="{{$ekraf->Tanggal_Mulai ?? old('Tanggal_Mulai')}}">
+                        @error('Tanggal_Mulai') <span class="text-danger">{{$message}}</span> @enderror
                     </div>
                     <div class="form-group">
-                        <label for="nomor_nib">NIB</label>
-                        <input type="text" class="form-control @error('nomor_nib') is-invalid @enderror" id="nomor_nib" placeholder="NIB" name="nomor_nib" value="{{$ekraf->nomor_nib ?? old('nomor_nib')}}">
-                        @error('nomor_nib') <span class="text-danger">{{$message}}</span> @enderror
+                        <label for="nib">NIB</label>
+                        <input type="text" class="form-control @error('nib') is-invalid @enderror" id="nib" placeholder="NIB" name="nib" value="{{$ekraf->nib ?? old('nib')}}">
+                        @error('nib') <span class="text-danger">{{$message}}</span> @enderror
                     </div>
                     <div class="form-group">
-                        <label for="address">Alamat</label>
-                        <input type="text" class="form-control @error('address') is-invalid @enderror" id="address" placeholder="Alamat" name="address" value="{{$ekraf->address ?? old('address')}}">
-                        @error('address') <span class="text-danger">{{$message}}</span> @enderror
+                        <label for="Alamat">Alamat</label>
+                        <input type="text" class="form-control @error('Alamat') is-invalid @enderror" id="Alamat" placeholder="Alamat" name="Alamat" value="{{$ekraf->Alamat ?? old('Alamat')}}">
+                        @error('Alamat') <span class="text-danger">{{$message}}</span> @enderror
                     </div>
                     <div class="form-group">
-                        <label for="no_te">No telepon</label>
-                        <input type="text" class="form-control @error('no_te') is-invalid @enderror" id="no_te" placeholder="No Telepon" name="no_te" value="{{$ekraf->no_te ?? old('no_te')}}">
-                        @error('no_te') <span class="text-danger">{{$message}}</span> @enderror
+                        <label for="No_Telepon">No telepon</label>
+                        <input type="text" class="form-control @error('No_Telepon') is-invalid @enderror" id="No_Telepon" placeholder="No Telepon" name="No_Telepon" value="{{$ekraf->No_Telepon ?? old('No_Telepon')}}">
+                        @error('No_Telepon') <span class="text-danger">{{$message}}</span> @enderror
                     </div>
                     <div class="form-group">
                         <label for="subj_usaha">Subjek Usaha</label>

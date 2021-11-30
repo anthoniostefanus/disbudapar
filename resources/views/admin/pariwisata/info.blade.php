@@ -10,23 +10,23 @@
                     <table class='table table-striped table-hover'>
                         <tr>
                             <td>Nama usaha</td>
-                            <td>{{ $pariwisata->nama_usaha}}</td>
+                            <td>{{ $pariwisata->Nama_Usaha}}</td>
                         </tr>
                         <tr>
                             <td>Tanggal Mulai</td>
-                            <td>{{ $pariwisata->tgl_mulai}}</td>
+                            <td>{{ $pariwisata->Tanggal_Mulai}}</td>
                         </tr>
                         <tr>
                             <td>NIB</td>
-                            <td>{{ $pariwisata->nomor_nib}}</td>
+                            <td>{{ $pariwisata->nib}}</td>
                         </tr>
                         <tr>
                             <td>Alamat</td>
-                            <td>{{ $pariwisata->address}}</td>
+                            <td>{{ $pariwisata->Alamat}}</td>
                         </tr>
                         <tr>
                             <td>No Telepon</td>
-                            <td>{{ $pariwisata->no_te}}</td>
+                            <td>{{ $pariwisata->No_Telepon}}</td>
                         </tr>
                         <tr>
                             <td>subjek Usaha</td>

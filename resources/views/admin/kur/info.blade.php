@@ -18,7 +18,7 @@
                         </tr>
                         <tr>
                             <td>No Telepon</td>
-                            <td>{{ $kur->no_tlp}}</td>
+                            <td>{{ $kur->No_Telepon}}</td>
                         </tr>
                         <tr>
                             <td>Kelurahan</td>

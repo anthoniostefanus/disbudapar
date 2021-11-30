@@ -21,8 +21,8 @@
                         @foreach($ekraf as $key => $ekraf)
                             <tr>
                                 <td>{{$key+1}}</td>
-                                <td>{{$ekraf->nomor_nib}}</td>
-                                <td>{{$ekraf->nama_usaha}}</td>
+                                <td>{{$ekraf->nib}}</td>
+                                <td>{{$ekraf->Nama_Usaha}}</td>
                                 <td>
                                 <a href="{{route('ekraf.show', $ekraf)}}" class="btn btn-primary btn-xs">
                                         info

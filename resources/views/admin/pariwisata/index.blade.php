@@ -21,8 +21,8 @@
                         @foreach($pariwisata as $key => $pariwisata)
                             <tr>
                                 <td>{{$key+1}}</td>
-                                <td>{{$pariwisata->nomor_nib}}</td>
-                                <td>{{$pariwisata->nama_usaha}}</td>
+                                <td>{{$pariwisata->nib}}</td>
+                                <td>{{$pariwisata->Nama_Usaha}}</td>
                                 <td>
                                 <a href="{{route('pariwisata.show', $pariwisata)}}" class="btn btn-primary btn-xs">
                                         info

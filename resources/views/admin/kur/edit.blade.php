@@ -22,9 +22,9 @@
                         @error('nik') <span class="text-danger">{{$message}}</span> @enderror
                     </div>
                     <div class="form-group">
-                        <label for="no_tlp">No Telepon</label>
-                        <input type="text" class="form-control @error('no_tlp') is-invalid @enderror" id="no_tlp" placeholder="Nama Lengkap" name="no_tlp" value="{{$kur->no_tlp ?? old('no_tlp')}}">
-                        @error('no_tlp') <span class="text-danger">{{$message}}</span> @enderror
+                        <label for="No_Telepon">No Telepon</label>
+                        <input type="text" class="form-control @error('No_Telepon') is-invalid @enderror" id="No_Telepon" placeholder="Nama Lengkap" name="No_Telepon" value="{{$kur->No_Telepon ?? old('No_Telepon')}}">
+                        @error('No_Telepon') <span class="text-danger">{{$message}}</span> @enderror
                     </div>
                     <div class="form-group">
                         <label for="Kelurahan">Kelurahan</label>

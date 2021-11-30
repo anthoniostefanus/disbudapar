@@ -12,9 +12,8 @@
             @csrf
             <div class="row form-input">
                 <div class="col-md-12 avatar">
-                    <img id="file-ip-1-preview" src= "{{ ('/img/avatar.jpg ') }}">
                     @foreach($profile as $key => $profile)
-                    <img src ="{{ route('profile.download', $profile->berkas) }}">
+                    <img id="file-ip-1-preview" src ="{{ route('profile.download', $profile->berkas) }}" >
                     @endforeach
                     <p>Selamat Datang {{ Auth::user()->name }}!  </p>
                 </div>
